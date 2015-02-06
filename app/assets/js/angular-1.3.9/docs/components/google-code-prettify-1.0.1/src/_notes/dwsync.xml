@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="lang-apollo.js" server="C:/tomcat/webapps/ecms/" local="130668523351864431" remote="130668523350000000" Dst="1" />
+<file name="lang-clj.js" server="C:/tomcat/webapps/ecms/" local="130668523351924431" remote="130668523350000000" Dst="1" />
+<file name="lang-css.js" server="C:/tomcat/webapps/ecms/" local="130668523351984431" remote="130668523350000000" Dst="1" />
+<file name="lang-dart.js" server="C:/tomcat/webapps/ecms/" local="130668523352044431" remote="130668523350000000" Dst="1" />
+<file name="lang-go.js" server="C:/tomcat/webapps/ecms/" local="130668523352104431" remote="130668523350000000" Dst="1" />
+<file name="lang-hs.js" server="C:/tomcat/webapps/ecms/" local="130668523352174431" remote="130668523350000000" Dst="1" />
+<file name="lang-lisp.js" server="C:/tomcat/webapps/ecms/" local="130668523352234431" remote="130668523350000000" Dst="1" />
+<file name="lang-lua.js" server="C:/tomcat/webapps/ecms/" local="130668523352294431" remote="130668523350000000" Dst="1" />
+<file name="lang-ml.js" server="C:/tomcat/webapps/ecms/" local="130668523352364431" remote="130668523350000000" Dst="1" />
+<file name="lang-n.js" server="C:/tomcat/webapps/ecms/" local="130668523352424431" remote="130668523350000000" Dst="1" />
+<file name="lang-proto.js" server="C:/tomcat/webapps/ecms/" local="130668523352494431" remote="130668523350000000" Dst="1" />
+<file name="lang-scala.js" server="C:/tomcat/webapps/ecms/" local="130668523352554431" remote="130668523350000000" Dst="1" />
+<file name="lang-sql.js" server="C:/tomcat/webapps/ecms/" local="130668523352624431" remote="130668523350000000" Dst="1" />
+<file name="lang-tex.js" server="C:/tomcat/webapps/ecms/" local="130668523352684431" remote="130668523350000000" Dst="1" />
+<file name="lang-vb.js" server="C:/tomcat/webapps/ecms/" local="130668523352754431" remote="130668523350000000" Dst="1" />
+<file name="lang-vhdl.js" server="C:/tomcat/webapps/ecms/" local="130668523352814431" remote="130668523350000000" Dst="1" />
+<file name="lang-wiki.js" server="C:/tomcat/webapps/ecms/" local="130668523352884431" remote="130668523350000000" Dst="1" />
+<file name="lang-xq.js" server="C:/tomcat/webapps/ecms/" local="130668523352944431" remote="130668523350000000" Dst="1" />
+<file name="lang-yaml.js" server="C:/tomcat/webapps/ecms/" local="130668523353014431" remote="130668523350000000" Dst="1" />
+<file name="prettify.css" server="C:/tomcat/webapps/ecms/" local="130668523353084431" remote="130668523350000000" Dst="1" />
+<file name="prettify.js" server="C:/tomcat/webapps/ecms/" local="130668523353154431" remote="130668523350000000" Dst="1" />
+<file name="lang-apollo.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523351864431" remote="130668523350000000" Dst="1" />
+<file name="lang-clj.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523351924431" remote="130668523350000000" Dst="1" />
+<file name="lang-css.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523351984431" remote="130668523350000000" Dst="1" />
+<file name="lang-dart.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352044431" remote="130668523350000000" Dst="1" />
+<file name="lang-go.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352104431" remote="130668523350000000" Dst="1" />
+<file name="lang-hs.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352174431" remote="130668523350000000" Dst="1" />
+<file name="lang-lisp.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352234431" remote="130668523350000000" Dst="1" />
+<file name="lang-lua.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352294431" remote="130668523350000000" Dst="1" />
+<file name="lang-ml.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352364431" remote="130668523350000000" Dst="1" />
+<file name="lang-n.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352424431" remote="130668523350000000" Dst="1" />
+<file name="lang-proto.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352494431" remote="130668523350000000" Dst="1" />
+<file name="lang-scala.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352554431" remote="130668523350000000" Dst="1" />
+<file name="lang-sql.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352624431" remote="130668523350000000" Dst="1" />
+<file name="lang-tex.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352684431" remote="130668523350000000" Dst="1" />
+<file name="lang-vb.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352754431" remote="130668523350000000" Dst="1" />
+<file name="lang-vhdl.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352814431" remote="130668523350000000" Dst="1" />
+<file name="lang-wiki.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352884431" remote="130668523350000000" Dst="1" />
+<file name="lang-xq.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523352944431" remote="130668523350000000" Dst="1" />
+<file name="lang-yaml.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523353014431" remote="130668523350000000" Dst="1" />
+<file name="prettify.css" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523353084431" remote="130668523350000000" Dst="1" />
+<file name="prettify.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523353154431" remote="130668523350000000" Dst="1" />
+</dwsync>

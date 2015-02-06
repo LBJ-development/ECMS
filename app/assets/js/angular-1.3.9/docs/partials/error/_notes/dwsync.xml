@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="$animate.html" server="C:/tomcat/webapps/ecms/" local="130668523510764431" remote="130668523510000000" Dst="1" />
+<file name="$cacheFactory.html" server="C:/tomcat/webapps/ecms/" local="130668523510884431" remote="130668523510000000" Dst="1" />
+<file name="$compile.html" server="C:/tomcat/webapps/ecms/" local="130668523511004431" remote="130668523510000000" Dst="1" />
+<file name="$controller.html" server="C:/tomcat/webapps/ecms/" local="130668523511084431" remote="130668523510000000" Dst="1" />
+<file name="$http.html" server="C:/tomcat/webapps/ecms/" local="130668523511154431" remote="130668523510000000" Dst="1" />
+<file name="$injector.html" server="C:/tomcat/webapps/ecms/" local="130668523511224431" remote="130668523510000000" Dst="1" />
+<file name="$interpolate.html" server="C:/tomcat/webapps/ecms/" local="130668523511294431" remote="130668523510000000" Dst="1" />
+<file name="$location.html" server="C:/tomcat/webapps/ecms/" local="130668523511374431" remote="130668523510000000" Dst="1" />
+<file name="$parse.html" server="C:/tomcat/webapps/ecms/" local="130668523511444431" remote="130668523510000000" Dst="1" />
+<file name="$q.html" server="C:/tomcat/webapps/ecms/" local="130668523511514431" remote="130668523510000000" Dst="1" />
+<file name="$resource.html" server="C:/tomcat/webapps/ecms/" local="130668523511584431" remote="130668523510000000" Dst="1" />
+<file name="$rootScope.html" server="C:/tomcat/webapps/ecms/" local="130668523511654431" remote="130668523510000000" Dst="1" />
+<file name="$sanitize.html" server="C:/tomcat/webapps/ecms/" local="130668523511734431" remote="130668523510000000" Dst="1" />
+<file name="$sce.html" server="C:/tomcat/webapps/ecms/" local="130668523511814431" remote="130668523510000000" Dst="1" />
+<file name="jqLite.html" server="C:/tomcat/webapps/ecms/" local="130668523511884431" remote="130668523510000000" Dst="1" />
+<file name="ng.html" server="C:/tomcat/webapps/ecms/" local="130668523511954431" remote="130668523510000000" Dst="1" />
+<file name="ngModel.html" server="C:/tomcat/webapps/ecms/" local="130668523512034431" remote="130668523510000000" Dst="1" />
+<file name="ngOptions.html" server="C:/tomcat/webapps/ecms/" local="130668523512104431" remote="130668523510000000" Dst="1" />
+<file name="ngPattern.html" server="C:/tomcat/webapps/ecms/" local="130668523512184431" remote="130668523510000000" Dst="1" />
+<file name="ngRepeat.html" server="C:/tomcat/webapps/ecms/" local="130668523512254431" remote="130668523510000000" Dst="1" />
+<file name="ngTransclude.html" server="C:/tomcat/webapps/ecms/" local="130668523512324431" remote="130668523510000000" Dst="1" />
+<file name="$animate.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523510764431" remote="130668523510000000" Dst="1" />
+<file name="$cacheFactory.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523510884431" remote="130668523510000000" Dst="1" />
+<file name="$compile.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511004431" remote="130668523510000000" Dst="1" />
+<file name="$controller.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511084431" remote="130668523510000000" Dst="1" />
+<file name="$http.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511154431" remote="130668523510000000" Dst="1" />
+<file name="$injector.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511224431" remote="130668523510000000" Dst="1" />
+<file name="$interpolate.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511294431" remote="130668523510000000" Dst="1" />
+<file name="$location.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511374431" remote="130668523510000000" Dst="1" />
+<file name="$parse.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511444431" remote="130668523510000000" Dst="1" />
+<file name="$q.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511514431" remote="130668523510000000" Dst="1" />
+<file name="$resource.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511584431" remote="130668523510000000" Dst="1" />
+<file name="$rootScope.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511654431" remote="130668523510000000" Dst="1" />
+<file name="$sanitize.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511734431" remote="130668523510000000" Dst="1" />
+<file name="$sce.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511814431" remote="130668523510000000" Dst="1" />
+<file name="jqLite.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511884431" remote="130668523510000000" Dst="1" />
+<file name="ng.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523511954431" remote="130668523510000000" Dst="1" />
+<file name="ngModel.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523512034431" remote="130668523510000000" Dst="1" />
+<file name="ngOptions.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523512104431" remote="130668523510000000" Dst="1" />
+<file name="ngPattern.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523512184431" remote="130668523510000000" Dst="1" />
+<file name="ngRepeat.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523512254431" remote="130668523510000000" Dst="1" />
+<file name="ngTransclude.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523512324431" remote="130668523510000000" Dst="1" />
+</dwsync>

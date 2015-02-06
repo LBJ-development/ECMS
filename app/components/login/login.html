@@ -1,0 +1,50 @@
+
+<div class="CC-title-big" style="width:100%"></div>
+
+<div role="login" class="login-panel">
+	<span class="panel-header"><span class="white-title">Login</span></span>
+    <form id="login-frm" ng-controller="LoginCtrl" ng-submit="login(credentials)" role="form" name="login-form">
+    
+    <login-directive>
+    	<span>
+    		<label for="username">Username:</label>
+        	<input class="required" id="username" type="text" ng-model="credentials.username" name="username" >
+		</span>
+        <span>
+        	<label for="password">Password:</label>
+        	<input class="required" id="password" type="password" ng-model="credentials.password" name="password" >
+		</span>
+        
+        <span  style="padding: 0 0 20px 93px">
+        <!--<input type="submit" class="regular-btn"  value="LOGIN">-->
+    		<input type="submit" value="LOGIN" id="logingbutton" class="{{buttonClass}}"  ng-disabled="isDisabled">
+             <!--  <button login-directive ng-model="button" class="regular-btn" >LOGIN</button>-->
+		</span>
+      	<span class="{{errormessageclass}}">{{errormessage}}</span>
+   
+      </logindirective>
+    </form>
+   
+</div>
+
+<script>
+		/*function login(){
+		
+		$('#username').text( $('#userId').val()); 
+		console.log($('#userId').val());
+		
+	$('#CC-login').animate({'opacity' : 0}, 200, function(){
+			$('#userId').val('');
+			$('#password').val('');
+			$(this).css({'display' : 'none'});
+			$('#CC-masthead').css({'display' : 'block'});
+			$('#CC-masthead').animate({'opacity' : 1}, 200, function(){
+		 	});
+		 });
+	}*/
+</script>
+
+
+
+
+             

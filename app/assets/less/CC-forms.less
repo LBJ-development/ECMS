@@ -1,0 +1,93 @@
+
+form { 
+margin : 30px 10px @baselineheight 10px;
+
+fieldset { 
+margin-bottom : @baselineheight; 
+padding : 0; 
+border-width : 0; }
+}
+
+form span {
+	display: inline-block;
+	width: 100%;	
+	float: left;
+	padding: 0 0 20px 0;
+}
+
+label {
+	.labeText;
+	text-align: right;
+	display:inline-block;
+	float:left;
+	width: 30%;
+	vertical-align : baseline; 
+	padding-top: 3px;
+	}
+
+// IMPUT FIELDS 		==============================
+
+input[type="text"],
+input[type="password"]  {
+	font-size: .95em;
+	padding-left:5px;
+	display:inline-block;
+	width: 50%;
+	float: left;
+	height: 22px;
+	background-color: @imputbackground;
+	border-top: 1px solid @imputtopborder;
+	border-left: 1px solid @imputleftborder;
+}
+
+
+// BUTTON 			==============================
+
+/*input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+//width : auto;
+//height : auto;
+.buttonText;
+cursor : pointer;
+padding:0;
+*overflow : visible; 
+border: none;
+background-color: rgba(0, 0, 0, 0);
+}*/
+
+.regular-btn {
+	.buttonText;
+	.rounded;
+	cursor : pointer;
+	padding: 2px 10px 2px 10px;
+	border:solid 1px @bordergray;
+	.vertical(@lightgradientstartcolor, @lightgradientendcolor);
+}
+
+.disabled-btn {
+	.regular-btn;
+	cursor:default;
+	opacity: .5;
+}
+
+.regular-btn:hover {
+	color: @midblue;
+	border:solid 1px @midblue;
+}
+
+.search-btn {
+	width: 20px;
+	height: 20px;
+	margin: 5px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	background-image:url(../images/CC-wingdings.png);
+	background-repeat: no-repeat;
+	background-size: 40px @wingdingsheight;
+	background-position: 0 -40px;
+}
+
+.search-btn:hover{
+	background-position: -20px -40px;
+}

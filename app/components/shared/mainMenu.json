@@ -1,0 +1,34 @@
+// JavaScript Document{
+ {
+	"menus":[
+	
+	{
+		"menu": "Home",
+		"url": "/"
+	},
+	{
+		"menu": "Call Center",
+		"url": "/callcenter"
+	},
+	{
+		"menu": "Instance Management",
+		"url": "/instancemanagement"
+	},
+	{
+		"menu": "Case Administration",
+		"url": "/caseadministration"
+	},
+	{
+		"menu": "Supervisor",
+		"url": "/supervisor"
+	},
+	{
+		"menu": "Reports",
+		"url": "/reports"
+	},
+	{
+		"menu": "Whatever",
+		"url": "/whatever"
+	}
+	]
+}

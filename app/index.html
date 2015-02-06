@@ -1,0 +1,54 @@
+<!doctype html >
+<html class="no-js" lang="en" ng-app="ECMSapp" >
+<head>
+<meta http-equiv="Content-Type" content="text/html; csharset=UTF-8">
+<title>ECMS</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="assets/css/CC-styles.css">
+
+<script type="text/javascript" src="assets/js/jquery.js"></script>
+<script type="text/javascript" src="assets/js/angular-1.3.9/angular.js"></script>
+<script type="text/javascript" src="assets/js/angular-1.3.9/angular-route.js"></script>
+<script type="text/javascript" src="assets/js/angular-1.3.9/angular-loader.js"></script>
+<script type="text/javascript" src="assets/js/angular-1.3.9/angular-animate.js"></script>
+<!-- JQWIDGETS ------------------------------------------------------------------------------>
+<link rel="stylesheet" href="assets/jqWidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
+<script type="text/javascript" src="assets/jqWidgets/scripts/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="assets/jqWidgets/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="assets/jqWidgets/jqwidgets/jqxangular.js"></script>
+<script type="text/javascript" src="assets/jqWidgets/scripts/demos.js"></script>
+<script type="text/javascript" src="assets/jqWidgets/demos/sampledata/generatedata.js"></script>
+<!-------------------------------------------------------------------------------------------->
+</head>
+
+<body>
+	<div id="wrapper" class="clearfix" >
+    	<div id="MK-logo" ></div>
+        <div ng-view></div>
+	</div> 
+
+<script type="text/javascript" src="app.js"></script>
+
+<script src="components/login/loginCtrl.js"></script>
+<script src="components/login/loginService.js"></script>
+
+<script src="components/home/homeCtrl.js"></script>
+
+
+<script>
+	$(document).ready(function(){
+		// LOAD MASTHEAD
+		//$('#CC-masthead').load('CC-masthead.html');
+		//$('#CC-login').load('CC-login.html');
+		 //delay = setInterval(function(){  adjustNavigation();}, 500);
+	});
+
+	$(window).resize(function(){
+		//console.log($(window).width());
+	});
+</script>
+
+</body>
+</html>
