@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="loginService.js" server="Z:/ECMS/" local="130668688473332598" remote="130668688470000000" Dst="1" />
-<file name="login.html" server="Z:/ECMS/" local="130668673155362639" remote="130668673150000000" Dst="1" />
+<file name="loginService.js" server="Z:/ECMS/" local="130677150561663543" remote="130677150560000000" Dst="1" />
+<file name="login.html" server="Z:/ECMS/" local="130677127742303292" remote="130677127740000000" Dst="1" />
 <file name="login.html" server="Z:/UIDesigns/ECMS/" local="130668673155362639" remote="130668673150000000" Dst="1" />
 <file name="loginCtrl.js" server="Z:/UIDesigns/ECMS/" local="130668663989055367" remote="130668663980000000" Dst="1" />
 <file name="loginService.js" server="Z:/UIDesigns/ECMS/" local="130669456589582220" remote="130669456640000000" Dst="1" />
@@ -12,4 +12,7 @@
 <file name="loginCtrl.js" server="D:/xampp/htdocs/ECMS/" local="130675356030814299" remote="130675356030000000" Dst="1" />
 <file name="loginService.js" server="D:/xampp/htdocs/ECMS/" local="130675364812264299" remote="130675364810000000" Dst="1" />
 <file name="loginCtrl.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675402810000000" remote="130675402810000000" Dst="1" />
+<file name="login.js" server="Z:/ECMS/" local="130668663989055367" remote="130668663980000000" Dst="1" />
+<file name="loginCtrl.js" server="Z:/ECMS/" local="130675402810000000" remote="130675402810000000" Dst="1" />
+<file name="testUser.php" server="Z:/ECMS/" local="130673771962563578" remote="130673771960000000" Dst="1" />
 </dwsync>

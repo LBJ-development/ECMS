@@ -46,6 +46,7 @@
         row["objects"] = objects[Math.floor(Math.random() * objects.length)];
         row["details"] = details[Math.floor(Math.random() * details.length)];
         row["users"] = users[Math.floor(Math.random() * users.length)];
+		row["seen"] = false;
 
         /*var date = new Date();
         date.setFullYear(2014, Math.floor(Math.random() * 11), Math.floor(Math.random() * 27));

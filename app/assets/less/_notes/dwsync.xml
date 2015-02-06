@@ -32,4 +32,9 @@
 <file name="mixins.less" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130664262143829182" remote="130664262140000000" Dst="1" />
 <file name="reset.less" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130332250200000000" remote="130332250200000000" Dst="1" />
 <file name="variables.less" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130332250200000000" remote="130332250200000000" Dst="1" />
+<file name="CC-forms.less" server="Z:/ECMS/" local="130673812007012578" remote="130673812000000000" Dst="1" />
+<file name="CC-general.less" server="Z:/ECMS/" local="130676471115329546" remote="130676471110000000" Dst="1" />
+<file name="CC-typography.less" server="Z:/ECMS/" local="130676485841818701" remote="130676485840000000" Dst="1" />
+<file name="CC-variables.less" server="Z:/ECMS/" local="130677309937053559" remote="130677309930000000" Dst="1" />
+<file name="JQX-redefined.less" server="Z:/ECMS/" local="130677316975647348" remote="130677316970000000" Dst="1" />
 </dwsync>

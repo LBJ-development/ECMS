@@ -12,7 +12,7 @@ angular.module('ECMSapp.home', ['ngRoute'])
 .controller('HomeCtrl', function($scope) {
 
 	// prepare the data
-	var data = generatenotification(15);
+	var data = generatenotification(13);
 
 	var source =
 		{
@@ -35,13 +35,17 @@ angular.module('ECMSapp.home', ['ngRoute'])
 			{ text: 'Object ID', datafield: 'objects', width: '20%', align: 'center'},
 			{ text: 'Details', datafield: 'details', width: '35%', align: 'center'},
 			{ text: 'User', datafield: 'users', width: '15%', cellsFormat: 'c2', align: 'center' },
-			{ text: 'Seen', datafield: 'seen', width: '5%', cellsAlign: 'center', align: 'center',  cellsformat: 'c2' }
+			{ text: 'Seen', datafield: 'seen', width: '5%', columntype: 'checkbox', cellsAlign: 'center', align: 'center',  cellsformat: 'c2' }
 		];
       
 	$scope.gridSettings =
 		{
 			width: '100%',
+			autoheight: true,
 			source: source,                
-			columns: columns
+			columns: columns,
+			editable: true,
+            enabletooltips: true
+
 		};
 });

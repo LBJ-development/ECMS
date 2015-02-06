@@ -6,8 +6,9 @@ app.factory('loginService', function($http, $location, $rootScope){
 			
 			//var id ="http://cc-devapp1.ncmecad.net:8080/ecms/init?user=" + credentials['username'] + "&pass=" + credentials['password'];
 			
-			var id ="http://localhost:8080/ecms/auth/" + credentials['username'] + "/" + credentials['password'];
-			var $promise = $http.get(id);
+			//var id ="http://localhost:8080/ecms/auth/" + credentials['username'] + "/" + credentials['password'];
+			//var $promise = $http.get(id);
+			$location.path('/home');
 
 			//var $promise = $http.post('components/login/testUser.php', credentials); //send data to testUser.php
 			
@@ -24,7 +25,8 @@ app.factory('loginService', function($http, $location, $rootScope){
 					//$scope.errormessage		= result.data + "!";
 					$scope.errormessage			= "Incorrect Information, please try again!";
 					$scope.errormessageclass	= 'errorMessageOn';	
-					$location.path('/home')
+					$location.path('/home');
+					console.log("I'm not moving");
 				}
 			});
 		}
