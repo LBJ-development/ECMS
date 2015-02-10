@@ -5,8 +5,10 @@ var app = angular.module('ECMSapp', [
 	'ngRoute',
 	'ECMSapp.login',
 	'ECMSapp.home',
+	'ECMSapp.adminMain',
 	'jqwidgets', 
-	'jqwidgets-amd'
+	'jqwidgets-amd',
+	'kendo.directives' 
 	])
 
 .config(['$routeProvider', function($routeProvider) {

@@ -11,9 +11,9 @@
 
 <div role="navigation">
 	<ul >
-		<li><a href="index.html" id="deskHomeBtn">Home</a></li>
-		<li><a href="issues.html">Instance Management</a></li>
-		<li><a href="resources.html">Case Administration</a></li>
+		<li><a href="#/home" id="deskHomeBtn">Home</a></li>
+		<li><a href="#">Instance Management</a></li>
+		<li><a href="#/adminMain">Case Administration</a></li>
 		<li><a href="#">Supervisor</a></li>
 		<li><a href="#">Reports</a></li>  
         <div id="quick-search">
@@ -27,14 +27,14 @@
         </div>  
 	</ul> 
 </div>
-
-<div class="content-holder">
-
-	<div role="datagrid" class="grid-holder" ng-controller="HomeCtrl">
-    
-		<span class="title">Notifications</span>
-    	<jqx-grid jqx-settings="gridSettings" jqx-alt-rows="true"></jqx-grid>
-        
+<div class="content-wrapper">
+	<div class="content-holder">
+		<div role="datagrid" class="grid-holder" ng-controller="HomeCtrl">
+			<div class="title-holder">
+				<span class="title">Notifications</span>
+			</div>
+    		<jqx-grid jqx-settings="gridSettings" jqx-alt-rows="true"></jqx-grid> 
+		</div>
 	</div>
 </div>
 
