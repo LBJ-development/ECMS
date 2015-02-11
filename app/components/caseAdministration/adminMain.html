@@ -35,25 +35,37 @@
 		</div>
         <!-- FILTER GRIG ---------------------------------------------------------------------->
 		<div class="filter-holder">
+        
+        <div class="title-holder title-small">Filters</div>
+
 			<div class="k-content" ng-controller="AdminMainFilterCtrl">
-				<ul class="multi-select">
-                	<li >
-                		<span>RFS Source Type:</span>
-        				<select kendo-multi-select k-options="RFSSourceType"></select>
-                	</li>
-        			<li >
-                		<span>RFS Type:</span>
-        				<select  kendo-multi-select k-options="RFSType"></select>
-                	</li>
-                	<li>
-                		<span>Case Type:</span>
+            
+            	<div>
+                
+					<input kendo-date-picker ng-model="dateString"  k-ng-model="dateObject" />
+					
+            	</div>
+            
+            	<div>
+					<ul class="multi-select">
+                		<li >
+                			<span>RFS Source Type:</span>
+        					<select kendo-multi-select k-options="RFSSourceType"></select>
+                		</li>
+        				<li >
+                			<span>RFS Type:</span>
+        					<select  kendo-multi-select k-options="RFSType"></select>
+                		</li>
+                		<li>
+                			<span>Case Type:</span>
         				<select kendo-multi-select k-options="caseType"></select>
-                	</li>
-                    <li>
-                		<span>Media Status:</span>
-        				<select kendo-multi-select k-options="mediaStatus"></select>
-                	</li>
-            	</ul>
+                		</li>
+                    	<li>
+                			<span>Media Status:</span>
+        					<select kendo-multi-select k-options="mediaStatus"></select>
+                		</li>
+            		</ul>
+                </div>
    			</div>
          </div>
 		<!-- DATA GRIG ---------------------------------------------------------------------->
@@ -64,3 +76,5 @@
 		</div>
 	</div>
 </div>
+
+

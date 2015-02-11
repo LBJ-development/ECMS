@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+<link rel="stylesheet" type="text/css" href="../../../../assets/jqWidgets/jqwidgets/styles/jqx.base.css" />
+<script type="text/javascript" src="../../../../assets/jqWidgets/scripts/angular.min.js"></script>
+<script type="text/javascript" src="../../../../assets/jqWidgets/scripts/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxcore.js"></script>
+<script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxtabs.js"></script>
+<script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxbuttons.js"></script>
+   <script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxgrid.js"></script>
+    <script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxgrid.selection.js"></script>
+    <script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxmenu.js"></script>
+    <script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxdata.js"></script>
+
+    <script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxgrid.sort.js"></script>
+    <script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxgrid.columnsresize.js"></script>
+<script type="text/javascript" src="../../../../assets/jqWidgets/jqwidgets/jqxangular.js"></script>
+
+<script type="text/javascript" src="../../../../assets/jqWidgets/scripts/demos.js"></script>
+<script>
+    var demoApp = angular.module("demoApp", ["jqwidgets"]);
+
+    demoApp.controller("demoController", function ($scope) {
+        $scope.tabsSettings = {
+            width: 800,
+            height: 800
+        }
+    });
+    demoApp.controller("Tab1Controller", function ($scope) {
+        $scope.obj1 = {
+            name: "Peter Smith",
+            calling1: function () {
+                alert("Calling 1");
+            }
+        };
+
+    });
+    demoApp.controller("Tab2Controller", function ($scope) {
+        $scope.obj2 = {
+            name: "Bill Fuller",
+            calling2: function () {
+                alert("Calling 2");
+            }
+        };
+    });
+</script>
+</head>
+<body>
+	<div ng-controller="demoController">
+		<jqx-tabs jqx-settings="tabsSettings">
+		<ul style="margin-left: 30px;">
+			<li>Tab 1</li>
+			<li>Tab 2</li>
+		</ul>
+		<div ng-controller="Tab1Controller">
+			{{obj1.name}}
+			<jqx-button ng-click="obj1.calling1()">Button 1</jqx-button>
+		</div>
+		<div ng-controller="Tab2Controller">
+			{{obj2.name}}
+			<jqx-button ng-click="obj2.calling2()">Button 2</jqx-button>
+		</div>
+		</jqx-tabs>
+	</div>
+</body>
+</html>

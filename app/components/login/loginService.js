@@ -11,8 +11,8 @@ app.factory('loginService', function($http, $location, $rootScope){
 			$location.path('/home');
 
 			//var $promise = $http.post('components/login/testUser.php', credentials); //send data to testUser.php
-			
-			$promise.then(function(result){
+		
+			/*$promise.then(function(result){
 				console.log(result);
 				console.log(result.status);
 				console.log(result.data.status);
@@ -26,9 +26,9 @@ app.factory('loginService', function($http, $location, $rootScope){
 					$scope.errormessage			= "Incorrect Information, please try again!";
 					$scope.errormessageclass	= 'errorMessageOn';	
 					$location.path('/home');
-					console.log("I'm not moving");
+					
 				}
-			});
+			});*/
 		}
 	}
 })

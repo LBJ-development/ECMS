@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+//  VARIABLES 			==============================
+@import "CC-variables.less";
+@import "mixins.less";
+@import "CC-mixins.less";
+
+.k-button {
+	background-color:rgb(255,255,255);
+	.vertical(@white, @lightgradientendcolor);
+	border:solid 1px @lightblue;
+}
+
+.k-button:hover, .k-button.k-state-hover, .k-item:hover, k-state-focus.k-state-hover, .k-multiselect.k-header.k-state-hover{
+	
+	.hover-btn;
+	
+}
+
+
