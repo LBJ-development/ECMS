@@ -15,4 +15,19 @@
 <file name="restrictdaterange.htm" server="Z:/ECMS/" local="130543337480000000" remote="130543337480000000" Dst="1" />
 <file name="rtl.htm" server="Z:/ECMS/" local="130543337480000000" remote="130543337480000000" Dst="1" />
 <file name="timeinput.htm" server="Z:/ECMS/" local="130543337480000000" remote="130543337480000000" Dst="1" />
+<file name="alignment.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428190936" remote="130681431420000000" Dst="1" />
+<file name="animation.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428250936" remote="130681431420000000" Dst="1" />
+<file name="dateandtime.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428310936" remote="130681431420000000" Dst="1" />
+<file name="datetimeinput-fluid-size.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428350936" remote="130681431420000000" Dst="1" />
+<file name="defaultfunctionality.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428400936" remote="130681431420000000" Dst="1" />
+<file name="disableddatetimeinput.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428440936" remote="130681431420000000" Dst="1" />
+<file name="events.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428500936" remote="130681431420000000" Dst="1" />
+<file name="formatdate.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428560936" remote="130681431420000000" Dst="1" />
+<file name="keyboardsupport.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428600936" remote="130681431420000000" Dst="1" />
+<file name="knockoutjs.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428660936" remote="130681431420000000" Dst="1" />
+<file name="localization.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428720936" remote="130681431420000000" Dst="1" />
+<file name="rangeselection.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428770936" remote="130681431420000000" Dst="1" />
+<file name="restrictdaterange.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428810936" remote="130681431420000000" Dst="1" />
+<file name="rtl.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428850936" remote="130681431420000000" Dst="1" />
+<file name="timeinput.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428900936" remote="130681431420000000" Dst="1" />
 </dwsync>

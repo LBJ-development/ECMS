@@ -18,4 +18,13 @@
 <file name="index.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523472984431" remote="130668523470000000" Dst="1" />
 <file name="manifest.json" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523473044431" remote="130668523470000000" Dst="1" />
 <file name="protractor.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523473114431" remote="130668523470000000" Dst="1" />
+<file name="addressBar.js" server="D:/xampp/htdocs/ECMS/" local="130681431507700936" remote="130681431500000000" Dst="1" />
+<file name="app.js" server="D:/xampp/htdocs/ECMS/" local="130681431507720936" remote="130681431500000000" Dst="1" />
+<file name="fakeBrowser.js" server="D:/xampp/htdocs/ECMS/" local="130681431507760936" remote="130681431500000000" Dst="1" />
+<file name="index-debug.html" server="D:/xampp/htdocs/ECMS/" local="130681431507790936" remote="130681431500000000" Dst="1" />
+<file name="index-jquery.html" server="D:/xampp/htdocs/ECMS/" local="130681431507810936" remote="130681431500000000" Dst="1" />
+<file name="index-production.html" server="D:/xampp/htdocs/ECMS/" local="130681431507840936" remote="130681431500000000" Dst="1" />
+<file name="index.html" server="D:/xampp/htdocs/ECMS/" local="130681431507870936" remote="130681431500000000" Dst="1" />
+<file name="manifest.json" server="D:/xampp/htdocs/ECMS/" local="130681431507870936" remote="130681431500000000" Dst="1" />
+<file name="protractor.js" server="D:/xampp/htdocs/ECMS/" local="130681431507910936" remote="130681431500000000" Dst="1" />
 </dwsync>

@@ -7,18 +7,18 @@
     
     <login-directive>
     	<span>
-    		<label for="username"  style="width: 30%">Username:</label>
-        	<input class="required" id="username" type="text" ng-model="credentials.username" name="username" >
+    		<label for="username"  style="width: 120px">Username:</label>
+        	<input class="k-textbox" style="width: 200px" id="username" type="text" ng-model="credentials.username" name="username" >
 		</span>
         <span>
-        	<label for="password"  style="width: 30%">Password:</label>
-        	<input class="required" id="password" type="password" ng-model="credentials.password" name="password" >
+        	<label for="password" style="width: 120px">Password:</label>
+        	<input class="k-textbox" style="width: 200px" id="password" type="password" ng-model="credentials.password" name="password" >
 		</span>
         
-        <span  style="padding: 0 0 20px 93px">
+        <span  style="padding: 0 0 20px 100px">
         <!--<input type="submit" class="regular-btn"  value="LOGIN">-->
-    		<input type="submit" value="LOGIN" id="logingbutton" class="{{buttonClass}}"  ng-disabled="isDisabled">
-             <!--  <button login-directive ng-model="button" class="regular-btn" >LOGIN</button>-->
+    		 <!-- <input type="submit" value="LOGIN" id="logingbutton" class="{{buttonClass}}"  ng-disabled="isDisabled">-->
+             <kendo-button login-directive ng-model="button" class="k-button" ng-disabled="{{username.value().length >= 5}}" >LOGIN</kendo-button>
 		</span>
       	<span class="{{errormessageclass}}">{{errormessage}}</span>
    

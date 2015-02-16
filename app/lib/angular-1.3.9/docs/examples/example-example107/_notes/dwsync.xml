@@ -10,4 +10,9 @@
 <file name="index-production.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523403634431" remote="130668523400000000" Dst="1" />
 <file name="index.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523403724431" remote="130668523400000000" Dst="1" />
 <file name="manifest.json" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523403794431" remote="130668523400000000" Dst="1" />
+<file name="index-debug.html" server="D:/xampp/htdocs/ECMS/" local="130681431492910936" remote="130681431490000000" Dst="1" />
+<file name="index-jquery.html" server="D:/xampp/htdocs/ECMS/" local="130681431492930936" remote="130681431490000000" Dst="1" />
+<file name="index-production.html" server="D:/xampp/htdocs/ECMS/" local="130681431492950936" remote="130681431490000000" Dst="1" />
+<file name="index.html" server="D:/xampp/htdocs/ECMS/" local="130681431492970936" remote="130681431490000000" Dst="1" />
+<file name="manifest.json" server="D:/xampp/htdocs/ECMS/" local="130681431492970936" remote="130681431490000000" Dst="1" />
 </dwsync>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="CC-styles.css" server="D:/xampp/htdocs/ECMS/" local="130675362026584299" remote="130675362020000000" Dst="1" />
+<file name="CC-styles.css" server="D:/xampp/htdocs/ECMS/" local="130682282856336182" remote="130682282850000000" Dst="1" />
 <file name="CC-styles.css" server="C:/tomcat/webapps/ecms/" local="130670153051635051" remote="130670153050000000" Dst="1" />
 <file name="CC-styles.css" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675411565426799" remote="130675411560000000" Dst="1" />
 <file name="CC-styles.css" server="Z:/ECMS/" local="130677309940503904" remote="130677309940000000" Dst="1" />
@@ -8,4 +8,6 @@
 <file name="CC-styles.css" server="Z:/UIDesigns/ECMS/" local="130681544065528075" remote="130681544060000000" Dst="1" />
 <file name="JQX-redefined.css" server="Z:/UIDesigns/ECMS/" local="130681554211862607" remote="130681554210000000" Dst="1" />
 <file name="kendoUI-redefined.css" server="Z:/UIDesigns/ECMS/" local="130681554208562277" remote="130681554200000000" Dst="1" />
+<file name="JQX-redefined.css" server="D:/xampp/htdocs/ECMS/" local="130682282859976182" remote="130682282850000000" Dst="1" />
+<file name="kendoUI-redefined.css" server="D:/xampp/htdocs/ECMS/" local="130682286720310182" remote="130682286720000000" Dst="1" />
 </dwsync>

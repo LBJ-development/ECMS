@@ -20,4 +20,14 @@
 <file name="script.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523460474431" remote="130668523460000000" Dst="1" />
 <file name="template1.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523460564431" remote="130668523460000000" Dst="1" />
 <file name="template2.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523460654431" remote="130668523460000000" Dst="1" />
+<file name="animations.css" server="D:/xampp/htdocs/ECMS/" local="130681431503890936" remote="130681431500000000" Dst="1" />
+<file name="index-debug.html" server="D:/xampp/htdocs/ECMS/" local="130681431503920936" remote="130681431500000000" Dst="1" />
+<file name="index-jquery.html" server="D:/xampp/htdocs/ECMS/" local="130681431503940936" remote="130681431500000000" Dst="1" />
+<file name="index-production.html" server="D:/xampp/htdocs/ECMS/" local="130681431503970936" remote="130681431500000000" Dst="1" />
+<file name="index.html" server="D:/xampp/htdocs/ECMS/" local="130681431503990936" remote="130681431500000000" Dst="1" />
+<file name="manifest.json" server="D:/xampp/htdocs/ECMS/" local="130681431503990936" remote="130681431500000000" Dst="1" />
+<file name="protractor.js" server="D:/xampp/htdocs/ECMS/" local="130681431504020936" remote="130681431500000000" Dst="1" />
+<file name="script.js" server="D:/xampp/htdocs/ECMS/" local="130681431504040936" remote="130681431500000000" Dst="1" />
+<file name="template1.html" server="D:/xampp/htdocs/ECMS/" local="130681431504060936" remote="130681431500000000" Dst="1" />
+<file name="template2.html" server="D:/xampp/htdocs/ECMS/" local="130681431504080936" remote="130681431500000000" Dst="1" />
 </dwsync>

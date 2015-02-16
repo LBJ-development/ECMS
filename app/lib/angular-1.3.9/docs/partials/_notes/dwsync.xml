@@ -10,4 +10,9 @@
 <file name="guide.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523490194431" remote="130668523490000000" Dst="1" />
 <file name="misc.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523490284431" remote="130668523490000000" Dst="1" />
 <file name="tutorial.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523490354431" remote="130668523490000000" Dst="1" />
+<file name="api.html" server="D:/xampp/htdocs/ECMS/" local="130681431512650936" remote="130681431510000000" Dst="1" />
+<file name="error.html" server="D:/xampp/htdocs/ECMS/" local="130681431517130936" remote="130681431510000000" Dst="1" />
+<file name="guide.html" server="D:/xampp/htdocs/ECMS/" local="130681431518830936" remote="130681431510000000" Dst="1" />
+<file name="misc.html" server="D:/xampp/htdocs/ECMS/" local="130681431519330936" remote="130681431510000000" Dst="1" />
+<file name="tutorial.html" server="D:/xampp/htdocs/ECMS/" local="130681431519430936" remote="130681431510000000" Dst="1" />
 </dwsync>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="CC-general.less" server="D:/xampp/htdocs/ECMS/" local="130675362017284299" remote="130675362010000000" Dst="1" />
-<file name="CC-typography.less" server="D:/xampp/htdocs/ECMS/" local="130673768325543578" remote="130673768320000000" Dst="1" />
-<file name="CC-variables.less" server="D:/xampp/htdocs/ECMS/" local="130673783645752578" remote="130673783640000000" Dst="1" />
-<file name="CC-forms.less" server="D:/xampp/htdocs/ECMS/" local="130673812007012578" remote="130673812000000000" Dst="1" />
+<file name="CC-general.less" server="D:/xampp/htdocs/ECMS/" local="130682269224654182" remote="130682269220000000" Dst="1" />
+<file name="CC-typography.less" server="D:/xampp/htdocs/ECMS/" local="130682265730472182" remote="130682265730000000" Dst="1" />
+<file name="CC-variables.less" server="D:/xampp/htdocs/ECMS/" local="130682282853116182" remote="130682282850000000" Dst="1" />
+<file name="CC-forms.less" server="D:/xampp/htdocs/ECMS/" local="130682270715254182" remote="130682270710000000" Dst="1" />
 <file name="480.less" server="C:/tomcat/webapps/ecms/" local="130662403713872983" remote="130662403710000000" Dst="1" />
 <file name="650.less" server="C:/tomcat/webapps/ecms/" local="130662403820041361" remote="130662403820000000" Dst="1" />
 <file name="850.less" server="C:/tomcat/webapps/ecms/" local="130662403259351793" remote="130662403250000000" Dst="1" />
@@ -37,4 +37,17 @@
 <file name="CC-typography.less" server="Z:/ECMS/" local="130676485841818701" remote="130676485840000000" Dst="1" />
 <file name="CC-variables.less" server="Z:/ECMS/" local="130677309937053559" remote="130677309930000000" Dst="1" />
 <file name="JQX-redefined.less" server="Z:/ECMS/" local="130677343513030915" remote="130677343510000000" Dst="1" />
+<file name="480.less" server="D:/xampp/htdocs/ECMS/" local="130681431642390936" remote="130681431640000000" Dst="1" />
+<file name="650.less" server="D:/xampp/htdocs/ECMS/" local="130681431642390936" remote="130681431640000000" Dst="1" />
+<file name="850.less" server="D:/xampp/htdocs/ECMS/" local="130681431642400936" remote="130681431640000000" Dst="1" />
+<file name="CC-masthead.less" server="D:/xampp/htdocs/ECMS/" local="130681431642410936" remote="130681431640000000" Dst="1" />
+<file name="CC-mixins.less" server="D:/xampp/htdocs/ECMS/" local="130681554202771698" remote="130681554200000000" Dst="1" />
+<file name="CC-styles.less" server="D:/xampp/htdocs/ECMS/" local="130681544062187741" remote="130681544060000000" Dst="1" />
+<file name="colour.less" server="D:/xampp/htdocs/ECMS/" local="130681431642450936" remote="130681431640000000" Dst="1" />
+<file name="forms.less" server="D:/xampp/htdocs/ECMS/" local="130681431642450936" remote="130681431640000000" Dst="1" />
+<file name="JQX-redefined.less" server="D:/xampp/htdocs/ECMS/" local="130681544504041922" remote="130681544500000000" Dst="1" />
+<file name="kendoUI-redefined.less" server="D:/xampp/htdocs/ECMS/" local="130682285330730182" remote="130682285330000000" Dst="1" />
+<file name="mixins.less" server="D:/xampp/htdocs/ECMS/" local="130681431642460936" remote="130681431640000000" Dst="1" />
+<file name="reset.less" server="D:/xampp/htdocs/ECMS/" local="130681431642460936" remote="130681431640000000" Dst="1" />
+<file name="variables.less" server="D:/xampp/htdocs/ECMS/" local="130681431642470936" remote="130681431640000000" Dst="1" />
 </dwsync>

@@ -24,4 +24,16 @@
 <file name="ngRoute.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523491154431" remote="130668523490000000" Dst="1" />
 <file name="ngSanitize.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523491224431" remote="130668523490000000" Dst="1" />
 <file name="ngTouch.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523491304431" remote="130668523490000000" Dst="1" />
+<file name="auto.html" server="D:/xampp/htdocs/ECMS/" local="130681431512720936" remote="130681431510000000" Dst="1" />
+<file name="ng.html" server="D:/xampp/htdocs/ECMS/" local="130681431512800936" remote="130681431510000000" Dst="1" />
+<file name="ngAnimate.html" server="D:/xampp/htdocs/ECMS/" local="130681431515810936" remote="130681431510000000" Dst="1" />
+<file name="ngAria.html" server="D:/xampp/htdocs/ECMS/" local="130681431515930936" remote="130681431510000000" Dst="1" />
+<file name="ngCookies.html" server="D:/xampp/htdocs/ECMS/" local="130681431516030936" remote="130681431510000000" Dst="1" />
+<file name="ngMessages.html" server="D:/xampp/htdocs/ECMS/" local="130681431516120936" remote="130681431510000000" Dst="1" />
+<file name="ngMock.html" server="D:/xampp/htdocs/ECMS/" local="130681431516220936" remote="130681431510000000" Dst="1" />
+<file name="ngMockE2E.html" server="D:/xampp/htdocs/ECMS/" local="130681431516580936" remote="130681431510000000" Dst="1" />
+<file name="ngResource.html" server="D:/xampp/htdocs/ECMS/" local="130681431516640936" remote="130681431510000000" Dst="1" />
+<file name="ngRoute.html" server="D:/xampp/htdocs/ECMS/" local="130681431516700936" remote="130681431510000000" Dst="1" />
+<file name="ngSanitize.html" server="D:/xampp/htdocs/ECMS/" local="130681431516880936" remote="130681431510000000" Dst="1" />
+<file name="ngTouch.html" server="D:/xampp/htdocs/ECMS/" local="130681431516980936" remote="130681431510000000" Dst="1" />
 </dwsync>

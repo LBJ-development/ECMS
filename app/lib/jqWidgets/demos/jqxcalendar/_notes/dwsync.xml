@@ -14,4 +14,18 @@
 <file name="rtl.htm" server="Z:/ECMS/" local="130543337360000000" remote="130543337360000000" Dst="1" />
 <file name="showweekoftheyear.htm" server="Z:/ECMS/" local="130543337360000000" remote="130543337360000000" Dst="1" />
 <file name="specialdates.htm" server="Z:/ECMS/" local="130543337360000000" remote="130543337360000000" Dst="1" />
+<file name="calendar-fluid-size.htm" server="D:/xampp/htdocs/ECMS/" local="130681454828074376" remote="130681454820000000" Dst="1" />
+<file name="defaultfunctionality.htm" server="D:/xampp/htdocs/ECMS/" local="130681454834204989" remote="130681454830000000" Dst="1" />
+<file name="disabledcalendar.htm" server="D:/xampp/htdocs/ECMS/" local="130681454840325601" remote="130681454840000000" Dst="1" />
+<file name="displayweekends.htm" server="D:/xampp/htdocs/ECMS/" local="130681454846346203" remote="130681454840000000" Dst="1" />
+<file name="events.htm" server="D:/xampp/htdocs/ECMS/" local="130681454852616830" remote="130681454850000000" Dst="1" />
+<file name="firstdayofweek.htm" server="D:/xampp/htdocs/ECMS/" local="130681454860107579" remote="130681454860000000" Dst="1" />
+<file name="hideothermonthdays.htm" server="D:/xampp/htdocs/ECMS/" local="130681454866208189" remote="130681454860000000" Dst="1" />
+<file name="keyboardsupport.htm" server="D:/xampp/htdocs/ECMS/" local="130681454872278796" remote="130681454870000000" Dst="1" />
+<file name="localization.htm" server="D:/xampp/htdocs/ECMS/" local="130681454878459414" remote="130681454870000000" Dst="1" />
+<file name="rangeselection.htm" server="D:/xampp/htdocs/ECMS/" local="130681454884530021" remote="130681454880000000" Dst="1" />
+<file name="restrictdaterange.htm" server="D:/xampp/htdocs/ECMS/" local="130681454890680636" remote="130681454890000000" Dst="1" />
+<file name="rtl.htm" server="D:/xampp/htdocs/ECMS/" local="130681454896651233" remote="130681454890000000" Dst="1" />
+<file name="showweekoftheyear.htm" server="D:/xampp/htdocs/ECMS/" local="130681454902681836" remote="130681454900000000" Dst="1" />
+<file name="specialdates.htm" server="D:/xampp/htdocs/ECMS/" local="130681454908912459" remote="130681454900000000" Dst="1" />
 </dwsync>

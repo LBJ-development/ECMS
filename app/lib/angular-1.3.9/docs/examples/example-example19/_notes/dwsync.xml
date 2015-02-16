@@ -14,4 +14,11 @@
 <file name="manifest.json" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523424694431" remote="130668523420000000" Dst="1" />
 <file name="my-dialog.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523424784431" remote="130668523420000000" Dst="1" />
 <file name="script.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523424864431" remote="130668523420000000" Dst="1" />
+<file name="index-debug.html" server="D:/xampp/htdocs/ECMS/" local="130681431495380936" remote="130681431490000000" Dst="1" />
+<file name="index-jquery.html" server="D:/xampp/htdocs/ECMS/" local="130681431495410936" remote="130681431490000000" Dst="1" />
+<file name="index-production.html" server="D:/xampp/htdocs/ECMS/" local="130681431495420936" remote="130681431490000000" Dst="1" />
+<file name="index.html" server="D:/xampp/htdocs/ECMS/" local="130681431495440936" remote="130681431490000000" Dst="1" />
+<file name="manifest.json" server="D:/xampp/htdocs/ECMS/" local="130681431495450936" remote="130681431490000000" Dst="1" />
+<file name="my-dialog.html" server="D:/xampp/htdocs/ECMS/" local="130681431495460936" remote="130681431490000000" Dst="1" />
+<file name="script.js" server="D:/xampp/htdocs/ECMS/" local="130681431495480936" remote="130681431490000000" Dst="1" />
 </dwsync>

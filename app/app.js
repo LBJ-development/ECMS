@@ -6,8 +6,6 @@ var app = angular.module('ECMSapp', [
 	'ECMSapp.login',
 	'ECMSapp.home',
 	'ECMSapp.adminMain',
-	'jqwidgets', 
-	'jqwidgets-amd',
 	'kendo.directives' 
 	])
 

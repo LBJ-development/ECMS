@@ -5,4 +5,9 @@
 <file name="EmployeeModel.edmx" server="Z:/ECMS/" local="130495764680000000" remote="130495764680000000" Dst="1" />
 <file name="EmployeeModel.edmx.diagram" server="Z:/ECMS/" local="130495764680000000" remote="130495764680000000" Dst="1" />
 <file name="EmployeeModel1.Designer.cs" server="Z:/ECMS/" local="130518125500000000" remote="130518125500000000" Dst="1" />
+<file name="Employee.cs" server="D:/xampp/htdocs/ECMS/" local="130681431412460936" remote="130681431410000000" Dst="1" />
+<file name="EmployeeModel.Designer.cs" server="D:/xampp/htdocs/ECMS/" local="130681431412470936" remote="130681431410000000" Dst="1" />
+<file name="EmployeeModel.edmx" server="D:/xampp/htdocs/ECMS/" local="130681431412470936" remote="130681431410000000" Dst="1" />
+<file name="EmployeeModel.edmx.diagram" server="D:/xampp/htdocs/ECMS/" local="130681431412480936" remote="130681431410000000" Dst="1" />
+<file name="EmployeeModel1.Designer.cs" server="D:/xampp/htdocs/ECMS/" local="130681431412490936" remote="130681431410000000" Dst="1" />
 </dwsync>

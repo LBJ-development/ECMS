@@ -22,4 +22,26 @@
 <file name="rendering.htm" server="Z:/ECMS/" local="130543337520000000" remote="130543337520000000" Dst="1" />
 <file name="rtl.htm" server="Z:/ECMS/" local="130543337520000000" remote="130543337520000000" Dst="1" />
 <file name="textwithicons.htm" server="Z:/ECMS/" local="130543337520000000" remote="130543337520000000" Dst="1" />
+<file name="alignment.htm" server="D:/xampp/htdocs/ECMS/" local="130681431429710936" remote="130681431420000000" Dst="1" />
+<file name="animation.htm" server="D:/xampp/htdocs/ECMS/" local="130681431429760936" remote="130681431420000000" Dst="1" />
+<file name="autoopen.htm" server="D:/xampp/htdocs/ECMS/" local="130681431429810936" remote="130681431420000000" Dst="1" />
+<file name="bindingtojson.htm" server="D:/xampp/htdocs/ECMS/" local="130681431429870936" remote="130681431420000000" Dst="1" />
+<file name="bindingtoremotedata.htm" server="D:/xampp/htdocs/ECMS/" local="130681431429920936" remote="130681431420000000" Dst="1" />
+<file name="bindingtotsv.htm" server="D:/xampp/htdocs/ECMS/" local="130681431429970936" remote="130681431420000000" Dst="1" />
+<file name="bindingtoxml.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430020936" remote="130681431430000000" Dst="1" />
+<file name="categories.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430070936" remote="130681431430000000" Dst="1" />
+<file name="checkboxes.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430120936" remote="130681431430000000" Dst="1" />
+<file name="cookies.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430170936" remote="130681431430000000" Dst="1" />
+<file name="defaultfunctionality.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430220936" remote="130681431430000000" Dst="1" />
+<file name="dropdownlist-filtering.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430270936" remote="130681431430000000" Dst="1" />
+<file name="dropdownlist-fluid-size.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430320936" remote="130681431430000000" Dst="1" />
+<file name="dropdownlist-from-select.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430370936" remote="130681431430000000" Dst="1" />
+<file name="dropdownlist-from-ul.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430410936" remote="130681431430000000" Dst="1" />
+<file name="dropdownlistapi.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430460936" remote="130681431430000000" Dst="1" />
+<file name="events.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430520936" remote="130681431430000000" Dst="1" />
+<file name="keyboardsupport.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430570936" remote="130681431430000000" Dst="1" />
+<file name="loadfromselect.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430620936" remote="130681431430000000" Dst="1" />
+<file name="rendering.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430680936" remote="130681431430000000" Dst="1" />
+<file name="rtl.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430730936" remote="130681431430000000" Dst="1" />
+<file name="textwithicons.htm" server="D:/xampp/htdocs/ECMS/" local="130681431430780936" remote="130681431430000000" Dst="1" />
 </dwsync>

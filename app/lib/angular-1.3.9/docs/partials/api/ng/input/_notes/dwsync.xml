@@ -22,4 +22,15 @@
 <file name="input[time].html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523501184431" remote="130668523500000000" Dst="1" />
 <file name="input[url].html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523501254431" remote="130668523500000000" Dst="1" />
 <file name="input[week].html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523501334431" remote="130668523500000000" Dst="1" />
+<file name="input[checkbox].html" server="D:/xampp/htdocs/ECMS/" local="130681431514560936" remote="130681431510000000" Dst="1" />
+<file name="input[date].html" server="D:/xampp/htdocs/ECMS/" local="130681431514580936" remote="130681431510000000" Dst="1" />
+<file name="input[datetime-local].html" server="D:/xampp/htdocs/ECMS/" local="130681431514600936" remote="130681431510000000" Dst="1" />
+<file name="input[email].html" server="D:/xampp/htdocs/ECMS/" local="130681431514620936" remote="130681431510000000" Dst="1" />
+<file name="input[month].html" server="D:/xampp/htdocs/ECMS/" local="130681431514640936" remote="130681431510000000" Dst="1" />
+<file name="input[number].html" server="D:/xampp/htdocs/ECMS/" local="130681431514650936" remote="130681431510000000" Dst="1" />
+<file name="input[radio].html" server="D:/xampp/htdocs/ECMS/" local="130681431514670936" remote="130681431510000000" Dst="1" />
+<file name="input[text].html" server="D:/xampp/htdocs/ECMS/" local="130681431514680936" remote="130681431510000000" Dst="1" />
+<file name="input[time].html" server="D:/xampp/htdocs/ECMS/" local="130681431514700936" remote="130681431510000000" Dst="1" />
+<file name="input[url].html" server="D:/xampp/htdocs/ECMS/" local="130681431514720936" remote="130681431510000000" Dst="1" />
+<file name="input[week].html" server="D:/xampp/htdocs/ECMS/" local="130681431514730936" remote="130681431510000000" Dst="1" />
 </dwsync>

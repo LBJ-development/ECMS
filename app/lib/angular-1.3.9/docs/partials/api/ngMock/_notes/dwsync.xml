@@ -10,4 +10,9 @@
 <file name="provider.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523506574431" remote="130668523500000000" Dst="1" />
 <file name="service.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523506654431" remote="130668523500000000" Dst="1" />
 <file name="type.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523506714431" remote="130668523500000000" Dst="1" />
+<file name="function.html" server="D:/xampp/htdocs/ECMS/" local="130681431516240936" remote="130681431510000000" Dst="1" />
+<file name="object.html" server="D:/xampp/htdocs/ECMS/" local="130681431516320936" remote="130681431510000000" Dst="1" />
+<file name="provider.html" server="D:/xampp/htdocs/ECMS/" local="130681431516360936" remote="130681431510000000" Dst="1" />
+<file name="service.html" server="D:/xampp/htdocs/ECMS/" local="130681431516400936" remote="130681431510000000" Dst="1" />
+<file name="type.html" server="D:/xampp/htdocs/ECMS/" local="130681431516520936" remote="130681431510000000" Dst="1" />
 </dwsync>

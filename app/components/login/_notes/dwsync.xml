@@ -8,11 +8,13 @@
 <file name="testUser.php" server="Z:/UIDesigns/ECMS/" local="130669458766048594" remote="130669458810000000" Dst="1" />
 <file name="login.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675409252356799" remote="130675409250000000" Dst="1" />
 <file name="loginService.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675580146975788" remote="130675580140000000" Dst="1" />
-<file name="login.html" server="D:/xampp/htdocs/ECMS/" local="130675347102226415" remote="130675347100000000" Dst="1" />
-<file name="loginCtrl.js" server="D:/xampp/htdocs/ECMS/" local="130675356030814299" remote="130675356030000000" Dst="1" />
-<file name="loginService.js" server="D:/xampp/htdocs/ECMS/" local="130675364812264299" remote="130675364810000000" Dst="1" />
+<file name="login.html" server="D:/xampp/htdocs/ECMS/" local="130681431642670936" remote="130681431640000000" Dst="1" />
+<file name="loginCtrl.js" server="D:/xampp/htdocs/ECMS/" local="130681431642710936" remote="130681431640000000" Dst="1" />
+<file name="loginService.js" server="D:/xampp/htdocs/ECMS/" local="130681465747526306" remote="130681465740000000" Dst="1" />
 <file name="loginCtrl.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675402810000000" remote="130675402810000000" Dst="1" />
 <file name="login.js" server="Z:/ECMS/" local="130668663989055367" remote="130668663980000000" Dst="1" />
 <file name="loginCtrl.js" server="Z:/ECMS/" local="130675402810000000" remote="130675402810000000" Dst="1" />
 <file name="testUser.php" server="Z:/ECMS/" local="130673771962563578" remote="130673771960000000" Dst="1" />
+<file name="login.js" server="D:/xampp/htdocs/ECMS/" local="130681431642690936" remote="130681431640000000" Dst="1" />
+<file name="testUser.php" server="D:/xampp/htdocs/ECMS/" local="130681431642750936" remote="130681431640000000" Dst="1" />
 </dwsync>

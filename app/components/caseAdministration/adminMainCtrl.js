@@ -121,4 +121,17 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
             enabletooltips: true
 
 		};
-});
+	})
+
+.controller("DatePickerCtrl", function($scope){
+          $scope.monthSelectorOptions = {
+            start: "year",
+            depth: "year"
+          };
+          $scope.getType = function(x) {
+            return typeof x;
+          };
+          $scope.isDate = function(x) {
+            return x instanceof Date;
+          };
+      })

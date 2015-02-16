@@ -3,4 +3,7 @@
 <file name="Details.cshtml" server="Z:/ECMS/" local="130495829140000000" remote="130495829140000000" Dst="1" />
 <file name="Register.cshtml" server="Z:/ECMS/" local="130505420260000000" remote="130505420260000000" Dst="1" />
 <file name="RegisterFailed.cshtml" server="Z:/ECMS/" local="130505420160000000" remote="130505420160000000" Dst="1" />
+<file name="Details.cshtml" server="D:/xampp/htdocs/ECMS/" local="130681431412500936" remote="130681431410000000" Dst="1" />
+<file name="Register.cshtml" server="D:/xampp/htdocs/ECMS/" local="130681431412510936" remote="130681431410000000" Dst="1" />
+<file name="RegisterFailed.cshtml" server="D:/xampp/htdocs/ECMS/" local="130681431412520936" remote="130681431410000000" Dst="1" />
 </dwsync>

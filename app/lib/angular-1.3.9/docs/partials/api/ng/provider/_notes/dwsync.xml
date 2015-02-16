@@ -26,4 +26,17 @@
 <file name="$rootScopeProvider.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523502304431" remote="130668523500000000" Dst="1" />
 <file name="$sceDelegateProvider.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523502374431" remote="130668523500000000" Dst="1" />
 <file name="$sceProvider.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130668523502454431" remote="130668523500000000" Dst="1" />
+<file name="$anchorScrollProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514810936" remote="130681431510000000" Dst="1" />
+<file name="$animateProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514820936" remote="130681431510000000" Dst="1" />
+<file name="$compileProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514860936" remote="130681431510000000" Dst="1" />
+<file name="$controllerProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514870936" remote="130681431510000000" Dst="1" />
+<file name="$filterProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514890936" remote="130681431510000000" Dst="1" />
+<file name="$httpProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514900936" remote="130681431510000000" Dst="1" />
+<file name="$interpolateProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514930936" remote="130681431510000000" Dst="1" />
+<file name="$locationProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514950936" remote="130681431510000000" Dst="1" />
+<file name="$logProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514970936" remote="130681431510000000" Dst="1" />
+<file name="$parseProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431514980936" remote="130681431510000000" Dst="1" />
+<file name="$rootScopeProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431515000936" remote="130681431510000000" Dst="1" />
+<file name="$sceDelegateProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431515010936" remote="130681431510000000" Dst="1" />
+<file name="$sceProvider.html" server="D:/xampp/htdocs/ECMS/" local="130681431515030936" remote="130681431510000000" Dst="1" />
 </dwsync>
