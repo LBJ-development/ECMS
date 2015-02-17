@@ -28,4 +28,18 @@
 <file name="Tree.cshtml" server="D:/xampp/htdocs/ECMS/" local="130681431412640936" remote="130681431410000000" Dst="1" />
 <file name="TreeGrid.cshtml" server="D:/xampp/htdocs/ECMS/" local="130681431412650936" remote="130681431410000000" Dst="1" />
 <file name="TreeWithCheckboxes.cshtml" server="D:/xampp/htdocs/ECMS/" local="130681431412650936" remote="130681431410000000" Dst="1" />
+<file name="Chart.cshtml" server="Z:/ECMS/app/" local="130686537756992440" remote="130686537750000000" Dst="1" />
+<file name="ComboBox.cshtml" server="Z:/ECMS/app/" local="130686537756992440" remote="130686537750000000" Dst="1" />
+<file name="DataTable.cshtml" server="Z:/ECMS/app/" local="130686537756992440" remote="130686537750000000" Dst="1" />
+<file name="DropDownList.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="Grid.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="ListBox.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="Login.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="LoginFailed.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="LoginForm.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="RegistrationForm.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="Store.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="Tree.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="TreeGrid.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
+<file name="TreeWithCheckboxes.cshtml" server="Z:/ECMS/app/" local="130686537757092424" remote="130686537750000000" Dst="1" />
 </dwsync>

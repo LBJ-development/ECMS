@@ -50,4 +50,21 @@
 <file name="mixins.less" server="D:/xampp/htdocs/ECMS/" local="130681431642460936" remote="130681431640000000" Dst="1" />
 <file name="reset.less" server="D:/xampp/htdocs/ECMS/" local="130681431642460936" remote="130681431640000000" Dst="1" />
 <file name="variables.less" server="D:/xampp/htdocs/ECMS/" local="130681431642470936" remote="130681431640000000" Dst="1" />
+<file name="480.less" server="Z:/ECMS/app/" local="130686537509831992" remote="130686537500000000" Dst="1" />
+<file name="650.less" server="Z:/ECMS/app/" local="130686537509831992" remote="130686537500000000" Dst="1" />
+<file name="850.less" server="Z:/ECMS/app/" local="130686537509831992" remote="130686537500000000" Dst="1" />
+<file name="CC-forms.less" server="Z:/ECMS/app/" local="130686573214997985" remote="130686537510000000" Dst="1" />
+<file name="CC-general.less" server="Z:/ECMS/app/" local="130686537513131464" remote="130686537510000000" Dst="1" />
+<file name="CC-masthead.less" server="Z:/ECMS/app/" local="130686537513131464" remote="130686537510000000" Dst="1" />
+<file name="CC-mixins.less" server="Z:/ECMS/app/" local="130686537513131464" remote="130686537510000000" Dst="1" />
+<file name="CC-styles.less" server="Z:/ECMS/app/" local="130686537513231448" remote="130686537510000000" Dst="1" />
+<file name="CC-typography.less" server="Z:/ECMS/app/" local="130686537513231448" remote="130686537510000000" Dst="1" />
+<file name="CC-variables.less" server="Z:/ECMS/app/" local="130686537513231448" remote="130686537510000000" Dst="1" />
+<file name="colour.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
+<file name="forms.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
+<file name="JQX-redefined.less" server="Z:/ECMS/app/" local="130686537513231448" remote="130686537510000000" Dst="1" />
+<file name="kendoUI-redefined.less" server="Z:/ECMS/app/" local="130686578371323566" remote="130686578370000000" Dst="1" />
+<file name="mixins.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
+<file name="reset.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
+<file name="variables.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
 </dwsync>

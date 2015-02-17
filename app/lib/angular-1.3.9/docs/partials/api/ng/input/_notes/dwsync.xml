@@ -33,4 +33,15 @@
 <file name="input[time].html" server="D:/xampp/htdocs/ECMS/" local="130681431514700936" remote="130681431510000000" Dst="1" />
 <file name="input[url].html" server="D:/xampp/htdocs/ECMS/" local="130681431514720936" remote="130681431510000000" Dst="1" />
 <file name="input[week].html" server="D:/xampp/htdocs/ECMS/" local="130681431514730936" remote="130681431510000000" Dst="1" />
+<file name="input[checkbox].html" server="Z:/ECMS/app/" local="130686537651009400" remote="130686537650000000" Dst="1" />
+<file name="input[date].html" server="Z:/ECMS/app/" local="130686537651109384" remote="130686537650000000" Dst="1" />
+<file name="input[datetime-local].html" server="Z:/ECMS/app/" local="130686537651109384" remote="130686537650000000" Dst="1" />
+<file name="input[email].html" server="Z:/ECMS/app/" local="130686537651109384" remote="130686537650000000" Dst="1" />
+<file name="input[month].html" server="Z:/ECMS/app/" local="130686537651109384" remote="130686537650000000" Dst="1" />
+<file name="input[number].html" server="Z:/ECMS/app/" local="130686537651109384" remote="130686537650000000" Dst="1" />
+<file name="input[radio].html" server="Z:/ECMS/app/" local="130686537651209368" remote="130686537650000000" Dst="1" />
+<file name="input[text].html" server="Z:/ECMS/app/" local="130686537651209368" remote="130686537650000000" Dst="1" />
+<file name="input[time].html" server="Z:/ECMS/app/" local="130686537651209368" remote="130686537650000000" Dst="1" />
+<file name="input[url].html" server="Z:/ECMS/app/" local="130686537651209368" remote="130686537650000000" Dst="1" />
+<file name="input[week].html" server="Z:/ECMS/app/" local="130686537651309352" remote="130686537650000000" Dst="1" />
 </dwsync>

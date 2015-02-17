@@ -8,4 +8,8 @@
 <file name="view.txt" server="D:/xampp/htdocs/ECMS/" local="130681431412840936" remote="130681431410000000" Dst="1" />
 <file name="viewregister.txt" server="D:/xampp/htdocs/ECMS/" local="130681431412840936" remote="130681431410000000" Dst="1" />
 <file name="viewregisterfailed.txt" server="D:/xampp/htdocs/ECMS/" local="130681431412850936" remote="130681431410000000" Dst="1" />
+<file name="controller.txt" server="Z:/ECMS/app/" local="130686537757492360" remote="130686537750000000" Dst="1" />
+<file name="view.txt" server="Z:/ECMS/app/" local="130686537757492360" remote="130686537750000000" Dst="1" />
+<file name="viewregister.txt" server="Z:/ECMS/app/" local="130686537757492360" remote="130686537750000000" Dst="1" />
+<file name="viewregisterfailed.txt" server="Z:/ECMS/app/" local="130686537757492360" remote="130686537750000000" Dst="1" />
 </dwsync>

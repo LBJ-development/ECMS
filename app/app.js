@@ -6,9 +6,11 @@ var app = angular.module('ECMSapp', [
 	'ECMSapp.login',
 	'ECMSapp.home',
 	'ECMSapp.adminMain',
+	'ECMSapp.mainMenu',
 	'kendo.directives' 
 	])
 
-.config(['$routeProvider', function($routeProvider) {
+/*.config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/login'});
 }]);
+*/

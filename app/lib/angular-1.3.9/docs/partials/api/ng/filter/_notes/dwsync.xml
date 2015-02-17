@@ -27,4 +27,13 @@
 <file name="number.html" server="D:/xampp/htdocs/ECMS/" local="130681431514010936" remote="130681431510000000" Dst="1" />
 <file name="orderBy.html" server="D:/xampp/htdocs/ECMS/" local="130681431514030936" remote="130681431510000000" Dst="1" />
 <file name="uppercase.html" server="D:/xampp/htdocs/ECMS/" local="130681431514050936" remote="130681431510000000" Dst="1" />
+<file name="currency.html" server="Z:/ECMS/app/" local="130686537645310312" remote="130686537640000000" Dst="1" />
+<file name="date.html" server="Z:/ECMS/app/" local="130686537645310312" remote="130686537640000000" Dst="1" />
+<file name="filter.html" server="Z:/ECMS/app/" local="130686537650309512" remote="130686537650000000" Dst="1" />
+<file name="json.html" server="Z:/ECMS/app/" local="130686537650309512" remote="130686537650000000" Dst="1" />
+<file name="limitTo.html" server="Z:/ECMS/app/" local="130686537650309512" remote="130686537650000000" Dst="1" />
+<file name="lowercase.html" server="Z:/ECMS/app/" local="130686537650309512" remote="130686537650000000" Dst="1" />
+<file name="number.html" server="Z:/ECMS/app/" local="130686537650409496" remote="130686537650000000" Dst="1" />
+<file name="orderBy.html" server="Z:/ECMS/app/" local="130686537650409496" remote="130686537650000000" Dst="1" />
+<file name="uppercase.html" server="Z:/ECMS/app/" local="130686537650409496" remote="130686537650000000" Dst="1" />
 </dwsync>

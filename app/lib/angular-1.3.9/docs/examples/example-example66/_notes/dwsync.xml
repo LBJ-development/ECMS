@@ -18,4 +18,10 @@
 <file name="index.html" server="D:/xampp/htdocs/ECMS/" local="130681431502080936" remote="130681431500000000" Dst="1" />
 <file name="manifest.json" server="D:/xampp/htdocs/ECMS/" local="130681431502090936" remote="130681431500000000" Dst="1" />
 <file name="protractor.js" server="D:/xampp/htdocs/ECMS/" local="130681431502110936" remote="130681431500000000" Dst="1" />
+<file name="index-debug.html" server="Z:/ECMS/app/" local="130686537606716488" remote="130686537600000000" Dst="1" />
+<file name="index-jquery.html" server="Z:/ECMS/app/" local="130686537606716488" remote="130686537600000000" Dst="1" />
+<file name="index-production.html" server="Z:/ECMS/app/" local="130686537606816472" remote="130686537600000000" Dst="1" />
+<file name="index.html" server="Z:/ECMS/app/" local="130686537606816472" remote="130686537600000000" Dst="1" />
+<file name="manifest.json" server="Z:/ECMS/app/" local="130686537606816472" remote="130686537600000000" Dst="1" />
+<file name="protractor.js" server="Z:/ECMS/app/" local="130686537606816472" remote="130686537600000000" Dst="1" />
 </dwsync>

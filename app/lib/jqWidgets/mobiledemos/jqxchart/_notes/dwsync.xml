@@ -26,4 +26,17 @@
 <file name="javascript_chart_stacked_area_series.htm" server="D:/xampp/htdocs/ECMS/" local="130681431470190936" remote="130681431470000000" Dst="1" />
 <file name="javascript_chart_stacked_line_series.htm" server="D:/xampp/htdocs/ECMS/" local="130681431470230936" remote="130681431470000000" Dst="1" />
 <file name="javascript_chart_step_line_series.htm" server="D:/xampp/htdocs/ECMS/" local="130681431470280936" remote="130681431470000000" Dst="1" />
+<file name="javascript_chart_area_series.htm" server="Z:/ECMS/app/" local="130686537900579469" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_areaspline_series.htm" server="Z:/ECMS/app/" local="130686537900679453" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_bubbleSeries.htm" server="Z:/ECMS/app/" local="130686537900679453" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_column_series.htm" server="Z:/ECMS/app/" local="130686537900779437" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_combination_series.htm" server="Z:/ECMS/app/" local="130686537900879421" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_donut_series.htm" server="Z:/ECMS/app/" local="130686537900879421" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_line_series.htm" server="Z:/ECMS/app/" local="130686537900979405" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_pie_series.htm" server="Z:/ECMS/app/" local="130686537900979405" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_scatterXY.htm" server="Z:/ECMS/app/" local="130686537901079389" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_spline_series.htm" server="Z:/ECMS/app/" local="130686537901179373" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_stacked_area_series.htm" server="Z:/ECMS/app/" local="130686537901179373" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_stacked_line_series.htm" server="Z:/ECMS/app/" local="130686537901279357" remote="130686537900000000" Dst="1" />
+<file name="javascript_chart_step_line_series.htm" server="Z:/ECMS/app/" local="130686537901279357" remote="130686537900000000" Dst="1" />
 </dwsync>

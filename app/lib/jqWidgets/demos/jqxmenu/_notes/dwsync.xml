@@ -32,4 +32,20 @@
 <file name="opendirection.htm" server="D:/xampp/htdocs/ECMS/" local="130681431444840936" remote="130681431440000000" Dst="1" />
 <file name="rtl.htm" server="D:/xampp/htdocs/ECMS/" local="130681431444870936" remote="130681431440000000" Dst="1" />
 <file name="verticalmenu.htm" server="D:/xampp/htdocs/ECMS/" local="130681431444900936" remote="130681431440000000" Dst="1" />
+<file name="centeritems.htm" server="Z:/ECMS/app/" local="130686537824691613" remote="130686537820000000" Dst="1" />
+<file name="columns.htm" server="Z:/ECMS/app/" local="130686537824791597" remote="130686537820000000" Dst="1" />
+<file name="contextmenu.htm" server="Z:/ECMS/app/" local="130686537824791597" remote="130686537820000000" Dst="1" />
+<file name="defaultfunctionality.htm" server="Z:/ECMS/app/" local="130686537824791597" remote="130686537820000000" Dst="1" />
+<file name="events.htm" server="Z:/ECMS/app/" local="130686537824891581" remote="130686537820000000" Dst="1" />
+<file name="images.htm" server="Z:/ECMS/app/" local="130686537824991565" remote="130686537820000000" Dst="1" />
+<file name="keyboardnavigation.htm" server="Z:/ECMS/app/" local="130686537824991565" remote="130686537820000000" Dst="1" />
+<file name="localsource.htm" server="Z:/ECMS/app/" local="130686537825091549" remote="130686537820000000" Dst="1" />
+<file name="menu-fluid-size.htm" server="Z:/ECMS/app/" local="130686537825091549" remote="130686537820000000" Dst="1" />
+<file name="menubindingtojson.htm" server="Z:/ECMS/app/" local="130686537825191533" remote="130686537820000000" Dst="1" />
+<file name="menubindingxml.htm" server="Z:/ECMS/app/" local="130686537825191533" remote="130686537820000000" Dst="1" />
+<file name="menumobile.htm" server="Z:/ECMS/app/" local="130686537825291517" remote="130686537820000000" Dst="1" />
+<file name="minimized.htm" server="Z:/ECMS/app/" local="130686537825291517" remote="130686537820000000" Dst="1" />
+<file name="opendirection.htm" server="Z:/ECMS/app/" local="130686537825391501" remote="130686537820000000" Dst="1" />
+<file name="rtl.htm" server="Z:/ECMS/app/" local="130686537825391501" remote="130686537820000000" Dst="1" />
+<file name="verticalmenu.htm" server="Z:/ECMS/app/" local="130686537825391501" remote="130686537820000000" Dst="1" />
 </dwsync>

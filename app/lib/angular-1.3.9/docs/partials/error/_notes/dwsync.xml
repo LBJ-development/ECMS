@@ -63,4 +63,25 @@
 <file name="ngPattern.html" server="D:/xampp/htdocs/ECMS/" local="130681431518660936" remote="130681431510000000" Dst="1" />
 <file name="ngRepeat.html" server="D:/xampp/htdocs/ECMS/" local="130681431518700936" remote="130681431510000000" Dst="1" />
 <file name="ngTransclude.html" server="D:/xampp/htdocs/ECMS/" local="130681431518790936" remote="130681431510000000" Dst="1" />
+<file name="$animate.html" server="Z:/ECMS/app/" local="130686537668106664" remote="130686537660000000" Dst="1" />
+<file name="$cacheFactory.html" server="Z:/ECMS/app/" local="130686537668206648" remote="130686537660000000" Dst="1" />
+<file name="$compile.html" server="Z:/ECMS/app/" local="130686537672805912" remote="130686537670000000" Dst="1" />
+<file name="$controller.html" server="Z:/ECMS/app/" local="130686537673005880" remote="130686537670000000" Dst="1" />
+<file name="$http.html" server="Z:/ECMS/app/" local="130686537674105704" remote="130686537670000000" Dst="1" />
+<file name="$injector.html" server="Z:/ECMS/app/" local="130686537686603704" remote="130686537680000000" Dst="1" />
+<file name="$interpolate.html" server="Z:/ECMS/app/" local="130686537690903016" remote="130686537690000000" Dst="1" />
+<file name="$location.html" server="Z:/ECMS/app/" local="130686537690903016" remote="130686537690000000" Dst="1" />
+<file name="$parse.html" server="Z:/ECMS/app/" local="130686537691003000" remote="130686537690000000" Dst="1" />
+<file name="$q.html" server="Z:/ECMS/app/" local="130686537691202968" remote="130686537690000000" Dst="1" />
+<file name="$resource.html" server="Z:/ECMS/app/" local="130686537691302952" remote="130686537690000000" Dst="1" />
+<file name="$rootScope.html" server="Z:/ECMS/app/" local="130686537691402936" remote="130686537690000000" Dst="1" />
+<file name="$sanitize.html" server="Z:/ECMS/app/" local="130686537691502920" remote="130686537690000000" Dst="1" />
+<file name="$sce.html" server="Z:/ECMS/app/" local="130686537691502920" remote="130686537690000000" Dst="1" />
+<file name="jqLite.html" server="Z:/ECMS/app/" local="130686537691702888" remote="130686537690000000" Dst="1" />
+<file name="ng.html" server="Z:/ECMS/app/" local="130686537691802872" remote="130686537690000000" Dst="1" />
+<file name="ngModel.html" server="Z:/ECMS/app/" local="130686537695702248" remote="130686537690000000" Dst="1" />
+<file name="ngOptions.html" server="Z:/ECMS/app/" local="130686537699901576" remote="130686537690000000" Dst="1" />
+<file name="ngPattern.html" server="Z:/ECMS/app/" local="130686537700101544" remote="130686537700000000" Dst="1" />
+<file name="ngRepeat.html" server="Z:/ECMS/app/" local="130686537701001400" remote="130686537700000000" Dst="1" />
+<file name="ngTransclude.html" server="Z:/ECMS/app/" local="130686537703201048" remote="130686537700000000" Dst="1" />
 </dwsync>

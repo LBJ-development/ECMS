@@ -15,4 +15,9 @@
 <file name="index-production.html" server="D:/xampp/htdocs/ECMS/" local="130681431499120936" remote="130681431490000000" Dst="1" />
 <file name="index.html" server="D:/xampp/htdocs/ECMS/" local="130681431499150936" remote="130681431490000000" Dst="1" />
 <file name="manifest.json" server="D:/xampp/htdocs/ECMS/" local="130681431499160936" remote="130681431490000000" Dst="1" />
+<file name="index-debug.html" server="Z:/ECMS/app/" local="130686537571522120" remote="130686537570000000" Dst="1" />
+<file name="index-jquery.html" server="Z:/ECMS/app/" local="130686537590019160" remote="130686537590000000" Dst="1" />
+<file name="index-production.html" server="Z:/ECMS/app/" local="130686537590019160" remote="130686537590000000" Dst="1" />
+<file name="index.html" server="Z:/ECMS/app/" local="130686537590119144" remote="130686537590000000" Dst="1" />
+<file name="manifest.json" server="Z:/ECMS/app/" local="130686537590119144" remote="130686537590000000" Dst="1" />
 </dwsync>

@@ -28,4 +28,18 @@
 <file name="switchbutton.htm" server="D:/xampp/htdocs/ECMS/" local="130681454810402609" remote="130681454810000000" Dst="1" />
 <file name="templates.htm" server="D:/xampp/htdocs/ECMS/" local="130681454816163185" remote="130681454810000000" Dst="1" />
 <file name="togglebutton.htm" server="D:/xampp/htdocs/ECMS/" local="130681454821943763" remote="130681454820000000" Dst="1" />
+<file name="buttongroup.htm" server="Z:/ECMS/app/" local="130686537764091304" remote="130686537760000000" Dst="1" />
+<file name="buttons-fluid-size.htm" server="Z:/ECMS/app/" local="130686537764191288" remote="130686537760000000" Dst="1" />
+<file name="checkbox.htm" server="Z:/ECMS/app/" local="130686537766690888" remote="130686537760000000" Dst="1" />
+<file name="checkboxandknockoutjs.htm" server="Z:/ECMS/app/" local="130686537766790872" remote="130686537760000000" Dst="1" />
+<file name="defaultfunctionality.htm" server="Z:/ECMS/app/" local="130686537766790872" remote="130686537760000000" Dst="1" />
+<file name="dropdownbutton.htm" server="Z:/ECMS/app/" local="130686537766890856" remote="130686537760000000" Dst="1" />
+<file name="linkbutton.htm" server="Z:/ECMS/app/" local="130686537766890856" remote="130686537760000000" Dst="1" />
+<file name="radiobutton.htm" server="Z:/ECMS/app/" local="130686537766890856" remote="130686537760000000" Dst="1" />
+<file name="repeatbutton.htm" server="Z:/ECMS/app/" local="130686537766990840" remote="130686537760000000" Dst="1" />
+<file name="rtl.htm" server="Z:/ECMS/app/" local="130686537766990840" remote="130686537760000000" Dst="1" />
+<file name="select.htm" server="Z:/ECMS/app/" local="130686537767090824" remote="130686537760000000" Dst="1" />
+<file name="switchbutton.htm" server="Z:/ECMS/app/" local="130686537767190808" remote="130686537760000000" Dst="1" />
+<file name="templates.htm" server="Z:/ECMS/app/" local="130686537767190808" remote="130686537760000000" Dst="1" />
+<file name="togglebutton.htm" server="Z:/ECMS/app/" local="130686537767190808" remote="130686537760000000" Dst="1" />
 </dwsync>

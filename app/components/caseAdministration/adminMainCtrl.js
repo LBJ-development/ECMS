@@ -2,11 +2,11 @@
 
 angular.module('ECMSapp.adminMain', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
+/*.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/adminMain', {
     templateUrl: 'components/caseAdministration/adminMain.html'
   });
-}])
+}])*/
 
 .controller('AdminMainFilterCtrl', function($scope) {
 	

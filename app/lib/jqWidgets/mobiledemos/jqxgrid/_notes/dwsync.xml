@@ -12,4 +12,10 @@
 <file name="grid.htm" server="D:/xampp/htdocs/ECMS/" local="130681431471800936" remote="130681431470000000" Dst="1" />
 <file name="grouping.htm" server="D:/xampp/htdocs/ECMS/" local="130681431471870936" remote="130681431470000000" Dst="1" />
 <file name="paging.htm" server="D:/xampp/htdocs/ECMS/" local="130681431471940936" remote="130681431470000000" Dst="1" />
+<file name="columnsresize.htm" server="Z:/ECMS/app/" local="130686537902879101" remote="130686537900000000" Dst="1" />
+<file name="editing.htm" server="Z:/ECMS/app/" local="130686537903079069" remote="130686537900000000" Dst="1" />
+<file name="filtering.htm" server="Z:/ECMS/app/" local="130686537903079069" remote="130686537900000000" Dst="1" />
+<file name="grid.htm" server="Z:/ECMS/app/" local="130686537903179053" remote="130686537900000000" Dst="1" />
+<file name="grouping.htm" server="Z:/ECMS/app/" local="130686537903279037" remote="130686537900000000" Dst="1" />
+<file name="paging.htm" server="Z:/ECMS/app/" local="130686537903379021" remote="130686537900000000" Dst="1" />
 </dwsync>

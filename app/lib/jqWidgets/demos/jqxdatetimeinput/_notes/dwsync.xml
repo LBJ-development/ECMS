@@ -30,4 +30,19 @@
 <file name="restrictdaterange.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428810936" remote="130681431420000000" Dst="1" />
 <file name="rtl.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428850936" remote="130681431420000000" Dst="1" />
 <file name="timeinput.htm" server="D:/xampp/htdocs/ECMS/" local="130681431428900936" remote="130681431420000000" Dst="1" />
+<file name="alignment.htm" server="Z:/ECMS/app/" local="130686537796986040" remote="130686537790000000" Dst="1" />
+<file name="animation.htm" server="Z:/ECMS/app/" local="130686537797086024" remote="130686537790000000" Dst="1" />
+<file name="dateandtime.htm" server="Z:/ECMS/app/" local="130686537797086024" remote="130686537790000000" Dst="1" />
+<file name="datetimeinput-fluid-size.htm" server="Z:/ECMS/app/" local="130686537797186008" remote="130686537790000000" Dst="1" />
+<file name="defaultfunctionality.htm" server="Z:/ECMS/app/" local="130686537797186008" remote="130686537790000000" Dst="1" />
+<file name="disableddatetimeinput.htm" server="Z:/ECMS/app/" local="130686537797285992" remote="130686537790000000" Dst="1" />
+<file name="events.htm" server="Z:/ECMS/app/" local="130686537797385976" remote="130686537790000000" Dst="1" />
+<file name="formatdate.htm" server="Z:/ECMS/app/" local="130686537797385976" remote="130686537790000000" Dst="1" />
+<file name="keyboardsupport.htm" server="Z:/ECMS/app/" local="130686537797485960" remote="130686537790000000" Dst="1" />
+<file name="knockoutjs.htm" server="Z:/ECMS/app/" local="130686537797585944" remote="130686537790000000" Dst="1" />
+<file name="localization.htm" server="Z:/ECMS/app/" local="130686537797585944" remote="130686537790000000" Dst="1" />
+<file name="rangeselection.htm" server="Z:/ECMS/app/" local="130686537797685928" remote="130686537790000000" Dst="1" />
+<file name="restrictdaterange.htm" server="Z:/ECMS/app/" local="130686537797685928" remote="130686537790000000" Dst="1" />
+<file name="rtl.htm" server="Z:/ECMS/app/" local="130686537797785912" remote="130686537790000000" Dst="1" />
+<file name="timeinput.htm" server="Z:/ECMS/app/" local="130686537797785912" remote="130686537790000000" Dst="1" />
 </dwsync>

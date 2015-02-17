@@ -28,4 +28,18 @@
 <file name="rtl.htm" server="D:/xampp/htdocs/ECMS/" local="130681454896651233" remote="130681454890000000" Dst="1" />
 <file name="showweekoftheyear.htm" server="D:/xampp/htdocs/ECMS/" local="130681454902681836" remote="130681454900000000" Dst="1" />
 <file name="specialdates.htm" server="D:/xampp/htdocs/ECMS/" local="130681454908912459" remote="130681454900000000" Dst="1" />
+<file name="calendar-fluid-size.htm" server="Z:/ECMS/app/" local="130686537767290792" remote="130686537760000000" Dst="1" />
+<file name="defaultfunctionality.htm" server="Z:/ECMS/app/" local="130686537767390776" remote="130686537760000000" Dst="1" />
+<file name="disabledcalendar.htm" server="Z:/ECMS/app/" local="130686537767390776" remote="130686537760000000" Dst="1" />
+<file name="displayweekends.htm" server="Z:/ECMS/app/" local="130686537767490760" remote="130686537760000000" Dst="1" />
+<file name="events.htm" server="Z:/ECMS/app/" local="130686537767490760" remote="130686537760000000" Dst="1" />
+<file name="firstdayofweek.htm" server="Z:/ECMS/app/" local="130686537767590744" remote="130686537760000000" Dst="1" />
+<file name="hideothermonthdays.htm" server="Z:/ECMS/app/" local="130686537767690728" remote="130686537760000000" Dst="1" />
+<file name="keyboardsupport.htm" server="Z:/ECMS/app/" local="130686537767690728" remote="130686537760000000" Dst="1" />
+<file name="localization.htm" server="Z:/ECMS/app/" local="130686537767790712" remote="130686537760000000" Dst="1" />
+<file name="rangeselection.htm" server="Z:/ECMS/app/" local="130686537767890696" remote="130686537760000000" Dst="1" />
+<file name="restrictdaterange.htm" server="Z:/ECMS/app/" local="130686537767890696" remote="130686537760000000" Dst="1" />
+<file name="rtl.htm" server="Z:/ECMS/app/" local="130686537767990680" remote="130686537760000000" Dst="1" />
+<file name="showweekoftheyear.htm" server="Z:/ECMS/app/" local="130686537767990680" remote="130686537760000000" Dst="1" />
+<file name="specialdates.htm" server="Z:/ECMS/app/" local="130686537768090664" remote="130686537760000000" Dst="1" />
 </dwsync>
