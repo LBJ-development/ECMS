@@ -1,34 +1,38 @@
 // JavaScript Document{
- {
-	"menus":[
+ 
+[
 	
 	{
-		"menu": "Home",
+		"text": "Home",
 		"url": "/"
 	},
 	{
-		"menu": "Call Center",
-		"url": "/callcenter"
+		"text": "Call Management",
+		"url": "/callmanagement"
 	},
 	{
-		"menu": "Instance Management",
-		"url": "/instancemanagement"
-	},
-	{
-		"menu": "Case Administration",
+		"text": "Case Administration",
 		"url": "/caseadministration"
 	},
 	{
-		"menu": "Supervisor",
-		"url": "/supervisor"
+		"text": "Case Management",
+		"url": "/casemanagement"
 	},
 	{
-		"menu": "Reports",
+		"text": "Case Analysis",
+		"url": "/caseanalysis"
+	},
+	{
+		"text": "Person Management",
+		"url": "/personmanagement"
+	},
+	{
+		"text": "Reports",
 		"url": "/reports"
 	},
 	{
-		"menu": "Whatever",
-		"url": "/whatever"
+		"text": "Supervisor",
+		"url": "/supervisor"
 	}
 	]
-}
+

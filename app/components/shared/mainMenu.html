@@ -10,7 +10,18 @@
     <div class="CC-title"></div>
 </div>
 
-<div role="navigation">
+<ul kendo-menu k-data-source="menuSource"></ul>
+
+ <div class="box-col">
+    <h4>Remote data</h4>
+    <select kendo-drop-down-list
+            k-data-text-field="'ProductName'"
+            k-data-value-field="'ProductID'"
+            k-data-source="productsDataSource"
+            style="width: 200px"></select>
+  </div>
+
+<!--<div role="navigation">
 	<ul >
 		<li><a href="#/home" id="deskHomeBtn">Home</a></li>
 		<li><a href="#">Instance Management</a></li>
@@ -27,4 +38,4 @@
        		<span>Quick Search</span>
         </div>  
 	</ul> 
-</div>
+</div>-->
