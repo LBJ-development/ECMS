@@ -8,69 +8,78 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
     templateUrl: 'components/login/login.html',
   });
   
-  $routeProvider.when('/adminMain', {
-    templateUrl: 'components/caseAdministration/adminMain.html'
+   $routeProvider.when('/home', {
+    templateUrl: 'components/home/home.html'
   });
   
-   $routeProvider.otherwise({redirectTo: '/login'});
+  $routeProvider.when('/caseadministration', {
+    templateUrl: 'components/caseAdministration/caseAdministration.html'
+  });
+  
+   $routeProvider.when('/comingsoon', {
+    templateUrl: 'components/shared/comingSoon.html',
+  });
+
+   $routeProvider.otherwise({redirectTo: '/comingsoon'});
+
 }])
 
-.controller('MainMenuCtrl', function($http, $scope) {
-	
+.controller('MainMenuCtrl', function($http, $scope, $location) {
+
 	$scope.menuSource =    [{
         text: "Home",
-        cssClass: "myClass",                         // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
-        url: "/"                // Link URL if navigation is needed, optional.
+        spriteCssClass: "home-menu-btn", // Item image sprite CSS class, optional.                     
+        url: "#/home"                // Link URL if navigation is needed, optional.
       },{
          text: "Call Management",              
-          url: "/callmanagement"                               // content within an item
+          url: "#/callmanagement"                               // content within an item
        },
        {
          text: "Case Administration",
-		 url: "/caseadministration",
+		 url: "#/caseadministration",
        
-         	items: [{                                    // Sub item collection
-           		text: "Case Admin Main",
-		 		url: "/caseadministration"
-         		},
-                 {
+         	items: [ {
                    text: "Assign CM",
-		 			url: "/caseadministration/assigncm"
+				   cssClass: "sub-menu",
+		 			url: "#/caseadministration/assigncm"
                  },
 				 {
                    text: "Report Distribution",
-		 			url: "/caseadministration/reportdistribution"
+				    cssClass: "sub-menu",
+		 			url: "#/caseadministration/reportdistribution"
                  },
 				 {
                    text: "Manage Recoveries",
-		 			url: "/caseadministration/managerecoveries"
+				    cssClass: "sub-menu",
+		 			url: "#/caseadministration/managerecoveries"
                  },
 				 {
                    text: "Des Case Rev Cat",
-		 			url: "/caseadministration/descaserevcat"
+				    cssClass: "sub-menu",
+		 			url: "#/caseadministration/descaserevcat"
                  }]
        },
        {
          text: "Case Management",
-         spriteCssClass: "imageClass3", // Item image sprite CSS class, optional.
-		 url: "/casemanagement"               
+		 url: "#/casemanagement"               
        },
 	   {
          text: "Case Analysis",
-		 url: "/caseanalyasis"              
+		 url: "#/caseanalyasis"              
        },
 	   {
          text: "Person Management",
-		 url: "/personmanagement"              
+		 url: "#/personmanagement"              
        },
 	   {
          text: "Reports",
-		 url: "/reports"              
+		 url: "#/reports"              
        },
 	   {
          text: "Supervisor",
-		 url: "/supervisor"              
+		 url: "#/supervisor"              
        }]
+
 			
 /*
 	
@@ -83,7 +92,7 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 				}
 			}
 		}
-*/		
+	
 		$scope.productsDataSource = {
             type: "odata",
             serverFiltering: true,
@@ -115,14 +124,38 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 		
 	})
 
-.directive ('mainMenu', function () {
-
+.directive ('mainMenu', function ($location, $rootScope) {
 	return {
 		restrict: 'E',
 		controller: 'MainMenuCtrl',
 		templateUrl: 'components/shared/mainMenu.html',
-		link: function (scope, element, attrs, MainNavigationCtrl){
+		link: function (scope, element, attrs, MainMenuCtrl){
+			
+			// CHECK IF THE MAIN MENY NEEDS TO BE DISPLAYED
+			var url = $location.url();
+			scope.displayMainMenu = (url == "/login" ? false : true);
+			
+			// HIDE THE MENU WHEN LOGIN OUT
+			scope.hideMainMenu = function() {
+		   		scope.displayMainMenu = false;
+	  	 		}
+				
+			// DISPLAY THE NAME OF THE PAGE THAT HAS BEEN CLICKED
+			scope.onSelect = function(ev) {
+				
+				$rootScope.pageToBuild = $(ev.item.firstChild).text();
+				//alert($(ev.item.firstChild).text());
+				};
+			}
+		}
+	})
 	
+.directive ('footer', function () {
+	return {
+		restrict: 'E',
+		templateUrl: 'components/shared/footer.html',
+		link: function (scope, element, attrs){
+			
 			}
 		}
 	})

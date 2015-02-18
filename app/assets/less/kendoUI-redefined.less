@@ -26,7 +26,6 @@
 	background-position:right top;
 	background-repeat:no-repeat;
 	background-size: 20px 20px;
-	
 }
 
  .k-picker-wrap .k-state-default {
@@ -46,5 +45,34 @@
 	font-size: 16px;
 	color: @buttontextcolor;
 	padding: 2px 13px 2px 13px;
+}
+
+.k-block, .k-header, .k-grid-header, .k-toolbar, .k-grouping-header, .k-pager-wrap, .k-button, .k-draghandle, .k-treemap-tile, html .km-pane-wrapper .k-header {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ecf2fa), to(#d4ddea));
+	background-image: -webkit-linear-gradient(top, #3b4ecf2faa57, #d4ddea);
+	background-color: #ecf2fa;
+	background-image: -moz-linear-gradient(top, #ecf2fa, #d4ddea);
+	background-image: -ms-linear-gradient(top, #ecf2fa, #d4ddea);
+	background-image: -o-linear-gradient(top, #ecf2fa, #d4ddea);
+	background-image: linear-gradient(top, #ecf2fa, #d4ddea);
+	background-repeat: repeat-x;
+}
+
+.k-menu.k-header, .k-menu .k-item {
+    border-color:  @bordergray;
+}
+
+.home-menu-btn{
+	
+	background-image: url(../images/new-home-icn.png);
+	background-repeat:no-repeat;
+	background-position: 0px 0px;
+	background-size: 15px 14px;	
+}
+.sub-menu {
+	text-align:left;	
+	background-color: @dirtywhite;
+	border-bottom: solid 1px  @bordergray !important;
+	border-top: solid 1px  @white !important;
 }
 

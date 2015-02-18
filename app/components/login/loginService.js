@@ -9,6 +9,7 @@ app.factory('loginService', function($http, $location, $rootScope){
 			//var id ="http://localhost:8080/ecms/auth/" + credentials['username'] + "/" + credentials['password'];
 			//var $promise = $http.get(id);
 			$location.path('/home');
+			$rootScope.displayMainMenu = true;
 
 			//var $promise = $http.post('components/login/testUser.php', credentials); //send data to testUser.php
 		

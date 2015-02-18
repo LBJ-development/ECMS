@@ -6,8 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
-
 <script type="text/javascript" src="lib/jQuery/jquery.min.js"></script>
 <script type="text/javascript" src="lib/angular-1.3.9/angular.js"></script>
 <script type="text/javascript" src="lib/angular-1.3.9/angular-route.min.js"></script>
@@ -38,17 +36,17 @@
 <body>
 	<div id="wrapper" class="clearfix" >
     	<div id="MK-logo" ></div>
+        <main-menu ng-show="displayMainMenu"></main-menu>
         <div ng-view></div>
+        <footer ng-show="true"></footer>
 	</div> 
 
 <script type="text/javascript" src="app.js"></script>
-
 <script src="components/login/loginCtrl.js"></script>
 <script src="components/login/loginService.js"></script>
 <script src="components/home/homeCtrl.js"></script>
 <script src="components/shared/mainMenuCtrl.js"></script>
-<script src="components/caseAdministration/adminMainCtrl.js"></script>
-
+<script src="components/caseAdministration/caseAdministrationCtrl.js"></script>
 
 <script>
 	$(document).ready(function(){
