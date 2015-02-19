@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ECMSapp.login', ['ngRoute'])
+angular.module('ECMSapp.login', [])
 
 /*.config(['$routeProvider', function($routeProvider) {
 	

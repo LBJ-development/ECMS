@@ -160,30 +160,3 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 		}
 	})
 	
-	function demoController($location, $rootScope, $route, routes) {
-    var vm = this;
-    var currentPath;
-    vm.views = routes;
-    vm.animations = [
-        { name: 'shuffle-animation', caption: 'Shuffle' },
-        { name: 'top-down-animation', caption: 'Top Down' },
-        { name: 'fader-animation', caption: 'Fade' }
-    ];
-    vm.currentAnimation = vm.animations[0];
-    vm.setRoute = function (view) {
-        $location.path(view.path);
-    };
-    vm.activeViewClass = function (view) {
-        return view.path === currentPath ? 'active' : '';
-    };
-    vm.activeAnimationClass = function (animation) {
-        return animation.name === vm.currentAnimation.name ? 'active' : '';
-    };
-    vm.setAnimation = function (animation) {
-        vm.currentAnimation = animation;
-    };
-
-    $rootScope.$on('$routeChangeSuccess', function(scope, next, current) {
-        currentPath = next.originalPath;
-    });
-};

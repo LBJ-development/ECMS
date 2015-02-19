@@ -2,10 +2,10 @@
 <dwsync>
 <file name="loginService.js" server="Z:/ECMS/" local="130677150561663543" remote="130677150560000000" Dst="1" />
 <file name="login.html" server="Z:/ECMS/" local="130677127742303292" remote="130677127740000000" Dst="1" />
-<file name="login.html" server="Z:/UIDesigns/ECMS/" local="130668673155362639" remote="130668673150000000" Dst="1" />
-<file name="loginCtrl.js" server="Z:/UIDesigns/ECMS/" local="130668663989055367" remote="130668663980000000" Dst="1" />
-<file name="loginService.js" server="Z:/UIDesigns/ECMS/" local="130681465747526306" remote="130681465740000000" Dst="1" />
-<file name="testUser.php" server="Z:/UIDesigns/ECMS/" local="130669458766048594" remote="130669458810000000" Dst="1" />
+<file name="login.html" server="Z:/UIDesigns/ECMS/" local="130687431560138000" remote="130687431560000000" Dst="1" />
+<file name="loginCtrl.js" server="Z:/UIDesigns/ECMS/" local="130688451060006209" remote="130688451060000000" Dst="1" />
+<file name="loginService.js" server="Z:/UIDesigns/ECMS/" local="130687619435613547" remote="130687619430000000" Dst="1" />
+<file name="testUser.php" server="Z:/UIDesigns/ECMS/" local="130681431642750936" remote="130681431640000000" Dst="1" />
 <file name="login.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675409252356799" remote="130675409250000000" Dst="1" />
 <file name="loginService.js" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675580146975788" remote="130675580140000000" Dst="1" />
 <file name="login.html" server="D:/xampp/htdocs/ECMS/" local="130681431642670936" remote="130681431640000000" Dst="1" />
@@ -19,4 +19,7 @@
 <file name="loginCtrl.js" server="Z:/ECMS/app/" local="130686670400365574" remote="130686670400000000" Dst="1" />
 <file name="loginService.js" server="Z:/ECMS/app/" local="130686537513631384" remote="130686537510000000" Dst="1" />
 <file name="testUser.php" server="Z:/ECMS/app/" local="130686537513631384" remote="130686537510000000" Dst="1" />
+<file name="login.html" server="Z:/UIDesigns/ECMS/app/" local="130687431560138000" remote="130687431560000000" Dst="1" />
+<file name="loginCtrl.js" server="Z:/UIDesigns/ECMS/app/" local="130688451060006209" remote="130688451060000000" Dst="1" />
+<file name="loginService.js" server="Z:/UIDesigns/ECMS/app/" local="130687619435613547" remote="130687619430000000" Dst="1" />
 </dwsync>
