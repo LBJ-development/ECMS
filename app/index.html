@@ -8,9 +8,10 @@
 
 <script type="text/javascript" src="lib/jQuery/jquery.min.js"></script>
 <script type="text/javascript" src="lib/angular-1.3.9/angular.js"></script>
-<script type="text/javascript" src="lib/angular-1.3.9/angular-route.min.js"></script>
 <script type="text/javascript" src="lib/angular-1.3.9/angular-loader.min.js"></script>
 <script type="text/javascript" src="lib/angular-1.3.9/angular-animate.min.js"></script>
+<script type="text/javascript" src="lib/angular-1.3.9/angular-route.min.js"></script>
+
 <!-- JQWIDGETS ------------------------------------------------------------------------------>
 <!--<link rel="stylesheet" href="lib/jqWidgets/jqwidgets/styles/jqx.base.css" type="text/css" />
 <script type="text/javascript" src="lib/jqWidgets/scripts/jquery-1.11.1.min.js"></script>
@@ -27,7 +28,6 @@
 <script src="lib/kendoui/js/kendo.all.min.js"></script>
 <!-------------------------------------------------------------------------------------------->
 <link rel="stylesheet" href="assets/css/CC-styles.css">
-<link rel="stylesheet" href="assets/css/JQX-redefined.css">
 <link rel="stylesheet" href="assets/css/kendoUI-redefined.css">
 <script type="text/javascript" src="assets/js/generatedata.js"></script>
 
@@ -36,9 +36,9 @@
 <body>
 	<div id="wrapper" class="clearfix" >
     	<div id="MK-logo" ></div>
-        <main-menu ng-show="displayMainMenu"></main-menu>
-        <div ng-view></div>
-        <footer ng-show="true"></footer>
+        <main-menu ng-show="displayMainMenu" class="fader-animation"></main-menu>
+        <div ng-view class="fader-animation"></div>
+        <footer ng-show="displayMainMenu" class="fader-animation"></footer>
 	</div> 
 
 <script type="text/javascript" src="app.js"></script>

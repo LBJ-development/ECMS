@@ -3,6 +3,7 @@
 // JavaScript Documentvar
 var app = angular.module('ECMSapp', [
 	'ngRoute',
+	'ngAnimate',
 	'ECMSapp.login',
 	'ECMSapp.home',
 	'ECMSapp.adminMain',

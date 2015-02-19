@@ -74,9 +74,14 @@ html, body {
 	display:block;
 	width: 100%;
 	height: 35px;
-	color:@white;
+	color:@veryverylightblue;
 	text-align: left;
 	.vertical(@darkgradientstartcolor, @darkgradientendcolor);
+}
+
+.panel-footer {
+	.panel-header;
+	.vertical(@darkgradientendcolor,@darkgradientstartcolor );
 }
 
 .panel-header span {
