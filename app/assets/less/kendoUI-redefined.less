@@ -49,7 +49,7 @@
 
 .k-block, .k-header, .k-grid-header, .k-toolbar, .k-grouping-header, .k-pager-wrap, .k-button, .k-draghandle, .k-treemap-tile, html .km-pane-wrapper .k-header {
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ecf2fa), to(#d4ddea));
-	background-image: -webkit-linear-gradient(top, #3b4ecf2faa57, #d4ddea);
+	background-image: -webkit-linear-gradient(top, #ecf2fa, #d4ddea);
 	background-color: #ecf2fa;
 	background-image: -moz-linear-gradient(top, #ecf2fa, #d4ddea);
 	background-image: -ms-linear-gradient(top, #ecf2fa, #d4ddea);
@@ -58,7 +58,7 @@
 	background-repeat: repeat-x;
 }
 
-.k-menu.k-header, .k-menu .k-item, .k-textbox, .k-autocomplete.k-header, .k-dropdown-wrap.k-state-active, .k-picker-wrap.k-state-active, .k-numeric-wrap.k-state-active {
+.k-menu.k-header, .k-menu .k-item, .k-textbox, .k-autocomplete.k-header, .k-dropdown-wrap.k-state-active, .k-picker-wrap.k-state-active, .k-numeric-wrap.k-state-active, .k-block, .k-widget, .k-input, .k-textbox, .k-group, .k-content, .k-header, .k-filter-row > th, .k-editable-area, .k-separator, .k-colorpicker .k-i-arrow-s, .k-textbox > input, .k-autocomplete, .k-dropdown-wrap, .k-toolbar, .k-group-footer td, .k-grid-footer, .k-footer-template td, .k-state-default, .k-state-default .k-select, .k-state-disabled, .k-grid-header, .k-grid-header-wrap, .k-grid-header-locked, .k-grid-footer-locked, .k-grid-content-locked, .k-grid td, .k-grid td.k-state-selected, .k-grid-footer-wrap, .k-pager-wrap, .k-pager-wrap .k-link, .k-pager-refresh, .k-grouping-header, .k-grouping-header .k-group-indicator, .k-panelbar > .k-item > .k-link, .k-panel > .k-item > .k-link, .k-panelbar .k-panel, .k-panelbar .k-content, .k-treemap-tile, .k-calendar th, .k-slider-track, .k-splitbar, .k-dropzone-active, .k-tiles, .k-toolbar, .k-tooltip, .k-button-group .k-tool, .k-upload-files  {
     border-color:  @bordergray;
 }
 
@@ -76,3 +76,30 @@
 	border-top: solid 1px  @white !important;
 }
 
+[role="gridcell"]  {
+	text-align: left;
+}
+
+.k-grid-header-wrap .k-header, .k-grid-header,  .k-grouping-header {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@darkgradientstartcolor), to(@darkgradientendcolor));
+	background-image: -webkit-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-color: @darkgradientstartcolor;
+	background-image: -moz-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: -ms-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: -o-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-repeat: repeat-x;
+}
+
+.k-header, .k-treemap-title, .k-grid-header .k-header > .k-link {
+    color: @veryverylightblue;
+}
+
+/*
+.k-icon, .k-tool-icon, .k-grouping-dropclue, .k-drop-hint, .k-column-menu .k-sprite, .k-grid-mobile .k-resize-handle-inner:before, .k-grid-mobile .k-resize-handle-inner:after {
+    background-image: url("assets/images/sprite2.png");
+    border-color: transparent;
+	
+}
+
+*/

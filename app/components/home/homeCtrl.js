@@ -11,44 +11,60 @@ angular.module('ECMSapp.home', [])
 */
 .controller('HomeCtrl', function($scope) {
 
-	 $scope.mainGridOptions = {
-		dataSource: {
-			  type: "js",
-                            transport: {
-                                read: "http://dev-webiis/UIDesigns/ECMS/app/assets/js/notifications"
-                            },
-			schema: {
-				model: {
-					fields: {
-						ID:			{ type: "number" },
-						ObjectEV:	{ type: "string" },
-						ObjectID:	{ type: "string" },
-						Detail:		{ type: "string" },
-						User:		{ type: "string" },
-						Seen:		{ type: "boolean" }
-						}
-					}
-				}
-			},
-			height: 550,
-			columns: [{
-                    field: "ID",
-                    width: "120px"
-                    },{
-                    field: "ObjectEV",
-                    title: "Object/Event",
-                    width: "120px"
-                    },{
-                    field: "ObjectID",
-					title: "Object ID",
-                    width: "120px"
-                    },{
-                    field: "Detail",
-                    width: "120px"
-                    },{
-                    field: "User"
+	var notificationData = generatenotification(13);
+
+	$scope.mainGridOptions =  {
+		 
+		dataSource	: {
+			data: notificationData,
+			    schema: {
+					model: {
+						fields: {
+								id		: { type: "number" },
+								events	: { type: "string" },
+								objects	: { type: "string" },
+								details	: { type: "string" },
+								users	: { type: "string" },
+								seen	: { type: "boolean" }
+								}
+							}
+						},
+					},
+		height		: 550,
+		sortable: true,
+		columns		: [{
+						field	: "id",
+						title	: "ID",
+						width	: "50px",
+						attributes: {
+      						style: "text-align: center"
+    					}
 					},{
-                    field: "Seen"
-                }]
-		};
-	});
+						field	: "events",
+						title	: "Object/Event",
+						width	: "15%"
+					},{
+						field	: "objects",
+						title	: "Object ID",
+						width	: "20%"
+						},{
+						field	: "details",
+						title	: "Details",
+						
+						},{
+						field	: "users",
+						title	: "User",
+						width	: "15%"
+						},{
+						field	: "seen",
+						title	: "Seen",
+						template: "<input type='checkbox'/>",
+						width	: "70px",
+						attributes: {
+      						style: "text-align: center"
+    					}
+                	}]
+				};
+			});
+	
+			
