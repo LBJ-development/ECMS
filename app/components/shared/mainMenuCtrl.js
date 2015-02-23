@@ -29,99 +29,68 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 	$scope.menuSource =    [{
         text: "Home",
         spriteCssClass: "home-menu-btn", // Item image sprite CSS class, optional.                     
-        url: "#/home"                // Link URL if navigation is needed, optional.
+        url: "#/home" ,
+		permission: "menu:home"
+		
       },{
          text: "Call Management",              
-          url: "#/callmanagement"                               // content within an item
+          url: "#/callmanagement",
+		  permission: "menu:callmanagement"                            
        },
        {
          text: "Case Administration",
 		 url: "#/caseadministration",
-       
+       	permission: "menu:caseadministration",
          	items: [ {
                    text: "Assign CM",
 				   cssClass: "sub-menu",
-		 			url: "#/caseadministration/assigncm"
+		 			url: "#/caseadministration/assigncm",
+					permission: "menu:assigncm"
                  },
 				 {
                    text: "Report Distribution",
 				    cssClass: "sub-menu",
-		 			url: "#/caseadministration/reportdistribution"
+		 			url: "#/caseadministration/reportdistribution",
+					permission: "menu:reportdistribution"
                  },
 				 {
                    text: "Manage Recoveries",
 				    cssClass: "sub-menu",
-		 			url: "#/caseadministration/managerecoveries"
+		 			url: "#/caseadministration/managerecoveries",
+					permission: "menu:managerecoveries"
                  },
 				 {
                    text: "Des Case Rev Cat",
 				    cssClass: "sub-menu",
-		 			url: "#/caseadministration/descaserevcat"
+		 			url: "#/caseadministration/descaserevcat",
+					permission: "menu:descaserevcat"
                  }]
        },
        {
          text: "Case Management",
-		 url: "#/casemanagement"               
+		 url: "#/casemanagement",
+		permission: "menu:casemanagement"               
        },
 	   {
          text: "Case Analysis",
-		 url: "#/caseanalyasis"              
+		 url: "#/caseanalyasis",
+		 permission: "menu:caseanalyasis"              
        },
 	   {
          text: "Person Management",
-		 url: "#/personmanagement"              
+		 url: "#/personmanagement" ,
+		 permission: "menu:personmanagement"             
        },
 	   {
          text: "Reports",
-		 url: "#/reports"              
+		 url: "#/reports",
+		 permission: "menu:reports"              
        },
 	   {
          text: "Supervisor",
-		 url: "#/supervisor"              
+		 url: "#/supervisor",
+		 permission: "menu:supervisor"              
        }]
-
-			
-/*
-	
-		$scope.menuSource = {      
-			transport: {
-				read: { 
-				dataType: 'json',
-				url: 'components/shared/test'
-
-				}
-			}
-		}
-	
-		$scope.productsDataSource = {
-            type: "odata",
-            serverFiltering: true,
-            transport: {
-                read: {
-                    url: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Products",
-                }
-            }
-		}
-		console.log($scope.menuSource);
-/*		
-		
-
-		var data = this;
-		data.menus = [];
-		
-		
-		$http.get('components/shared/test.json').success(function(response) {
-			data.menus = response;
-			//console.log(response);
-			
-			$scope.menuSource = new kendo.data.DataSource({
-			
-				data: response
-			
-			});
-		});
-*/		
-		
 	})
 
 .directive ('mainMenu', function ($location, $rootScope) {
@@ -131,9 +100,49 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 		templateUrl: 'components/shared/mainMenu.html',
 		link: function (scope, element, attrs, MainMenuCtrl){
 			
-			// CHECK IF THE MAIN MENY NEEDS TO BE DISPLAYED
+			// CHECK IF THE MAIN MENU NEEDS TO BE DISPLAYED
 			var url = $location.url();
 			scope.displayMainMenu = (url == "/login" ? false : true);
+			
+			//////////////////////////////////////////////////////////////////
+			
+			var permissions = {
+				"menu:home" :"",
+				"menu:callmanagement":"",
+				//"menu:caseadministration":"",
+				"menu:casemanagement" : "",
+				//"menu:caseanalyasis" : "",
+				//"menu:personmanagement" : "",
+				//"menu:reports":"",
+				"menu:supervisor":""
+        	};
+			
+			$rootScope.menuWithPermissions = [];
+
+			for (var i in scope.menuSource) {
+                //console.log(scope.menuSource[i]['permission']);
+               // console.log(scope.menuSource[i]['permission'] in permissions);
+				
+				if (scope.menuSource[i]['permission'] in permissions){
+                    //alert(scope.menuSource[i]['permission'] + ' will be enabled');
+					 $rootScope.menuWithPermissions.push(scope.menuSource[i]);
+					 
+					 if('items' in scope.menuSource[i]){
+                        console.log('items exist for ' + scope.menuSource[i]['permission']);
+                        var submenu = scope.menuSource[i]['items'];
+                        console.log(submenu);
+                        for (var k in submenu){
+                            console.log(submenu[k]);
+                            console.log(submenu[k]['permission'] in permissions);
+                            if (!(submenu[k]['permission'] in permissions)) {
+                                console.log(submenu[k]['permission'] + ' will be disabled');
+                            }
+                        }
+                    }
+                }  
+            }
+			
+			/////////////////////////////////////////////////////////////
 			
 			// HIDE THE MENU WHEN LOGIN OUT
 			scope.hideMainMenu = function() {
