@@ -109,7 +109,7 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 			var permissions = {
 				"menu:home" :"",
 				"menu:callmanagement":"",
-				//"menu:caseadministration":"",
+				"menu:caseadministration":"",
 				"menu:casemanagement" : "",
 				//"menu:caseanalyasis" : "",
 				//"menu:personmanagement" : "",
@@ -128,16 +128,16 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 					 $rootScope.menuWithPermissions.push(scope.menuSource[i]);
 					 
 					 if('items' in scope.menuSource[i]){
-                        console.log('items exist for ' + scope.menuSource[i]['permission']);
+                        //console.log('items exist for ' + scope.menuSource[i]['permission']);
                         var submenu = scope.menuSource[i]['items'];
-                        console.log(submenu);
+                       /* console.log(submenu);
                         for (var k in submenu){
                             console.log(submenu[k]);
                             console.log(submenu[k]['permission'] in permissions);
                             if (!(submenu[k]['permission'] in permissions)) {
                                 console.log(submenu[k]['permission'] + ' will be disabled');
                             }
-                        }
+                        }*/
                     }
                 }  
             }

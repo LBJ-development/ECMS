@@ -12,9 +12,9 @@
             	<div class="row-holder" ng-controller="DatePickerCtrl">
                 
 					<span class="labelText" style="padding: 0 5px 0 20px" >From:</span> 
-                    <input kendo-date-picker/> 
+                    <input kendo-date-picker k-options="startingDay"  /> 
                     <span class="labelText" style="padding: 0 5px 0 20px">to:</span> 
-                    <input kendo-date-picker/>
+                    <input kendo-date-picker  k-options="endingDay"/>
                      <span style="padding: 0 5px 0 20px"><kendo-button  ng-model="button" class="k-button">SUBMIT</kendo-button></span>
 					
             	</div>

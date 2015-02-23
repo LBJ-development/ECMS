@@ -10,8 +10,23 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 
 
 .controller("DatePickerCtrl", function($scope){
-          $scope.monthSelectorOptions = {
-            start: "year",
+	var todayDate 		= new Date();
+	var dateOffset 		= (24*60*60*1000) * 2; //2 days
+	var startingDate 	= new Date(todayDate.getTime() - dateOffset);
+	var endingDate 		= todayDate;
+		
+	console.log(startingDate);
+	
+	$scope.startingDay = {
+		value: startingDate
+	}
+	
+	$scope.endingDay = {
+		value: endingDate
+	}
+			
+/*	$scope.monthSelectorOptions = {
+		start: "year",
             depth: "year"
           };
           $scope.getType = function(x) {
@@ -22,4 +37,5 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
           $scope.isDate = function(x) {
             return x instanceof Date;
           };
-      })
+      */
+	  })
