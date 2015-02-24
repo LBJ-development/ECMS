@@ -99,19 +99,25 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 		controller: 'MainMenuCtrl',
 		templateUrl: 'components/shared/mainMenu.html',
 		link: function ( scope, element, attrs, MainMenuCtrl){
+			
+			console.log("FROM MAINMENU CONTROLLER");
 
 			// INITIATE THE LOGGEDIN AS FALSE WHEN LOADING THE MENU THE FIRST TIME
 			// IS SET TO TRUE BY THE LOGGIN SERVICE
 			$rootScope.loggedIn = false;
-			// CHECK IF THE USER IS LOGGED IN WHILE HITTING DIRECTLY A PARTIAL PAGE
-			// IF NOT HE IS REDIRECTED TO THE LOGIN PAGE
+			// CHECK IF THE USER IS LOGGED IN WHILE RELOADING THE PAGE
 			if(!$rootScope.loggedIn) $location.path('/login'); 
 			
 			// CHECK IF THE MAIN MENU NEEDS TO BE DISPLAYED
 			var url = $location.url();
 			scope.displayMainMenu = (url == "/login" ? false : true);
 			
-			//scope.$on('$locationChangeStart', function(event) {});
+			scope.$on('$locationChangeStart', function(event) {
+				// CHECK IF THE USER IS LOGGED IN WHILE HITTING DIRECTLY A PARTIAL PAGE
+				// IF NOT HE IS REDIRECTED TO THE LOGIN PAGE
+				if(!$rootScope.loggedIn) $location.path('/login'); 
+					console.log("FROM LOCATION CHANGE");
+				});
 				
 			//////////////////////////////////////////////////////////////////
 			
@@ -154,13 +160,13 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 			/////////////////////////////////////////////////////////////
 			
 			// HIDE THE MENU WHEN LOGIN OUT
-			scope.hideMainMenu = function() {
+			scope.logout = function() {
 		   		scope.displayMainMenu = false;
+				$rootScope.loggedIn = false;
 	  	 		}
 				
 			// DISPLAY THE NAME OF THE PAGE THAT HAS BEEN CLICKED
 			scope.onSelect = function(ev) {
-				
 				$rootScope.pageToBuild = $(ev.item.firstChild).text();
 				//alert($(ev.item.firstChild).text());
 				};

@@ -17,7 +17,7 @@ angular.module('ECMSapp.login', [])
 		$scope.login = function(credentials){
 			loginService.login(credentials, $scope); // Call login service	
 		}
-
+/*
 		this.enableBtn = function(){
 			$scope.isDisabled 			= false;	
 			$scope.buttonClass  		= 'regular-btn';
@@ -27,7 +27,7 @@ angular.module('ECMSapp.login', [])
 			$scope.isDisabled 			= true;	
 			$scope.buttonClass  		= 'disabled-btn';
 			$scope.errormessageclass 	= "errorMessageOff";		
-		};
+		};*/
 		
 		this.hideErrorMessage = function(){
 			$scope.errormessageclass 	= "errorMessageOff";
@@ -41,7 +41,7 @@ angular.module('ECMSapp.login', [])
 		transclude: false,
 		controller: 'LoginCtrl',
 		link: function (scope, element, attrs, LoginCtrl){
-
+/*
 			scope.buttonClass 		= "disabled-btn";
 			scope.errormessageclass = "errorMessageOff";	
 
@@ -56,7 +56,7 @@ angular.module('ECMSapp.login', [])
 				password.addEventListener('input', function() {
 					LoginCtrl.hideErrorMessage();
 					( username.value != "" && password.value != "")? LoginCtrl.enableBtn() : LoginCtrl.disableBtn();
-        		});
+        		});*/
 			}
 		}
 	})
