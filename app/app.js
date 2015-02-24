@@ -12,6 +12,6 @@ var app = angular.module('ECMSapp', [
 	])
 
 /*.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/login'});
+$routeProvider.otherwise({redirectTo: '/login'});
 }]);
 */

@@ -10,6 +10,8 @@ app.factory('loginService', function($http, $location, $rootScope){
 			//var $promise = $http.get(id);
 			$location.path('/home');
 			$rootScope.displayMainMenu = true;
+			$rootScope.loggedIn = true;
+			//console.log("FROM LOGIN SERVICES: " + $rootScope.loggedIn);
 			//var $promise = $http.post('components/login/testUser.php', credentials); //send data to testUser.php
 		
 			/*$promise.then(function(result){
