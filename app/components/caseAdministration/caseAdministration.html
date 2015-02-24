@@ -6,22 +6,25 @@
 		</div>
         <!-- DATE RANGE ---------------------------------------------------------------------->
 		<div class="filter-holder">
-        
-        <div class="row-holder title-small" style="padding: 10px 0 0px 20px">Select an other date range:</div>
-            	<div class="row-holder" ng-controller="DatePickerCtrl">
-					<!--<form name="dateRange-frm" ng-submit="getDateRange()" role="form">-->
-						<span class="labelText" style="padding: 0 5px 0 20px" >From:</span> 
-                    	<input kendo-date-picker k-options="startingDay"  /> 
-                   	 	<span class="labelText" style="padding: 0 5px 0 20px">to:</span> 
-                    	<input kendo-date-picker  k-options="endingDay"/>
-                     	<span style="padding: 0 5px 0 20px">
-							<kendo-button  ng-model="button" class="k-button">SUBMIT</kendo-button>
-                        </span>
-					<!--</form>-->
-            	</div> 	
-         </div>
+        	<div class="row-holder title-small" style="padding: 10px 0 0px 20px">Select an other date range:</div>
+			<div class="row-holder" ng-controller="DatePickerCtrl" style="padding: 15px 0 20px 20px">
+				<form name="dateRange-frm" ng-submit="getRecords()" role="form">
+					<span class="labelText" style="padding: 0 5px 0 20px" >From:</span> 
+					<input kendo-date-picker k-ng-model="startingDate" /> 
+					<span class="labelText" style="padding: 0 5px 0 20px">to:</span> 
+					<input kendo-date-picker k-ng-model="endingDate"/>
+					<span style="padding: 0 5px 0 20px">
+						<kendo-button  ng-model="button" class="k-button">SUBMIT</kendo-button>
+					</span>
+                     <span  class="labelText" style="padding: 0 0px 0 40px" >Found:</span>
+                     <span class="title-small" >{{numRecords}} records</span>
+                     <span  class="labelText" >within date range</span>
+				</form>
+               
+			</div> 	
+		</div>
 		<!-- DATA GRIG ---------------------------------------------------------------------->
-		<div role="datagrid" class="grid-holder" >
+		<div role="datagrid" class="grid-holder"  ng-controller="CaseAdminCtrl">
 			<div>
 				<kendo-grid options="mainGridOptions"> </kendo-grid>
 			</div>  

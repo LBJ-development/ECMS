@@ -58,6 +58,75 @@
 
     return data;
 }
+
+function generateCaseAdminData(rowscount, hasNullValues) {
+    // prepare the data
+    var data = new Array();
+    if (rowscount == undefined) rowscount = 100;
+
+    var cases =
+    [
+        "C-133467" , "C-123567" , "C-127467" , "C-128467" , "C-243467" , "C-136467" , "C-189467" , "C-123487" , "C-178467" , "C-123484" , "C-363467" , "C-178567" , "C-175367" , "C-1148467" , "C-965467" , "C-743467" , "C-121248" , "C-154767" , "C-123567" , "C-369467" , "C-129667" , "C-247467" , "C-654467" , "C-147467" , "C-874467" , "C-247467" , "C-187467" , "C-247467" , "C-123954" , "C-1231589" , "C-127541" , "C-123467" , "C-123524" , "C-123687" , "C-123524" , "C-123987" , "C-123524" , "C-123984" , "C-123478" , "C-123324" ,  "R-1337" , "R-1267" , "R-1467" , "R-1267" , "R-3467" , "R-1467" , "R-1867" , "R-1237" , "R-1467" , "R-3484" , "R-3637" , "R-1767" , "R-1367" , "R-1847" , "R-9654" , "R-7437" , "R-1248" , "R-1547" , "R-1267" , "R-3697" , "R-1267" , "R-2467" , "R-6467" , "R-1477" , "R-8467" , "R-2467" , "R-1467" , "R-2467" , "R-1254" , "R-1289" , "R-1271" , "R-1237" , "R-1234" , "R-1237" , "R-1524" , "R-1287" , "R-1524" , "R-1234" , "R-1478" , "R-1233" 
+    ];
+	
+	  var source =
+    [
+        "call" , "elctrnc"];
+
+ 	 var caseType =
+    [
+        "Intake" , "Lead" , "TA" , "Cybertip" , "ERU" , "FA" , "NFA" , "LIM" , "Le5779ad", "UNID", "DEC", "UMR", "RCST", "ATT"];
+
+
+
+    for (var i = 0; i < rowscount; i++) {
+        var row = {};
+       /* var productindex = Math.floor(Math.random() * productNames.length);
+        var price = parseFloat(priceValues[productindex]);
+        var quantity = 1 + Math.round(Math.random() * 10);*/
+
+        //row["id"] = i + 1;
+       /* row["reportsto"] = Math.floor(Math.random() * firstNames.length);
+        if (i % Math.floor(Math.random() * firstNames.length) === 0) {
+            row["reportsto"] = null;
+        }
+
+        row["available"] = productindex % 2 == 0;
+        if (hasNullValues == true) {
+            if (productindex % 2 != 0) {
+                var random = Math.floor(Math.random() * rowscount);
+                row["available"] = i % random == 0 ? null : false;
+            }
+        }*/
+        row["cases"] = cases[Math.floor(Math.random() * cases.length)];
+		
+		var receivedDate = new Date();
+        receivedDate.setFullYear( 2010 + Math.round(Math.random() * 5) , Math.floor(Math.random() * 11), Math.floor(Math.random() * 27));
+        row["receivedDate"] = receivedDate;
+		
+		var incidentDate = new Date();
+        incidentDate.setFullYear( 2005 + Math.round(Math.random() * 5) , Math.floor(Math.random() * 11), Math.floor(Math.random() * 27));
+        row["incidentDate"] = incidentDate;
+		
+		 row["source"] = source[Math.floor(Math.random() * source.length)];
+		 
+		 row["caseType"] = caseType[Math.floor(Math.random() * caseType.length)];
+		
+        //row["objects"] = objects[Math.floor(Math.random() * objects.length)];
+        //row["details"] = details[Math.floor(Math.random() * details.length)];
+        //row["users"] = users[Math.floor(Math.random() * users.length)];
+		//row["seen"] = false;
+
+        /*var date = new Date();
+        date.setFullYear(2014, Math.floor(Math.random() * 11), Math.floor(Math.random() * 27));
+        date.setHours(0, 0, 0, 0);
+        row["date"] = date;*/
+       
+        data[i] = row;
+    }
+
+    return data;
+}
 function generatedata(rowscount, hasNullValues) {
     // prepare the data
     var data = new Array();

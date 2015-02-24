@@ -100,13 +100,11 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 		templateUrl: 'components/shared/mainMenu.html',
 		link: function ( scope, element, attrs, MainMenuCtrl){
 			
-			console.log("FROM MAINMENU CONTROLLER");
-
 			// INITIATE THE LOGGEDIN AS FALSE WHEN LOADING THE MENU THE FIRST TIME
 			// IS SET TO TRUE BY THE LOGGIN SERVICE
 			$rootScope.loggedIn = false;
-			// CHECK IF THE USER IS LOGGED IN WHILE RELOADING THE PAGE
-			if(!$rootScope.loggedIn) $location.path('/login'); 
+			//CHECK IF THE USER IS LOGGED IN WHILE RELOADING THE PAGE
+if(!$rootScope.loggedIn) $location.path('/login'); 
 			
 			// CHECK IF THE MAIN MENU NEEDS TO BE DISPLAYED
 			var url = $location.url();
@@ -116,7 +114,7 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 				// CHECK IF THE USER IS LOGGED IN WHILE HITTING DIRECTLY A PARTIAL PAGE
 				// IF NOT HE IS REDIRECTED TO THE LOGIN PAGE
 				if(!$rootScope.loggedIn) $location.path('/login'); 
-					console.log("FROM LOCATION CHANGE");
+					//console.log("FROM LOCATION CHANGE");
 				});
 				
 			//////////////////////////////////////////////////////////////////
