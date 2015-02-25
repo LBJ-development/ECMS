@@ -2,42 +2,64 @@
 
 angular.module('ECMSapp.adminMain', ['ngRoute'])
 
-/*.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/adminMain', {
-    templateUrl: 'components/caseAdministration/adminMain.html'
-  });
-}])*/
+.service("dataSvrc" ,function(){
+	this.getData = function(num){
+		var data = generateCaseAdminData(num);
+		return data;	
+	}
+	return this;
+})
 
+.factory("dataFtry", function(){
+	return{
+		getData: function(num){
+			return generateCaseAdminData(num)
+		}
+	}
+})
 
-.controller("DatePickerCtrl", function($scope){
+.controller("DatePickerCtrl",['$rootScope','$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
 	var todayDate 		= new Date();
 	var dateOffset 		= (24*60*60*1000) * 2; //2 days
 	var startingDate 	= new Date(todayDate.getTime() - dateOffset);
 	var endingDate 		= todayDate;
-	
-	var caseAdminData = generateCaseAdminData(10)
-	
+
 	$scope.startingDate	= startingDate;
 	$scope.endingDate	= endingDate;
-	$scope.numRecords	= 33*2; // 33 records/day
+	$rootScope.numRecords	= 33*2; // 33 records/day
 
-	$scope.getRecords = function(){
+	$rootScope.changeDateRange = function(){
 		
 		var numDays = ($scope.endingDate - $scope.startingDate) / 86400000;
 		var numRecords = 33 * numDays; // 33 records/day
-		caseAdminData = generateCaseAdminData(numRecords);
-		$scope.numRecords = numRecords;
-			console.log(caseAdminData);
-		}
-})
+		$rootScope.numRecords = numRecords;
+		//console.log("FROM DATEPICKERCTRL: " + dataSvrc.getData(numRecords));
+	}
+}])
 
-.controller("CaseAdminCtrl", function($scope){
+.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
 	
-	var caseAdminData = generateCaseAdminData(20);
+	var caseAdminData = dataSvrc.getData($rootScope.numRecords);
 	
+	$rootScope.$watch('numRecords', function(newValue, oldValue) {
+		
+		caseAdminData = dataSvrc.getData(newValue);
+		console.log(caseAdminData);
+		//$scope.mainGrid.refresh();
+		//$scope.newData = caseAdminData ;
+		
+		/*$scope.mainGridOptions = {
+			dataSource: {
+				rebind: caseAdminData
+			}
+		}*/
+		
+	});
+	
+
 	$scope.mainGridOptions =  {
 		 
-		dataSource	: {
+		dataSource: {
 			data: caseAdminData,
 			    schema: {
 					model: {
@@ -49,7 +71,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 								caseType		: { type: "string" },
 								caseStatus		: { type: "string" },
 								numVictims		: { type: "string" },
-								endangerment	: { type: "boolean" },
+								endangerment	: { type: "string" },
 								alerts			: { type: "string" },
 								state			: { type: "string" },
 								division		: { type: "string" },
@@ -72,57 +94,57 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						field	: "receivedDate",
 						title	: "Date Rcvd",
             			format	:"{0:MM/dd/yyyy}" ,
-						width	: "8%"
+						width	: "9%"
 						},{
 						field	: "incidentDate",
 						title	: "Incid. Date",
 						format	:"{0:MM/dd/yyyy}" ,
-						width	: "8%"
+						width	: "9%"
 						},{
 						field	: "source",
 						title	: "Source",
-						width	: "10%"
+						width	: "6%"
 						},{
 						field	: "caseType",
 						title	: "Case Type",
-						width	: "10%"
+						width	: "9%"
 						},{
 						field	: "caseStatus",
-						title	: "case Status",
-						template: "<input type='checkbox'/>",
-						width	: "10%",
-						attributes: {
-      						style: "text-align: center"
-    						}
+						title	: "Case Status",
+						width	: "9%",
 						},{
 						field	: "numVictims",
 						title	: "# Vic.",
-						width	: "3%"
+						width	: "5%"
 						},{
 						field	: "endangerment",
 						title	: "Endg.",
-						width	: "3%"
+						width	: "5%"
 						},{
 						field	: "alerts",
 						title	: "Alerts",
-						width	: "10%"
+						width	: "8%"
 						},{
 						field	: "state",
 						title	: "State",
-						width	: "10%"
+						width	: "5%"
 						},{
 						field	: "division",
 						title	: "Div",
-						width	: "5%"
+						width	: "8%"
 						},{
 						field	: "assignee",
 						title	: "Assignee",
-						width	: "10%"
+						width	: "14%"
 						},{
 						field	: "selected",
 						title	: "Sel.",
-						width	: "3%"
+						width	: "5%",
+						template: "<input type='checkbox'/>",
+						attributes: {
+      						style: "text-align: center"
+    					}
                 	}]
 				};
 	
-})
+}])

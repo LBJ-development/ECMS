@@ -8,7 +8,7 @@
 		<div class="filter-holder">
         	<div class="row-holder title-small" style="padding: 10px 0 0px 20px">Select an other date range:</div>
 			<div class="row-holder" ng-controller="DatePickerCtrl" style="padding: 15px 0 20px 20px">
-				<form name="dateRange-frm" ng-submit="getRecords()" role="form">
+				<form name="dateRange-frm" ng-submit="changeDateRange()" role="form">
 					<span class="labelText" style="padding: 0 5px 0 20px" >From:</span> 
 					<input kendo-date-picker k-ng-model="startingDate" /> 
 					<span class="labelText" style="padding: 0 5px 0 20px">to:</span> 
@@ -26,7 +26,7 @@
 		<!-- DATA GRIG ---------------------------------------------------------------------->
 		<div role="datagrid" class="grid-holder"  ng-controller="CaseAdminCtrl">
 			<div>
-				<kendo-grid options="mainGridOptions"> </kendo-grid>
+				<div kendo-grid="mainGrid" k-options="mainGridOptions" k-rebind="mainGridOptions"> </div>
 			</div>  
 		</div>
 	</div>
