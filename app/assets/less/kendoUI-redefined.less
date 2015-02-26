@@ -46,6 +46,7 @@
 	padding: 2px 13px 2px 13px;
 }
 
+
 .k-block, .k-header, .k-grid-header, .k-toolbar, .k-grouping-header, .k-pager-wrap, .k-button, .k-draghandle, .k-treemap-tile, html .km-pane-wrapper .k-header {
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafcff), to(#d4ddea));
 	background-image: -webkit-linear-gradient(top, #fafcff, #d4ddea);
@@ -54,6 +55,28 @@
 	background-image: -ms-linear-gradient(top, #fafcff, #d4ddea);
 	background-image: -o-linear-gradient(top, #fafcff, #d4ddea);
 	background-image: linear-gradient(top, #fafcff, #d4ddea);
+	background-repeat: repeat-x;
+}
+
+.k-grid-header-wrap .k-header, .k-grid-header,  .k-grouping-header {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@darkgradientstartcolor), to(@darkgradientendcolor));
+	background-image: -webkit-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-color: @darkgradientstartcolor;
+	background-image: -moz-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: -ms-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: -o-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-repeat: repeat-x;
+}
+
+[role="rowgroup"] .k-header {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@darkgradientstartcolor), to(@darkgradientendcolor));
+	background-image: -webkit-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-color: @darkgradientstartcolor;
+	background-image: -moz-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: -ms-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: -o-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
+	background-image: linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
 	background-repeat: repeat-x;
 }
 
@@ -77,17 +100,6 @@
 
 [role="gridcell"]  {
 	text-align: left;
-}
-
-.k-grid-header-wrap .k-header, .k-grid-header,  .k-grouping-header {
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@darkgradientstartcolor), to(@darkgradientendcolor));
-	background-image: -webkit-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
-	background-color: @darkgradientstartcolor;
-	background-image: -moz-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
-	background-image: -ms-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
-	background-image: -o-linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
-	background-image: linear-gradient(top, @darkgradientstartcolor, @darkgradientendcolor);
-	background-repeat: repeat-x;
 }
 
 .k-header, .k-treemap-title, .k-grid-header .k-header > .k-link {

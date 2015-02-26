@@ -74,13 +74,50 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 							}
 						},
 					},
-		height		: 550,
+		//height		: 550,
 		sortable	: true,
+		scrollable	: false,
+		filterable	: {
+					mode		: "menu",
+    				extra		: false,
+					messages	: {
+      					info		: "Filter by:",
+						selectValue	: "Select category",
+						isTrue		: "selected",
+						isFalse		: "not selected"
+							},
+					operators	: {
+      						string	: {
+        						eq			: "Equal to",
+        						//neq			: "Not equal to",
+								contains	: "Contains",
+								startswith	: "Starts with",
+								endswith	: "Ends with"
+      							},
+							number	: {
+								eq			: "Equal to",
+								},
+							date	: {
+								gt			: "After",
+       					 		lt			: "Before"
+								}
+							}
+  						},
 		pageable	: {
                      	refresh: true,
                       	pageSizes: true,
-                     	buttonCount: 5
+                     	buttonCount: 5,
+						pageSize: 15
                         },
+						
+		/*columnMenu: {
+   			messages	: {
+      			columns			: "Choose columns",
+      			filter			: "Apply filter",
+      			sortAscending	: "Sort (asc)",
+      			sortDescending	: "Sort (desc)"
+							}
+    				},*/
 		columns		: [{
 						field	: "cases",
 						title	: "RFS/Case",
@@ -113,6 +150,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						},{
 						field	: "numVictims",
 						title	: "# Vic.",
+						filterable: false,
 						width	: "5%"
 						},{
 						field	: "endangerment",
@@ -125,10 +163,12 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						},{
 						field	: "state",
 						title	: "State",
+						filterable: false,
 						width	: "5%"
 						},{
 						field	: "division",
 						title	: "Div",
+						filterable: false,
 						width	: "8%"
 						},{
 						field	: "assignee",
@@ -138,6 +178,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						field	: "selected",
 						title	: "Sel.",
 						width	: "5%",
+						filterable: false,
 						template: "<input type='checkbox'/>",
 						attributes: {
       						style: "text-align: center"
