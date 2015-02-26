@@ -2,6 +2,7 @@
 
 angular.module('ECMSapp.adminMain', ['ngRoute'])
 
+// SERVICE DATA FOR TESTING PURPOSE -- RETURN AN INSTANCE OF THE FUNCTION
 .service("dataSvrc" ,function(){
 	this.getData = function(num){
 		var data = generateCaseAdminData(num);
@@ -10,6 +11,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 	return this;
 })
 
+// FACTORY DATA FOR TESTING PURPOSE -- RETURN A RESULT 
 .factory("dataFtry", function(){
 	return{
 		getData: function(num){
@@ -20,18 +22,18 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 
 .controller("DatePickerCtrl",['$rootScope','$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
 	var todayDate 		= new Date();
-	var dateOffset 		= (24*60*60*1000) * 2; //2 days
+	var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
 	var startingDate 	= new Date(todayDate.getTime() - dateOffset);
 	var endingDate 		= todayDate;
 
 	$scope.startingDate	= startingDate;
 	$scope.endingDate	= endingDate;
-	$rootScope.numRecords	= 33*2; // 33 records/day
+	$rootScope.numRecords	= 33*2; // 33 RECORDS/DAY
 
 	$rootScope.changeDateRange = function(){
 		
 		var numDays = ($scope.endingDate - $scope.startingDate) / 86400000;
-		var numRecords = 33 * numDays; // 33 records/day
+		var numRecords = 33 * numDays; // 33 RECORDS/DAY
 		$rootScope.numRecords = numRecords;
 		//console.log("FROM DATEPICKERCTRL: " + dataSvrc.getData(numRecords));
 	}
@@ -43,19 +45,10 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 	
 	$rootScope.$watch('numRecords', function(newValue, oldValue) {
 		
-		caseAdminData = dataSvrc.getData(newValue);
-		console.log(caseAdminData);
-		//$scope.mainGrid.refresh();
-		//$scope.newData = caseAdminData ;
-		
-		/*$scope.mainGridOptions = {
-			dataSource: {
-				rebind: caseAdminData
-			}
-		}*/
-		
+			caseAdminData = dataSvrc.getData(newValue);
+			$scope.mainGridOptions.dataSource.data = caseAdminData;
+			//console.log($scope.mainGridOptions.dataSource.data);
 	});
-	
 
 	$scope.mainGridOptions =  {
 		 
@@ -83,6 +76,11 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 					},
 		height		: 550,
 		sortable	: true,
+		pageable	: {
+                     	refresh: true,
+                      	pageSizes: true,
+                     	buttonCount: 5
+                        },
 		columns		: [{
 						field	: "cases",
 						title	: "RFS/Case",
