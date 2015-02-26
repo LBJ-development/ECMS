@@ -3,6 +3,7 @@
 // JavaScript Documentvar
 var app = angular.module('ECMSapp', [
 	'ngRoute',
+	'ngAnimate',
 	'ECMSapp.login',
 	'ECMSapp.home',
 	'ECMSapp.adminMain',
@@ -11,6 +12,7 @@ var app = angular.module('ECMSapp', [
 	])
 
 /*.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/login'});
+$routeProvider.otherwise({redirectTo: '/login'});
 }]);
 */
+

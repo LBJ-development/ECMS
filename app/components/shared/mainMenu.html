@@ -2,7 +2,7 @@
 <div role="mashead">
 	<div role="utilities">
     	<ul>
-        	<li><a href="#/login" class="logout">logout</a></li>
+        	<li><a href="#/login" class="logout" id="textBtn" ng-click="logout()" >logout</a></li>
         	<li><span class="notification">5</span> notifications</li>
         	<li>welcome <a href="#" id="username">{{usernameScope}}</a></li>
         </ul>
@@ -10,32 +10,5 @@
     <div class="CC-title"></div>
 </div>
 
-<ul kendo-menu k-data-source="menuSource"></ul>
+<ul kendo-menu k-data-source="menuWithPermissions"  k-on-select="onSelect(kendoEvent)"></ul>
 
- <div class="box-col">
-    <h4>Remote data</h4>
-    <select kendo-drop-down-list
-            k-data-text-field="'ProductName'"
-            k-data-value-field="'ProductID'"
-            k-data-source="productsDataSource"
-            style="width: 200px"></select>
-  </div>
-
-<!--<div role="navigation">
-	<ul >
-		<li><a href="#/home" id="deskHomeBtn">Home</a></li>
-		<li><a href="#">Instance Management</a></li>
-		<li><a href="#/adminMain">Case Administration</a></li>
-		<li><a href="#">Supervisor</a></li>
-		<li><a href="#">Reports</a></li>  
-        <div id="quick-search">
-			<span>
-            	<form>
-                	<input type="button" class="search-btn">
-                    <input class="k-textbox" style="width: 200px" " type="text" name="quicksearch">
-				</form>
-            </span>
-       		<span>Quick Search</span>
-        </div>  
-	</ul> 
-</div>-->

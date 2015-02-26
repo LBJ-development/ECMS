@@ -8,121 +8,177 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
     templateUrl: 'components/login/login.html',
   });
   
-  $routeProvider.when('/adminMain', {
-    templateUrl: 'components/caseAdministration/adminMain.html'
+   $routeProvider.when('/home', {
+    templateUrl: 'components/home/home.html'
   });
   
-   $routeProvider.otherwise({redirectTo: '/login'});
+  $routeProvider.when('/caseadministration', {
+    templateUrl: 'components/caseAdministration/caseAdministration.html'
+  });
+  
+   $routeProvider.when('/comingsoon', {
+    templateUrl: 'components/shared/comingSoon.html',
+  });
+
+   $routeProvider.otherwise({redirectTo: '/comingsoon'});
+
 }])
 
-.controller('MainMenuCtrl', function($http, $scope) {
-	
+.controller('MainMenuCtrl', function($http, $scope, $location) {
+
 	$scope.menuSource =    [{
         text: "Home",
-        cssClass: "myClass",                         // Add custom CSS class to the item, optional, added 2012 Q3 SP1.
-        url: "/"                // Link URL if navigation is needed, optional.
+        spriteCssClass: "home-menu-btn", // Item image sprite CSS class, optional.                     
+        url: "#/home" ,
+		permission: "menu:home"
+		
       },{
          text: "Call Management",              
-          url: "/callmanagement"                               // content within an item
+          url: "#/callmanagement",
+		  permission: "menu:callmanagement"                            
        },
        {
          text: "Case Administration",
-		 url: "/caseadministration",
-       
-         	items: [{                                    // Sub item collection
-           		text: "Case Admin Main",
-		 		url: "/caseadministration"
-         		},
-                 {
+		 url: "#/caseadministration",
+       	permission: "menu:caseadministration",
+         	items: [ {
                    text: "Assign CM",
-		 			url: "/caseadministration/assigncm"
+				   cssClass: "sub-menu",
+		 			url: "#/caseadministration/assigncm",
+					permission: "menu:assigncm"
                  },
 				 {
                    text: "Report Distribution",
-		 			url: "/caseadministration/reportdistribution"
+				    cssClass: "sub-menu",
+		 			url: "#/caseadministration/reportdistribution",
+					permission: "menu:reportdistribution"
                  },
 				 {
                    text: "Manage Recoveries",
-		 			url: "/caseadministration/managerecoveries"
+				    cssClass: "sub-menu",
+		 			url: "#/caseadministration/managerecoveries",
+					permission: "menu:managerecoveries"
                  },
 				 {
                    text: "Des Case Rev Cat",
-		 			url: "/caseadministration/descaserevcat"
+				    cssClass: "sub-menu",
+		 			url: "#/caseadministration/descaserevcat",
+					permission: "menu:descaserevcat"
                  }]
        },
        {
          text: "Case Management",
-         spriteCssClass: "imageClass3", // Item image sprite CSS class, optional.
-		 url: "/casemanagement"               
+		 url: "#/casemanagement",
+		permission: "menu:casemanagement"               
        },
 	   {
          text: "Case Analysis",
-		 url: "/caseanalyasis"              
+		 url: "#/caseanalyasis",
+		 permission: "menu:caseanalyasis"              
        },
 	   {
          text: "Person Management",
-		 url: "/personmanagement"              
+		 url: "#/personmanagement" ,
+		 permission: "menu:personmanagement"             
        },
 	   {
          text: "Reports",
-		 url: "/reports"              
+		 url: "#/reports",
+		 permission: "menu:reports"              
        },
 	   {
          text: "Supervisor",
-		 url: "/supervisor"              
+		 url: "#/supervisor",
+		 permission: "menu:supervisor"              
        }]
-			
-/*
-	
-		$scope.menuSource = {      
-			transport: {
-				read: { 
-				dataType: 'json',
-				url: 'components/shared/test'
-
-				}
-			}
-		}
-*/		
-		$scope.productsDataSource = {
-            type: "odata",
-            serverFiltering: true,
-            transport: {
-                read: {
-                    url: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Products",
-                }
-            }
-		}
-		console.log($scope.menuSource);
-/*		
-		
-
-		var data = this;
-		data.menus = [];
-		
-		
-		$http.get('components/shared/test.json').success(function(response) {
-			data.menus = response;
-			//console.log(response);
-			
-			$scope.menuSource = new kendo.data.DataSource({
-			
-				data: response
-			
-			});
-		});
-*/		
-		
 	})
 
-.directive ('mainMenu', function () {
-
+.directive ('mainMenu', function ($location, $rootScope) {
 	return {
 		restrict: 'E',
 		controller: 'MainMenuCtrl',
 		templateUrl: 'components/shared/mainMenu.html',
-		link: function (scope, element, attrs, MainNavigationCtrl){
-	
+		link: function ( scope, element, attrs, MainMenuCtrl){
+			
+			// INITIATE THE LOGGEDIN AS FALSE WHEN LOADING THE MENU THE FIRST TIME
+			// IS SET TO TRUE BY THE LOGGIN SERVICE
+			$rootScope.loggedIn = false;
+			//CHECK IF THE USER IS LOGGED IN WHILE RELOADING THE PAGE
+if(!$rootScope.loggedIn) $location.path('/login'); 
+			
+			// CHECK IF THE MAIN MENU NEEDS TO BE DISPLAYED
+			var url = $location.url();
+			scope.displayMainMenu = (url == "/login" ? false : true);
+			
+			scope.$on('$locationChangeStart', function(event) {
+				// CHECK IF THE USER IS LOGGED IN WHILE HITTING DIRECTLY A PARTIAL PAGE
+				// IF NOT HE IS REDIRECTED TO THE LOGIN PAGE
+				if(!$rootScope.loggedIn) $location.path('/login'); 
+					//console.log("FROM LOCATION CHANGE");
+				});
+				
+			//////////////////////////////////////////////////////////////////
+			
+			var permissions = {
+				"menu:home" :"",
+				"menu:callmanagement":"",
+				"menu:caseadministration":"",
+				"menu:casemanagement" : "",
+				//"menu:caseanalyasis" : "",
+				//"menu:personmanagement" : "",
+				//"menu:reports":"",
+				"menu:supervisor":""
+        	};
+			
+			$rootScope.menuWithPermissions = [];
+
+			for (var i in scope.menuSource) {
+                //console.log(scope.menuSource[i]['permission']);
+               // console.log(scope.menuSource[i]['permission'] in permissions);
+				
+				if (scope.menuSource[i]['permission'] in permissions){
+                    //alert(scope.menuSource[i]['permission'] + ' will be enabled');
+					 $rootScope.menuWithPermissions.push(scope.menuSource[i]);
+					 
+					 if('items' in scope.menuSource[i]){
+                        //console.log('items exist for ' + scope.menuSource[i]['permission']);
+                        var submenu = scope.menuSource[i]['items'];
+                       /* console.log(submenu);
+                        for (var k in submenu){
+                            console.log(submenu[k]);
+                            console.log(submenu[k]['permission'] in permissions);
+                            if (!(submenu[k]['permission'] in permissions)) {
+                                console.log(submenu[k]['permission'] + ' will be disabled');
+                            }
+                        }*/
+                    }
+                }  
+            }
+			
+			/////////////////////////////////////////////////////////////
+			
+			// HIDE THE MENU WHEN LOGIN OUT
+			scope.logout = function() {
+		   		scope.displayMainMenu = false;
+				$rootScope.loggedIn = false;
+	  	 		}
+				
+			// DISPLAY THE NAME OF THE PAGE THAT HAS BEEN CLICKED
+			scope.onSelect = function(ev) {
+				$rootScope.pageToBuild = $(ev.item.firstChild).text();
+				//alert($(ev.item.firstChild).text());
+				};
 			}
 		}
 	})
+	
+.directive ('footer', function () {
+	return {
+		restrict: 'E',
+		templateUrl: 'components/shared/footer.html',
+		link: function (scope, element, attrs){
+			
+			}
+		}
+	})
+	

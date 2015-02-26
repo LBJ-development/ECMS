@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
 <file name="mainMenu.html" server="D:/xampp/htdocs/ECMS/" local="130681431642770936" remote="130681431640000000" Dst="1" />
-<file name="mainMenu.json" server="D:/xampp/htdocs/ECMS/" local="130681431642770936" remote="130681431640000000" Dst="1" />
 <file name="mainMenu.html" server="C:/tomcat/webapps/ecms/" local="130673623910000000" remote="130673623910000000" Dst="1" />
-<file name="mainMenu.json" server="C:/tomcat/webapps/ecms/" local="130673623633493578" remote="130673623630000000" Dst="1" />
 <file name="mainMenu.html" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130673623910000000" remote="130673623910000000" Dst="1" />
-<file name="mainMenu.json" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130673623633493578" remote="130673623630000000" Dst="1" />
 <file name="mainMenu.html" server="Z:/ECMS/" local="130673623910000000" remote="130673623910000000" Dst="1" />
+<<<<<<< HEAD
 <file name="mainMenu.json" server="Z:/ECMS/" local="130673623633493578" remote="130673623630000000" Dst="1" />
 <file name="mainMenu.json" server="Z:/ECMS/app/" local="130686870420952099" remote="130686870420000000" Dst="1" />
 <file name="mainMenu.html" server="Z:/ECMS/app/" local="130686857847711112" remote="130686857840000000" Dst="1" />
 <file name="mainMenu.js" server="Z:/ECMS/app/" local="130686711685394229" remote="130686711680000000" Dst="1" />
 <file name="mainMenuCtrl.js" server="Z:/ECMS/app/" local="130686867185004748" remote="130686867180000000" Dst="1" />
 <file name="test.json" server="Z:/ECMS/app/" local="130686833889435383" remote="130686833880000000" Dst="1" />
+=======
+<file name="mainMenu.html" server="Z:/ECMS/app/" local="130686726708016341" remote="130686726700000000" Dst="1" />
+<file name="mainMenuCtrl.js" server="Z:/ECMS/app/" local="130686734210526517" remote="130686734210000000" Dst="1" />
+<file name="comingSoon.html" server="Z:/UIDesigns/ECMS/" local="130687633797813547" remote="130687633790000000" Dst="1" />
+<file name="footer.html" server="Z:/UIDesigns/ECMS/" local="130688304388348271" remote="130688304380000000" Dst="1" />
+<file name="mainMenu.html" server="Z:/UIDesigns/ECMS/" local="130687616676843547" remote="130687616670000000" Dst="1" />
+<file name="mainMenuCtrl.js" server="Z:/UIDesigns/ECMS/" local="130688387835108388" remote="130688387830000000" Dst="1" />
+<file name="comingSoon.html" server="Z:/UIDesigns/ECMS/app/" local="130687633797813547" remote="130687633790000000" Dst="1" />
+<file name="footer.html" server="Z:/UIDesigns/ECMS/app/" local="130688304388348271" remote="130688304380000000" Dst="1" />
+<file name="mainMenu.html" server="Z:/UIDesigns/ECMS/app/" local="130692694275424015" remote="130692694270000000" Dst="1" />
+<file name="mainMenuCtrl.js" server="Z:/UIDesigns/ECMS/app/" local="130693508224953733" remote="130693508220000000" Dst="1" />
+>>>>>>> e0e485379fcbaa29cd6e1f5e102aa21a818ca07e
 </dwsync>

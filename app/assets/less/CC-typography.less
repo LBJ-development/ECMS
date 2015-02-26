@@ -7,13 +7,13 @@
 	text-decoration:none;
 }
 
-.labelText(@font-color: @basetextcolordark) {
-	font-size: @labelfontsize;
-	letter-spacing: 0.03em;
-    font-family: @basefont;
-    color: @font-color;
-	text-decoration:none;
+
+.labelText {
+	.baseText;
+	font-size:1em;
+	color: @basefont;
 }
+
 
 p {
 	.baseText;
@@ -59,6 +59,11 @@ p {
 	font-size:2.2em; 
 	padding: 5px 10px 5px 5px;
 	color: @mediumblue;
+}
+
+.coming-soon {
+	.title;
+	color: #a1a7ba;
 }
 
 .title-small {
