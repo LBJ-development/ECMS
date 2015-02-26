@@ -8,8 +8,9 @@
 <file name="mainMenu.json" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130673623633493578" remote="130673623630000000" Dst="1" />
 <file name="mainMenu.html" server="Z:/ECMS/" local="130673623910000000" remote="130673623910000000" Dst="1" />
 <file name="mainMenu.json" server="Z:/ECMS/" local="130673623633493578" remote="130673623630000000" Dst="1" />
-<file name="mainMenu.json" server="Z:/ECMS/app/" local="130686699058078033" remote="130686699050000000" Dst="1" />
-<file name="mainMenu.html" server="Z:/ECMS/app/" local="130686726708016341" remote="130686726700000000" Dst="1" />
+<file name="mainMenu.json" server="Z:/ECMS/app/" local="130686870420952099" remote="130686870420000000" Dst="1" />
+<file name="mainMenu.html" server="Z:/ECMS/app/" local="130686857847711112" remote="130686857840000000" Dst="1" />
 <file name="mainMenu.js" server="Z:/ECMS/app/" local="130686711685394229" remote="130686711680000000" Dst="1" />
-<file name="mainMenuCtrl.js" server="Z:/ECMS/app/" local="130686734210526517" remote="130686734210000000" Dst="1" />
+<file name="mainMenuCtrl.js" server="Z:/ECMS/app/" local="130686867185004748" remote="130686867180000000" Dst="1" />
+<file name="test.json" server="Z:/ECMS/app/" local="130686833889435383" remote="130686833880000000" Dst="1" />
 </dwsync>
