@@ -12,15 +12,35 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 })
 
 // FACTORY DATA FOR TESTING PURPOSE -- RETURN A RESULT 
-.factory("dataFtry", function(){
+.factory("dataFtry", function($http){
 	return{
-		getData: function(num){
-			return generateCaseAdminData(num)
+		getData: function(){
+			console.log("FROM FACTORY");
+			var srvc ="http://cc-devapp1.ncmecad.net:8080/ecms-prod/rest/caseadmin/cases?startDate=2015-02-18&endDate=2015-02-19";
+			var $promise = $http.get(srvc);
+			
+			$promise.then(function(result){
+				console.log("SUCCESS" + result);
+				/*console.log(result.status);
+				console.log(result.data.status);
+				if(result.data.status == 'SUCCESS'){
+					$scope.errormessage='';
+					$rootScope.usernameScope = credentials['username']; // display the user name
+					$location.path('/home'); // redirect to the home page
+				} else {
+					//$scope.errormessage		= result.data.messages[0] + "!";
+					//$scope.errormessage		= result.data + "!";
+					$scope.errormessage			= "Incorrect Information, please try again!";
+					$scope.errormessageclass	= 'errorMessageOn';	
+					$location.path('/home');
+					
+				};*/
+			})
 		}
 	}
 })
 
-.controller("DatePickerCtrl",['$rootScope','$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
+.controller("DatePickerCtrl",['$rootScope','$scope',  function($rootScope, $scope){
 	var todayDate 		= new Date();
 	var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
 	var startingDate 	= new Date(todayDate.getTime() - dateOffset);
@@ -39,16 +59,19 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 	}
 }])
 
-.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
+//.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
+.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataFtry', function($rootScope, $scope, dataFtry){
 	
-	var caseAdminData = dataSvrc.getData($rootScope.numRecords);
+	//var caseAdminData = dataSvrc.getData($rootScope.numRecords);
+	var caseAdminData = dataFtry.getData();
 	
-	$rootScope.$watch('numRecords', function(newValue, oldValue) {
+	// WATCH FOR A DATE RANGE CHANGE
+	/*$rootScope.$watch('numRecords', function(newValue, oldValue) {
 		
 			caseAdminData = dataSvrc.getData(newValue);
 			$scope.mainGridOptions.dataSource.data = caseAdminData;
 			//console.log($scope.mainGridOptions.dataSource.data);
-	});
+	});*/
 
 	$scope.mainGridOptions =  {
 		 
@@ -155,6 +178,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						},{
 						field	: "endangerment",
 						title	: "Endg.",
+						filterable: false,
 						width	: "5%"
 						},{
 						field	: "alerts",
