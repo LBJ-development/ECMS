@@ -2,136 +2,212 @@
 
 angular.module('ECMSapp.adminMain', ['ngRoute'])
 
-/*.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/adminMain', {
-    templateUrl: 'components/caseAdministration/adminMain.html'
-  });
-}])*/
+// SERVICE DATA FOR TESTING PURPOSE -- RETURN AN INSTANCE OF THE FUNCTION
+.service("dataSvrc" ,function(){
+	this.getData = function(num){
+		var data = generateCaseAdminData(num);
+		return data;	
+	}
+	return this;
+})
 
-.controller('AdminMainFilterCtrl', function($scope) {
-	
-	$scope.RFSSourceType = {
-            placeholder: "Select RFS Source types",
-            dataTextField: "text",
-            dataValueField: "value",
-            valuePrimitive: true,
-            autoBind: false,
-			dataSource:  
-                   [
-                 { text: "Call", 					value: "1" },
-       			 { text: "Email", 					value: "2" },
-				 { text: "Internet", 				value: "3" },
-				 { text: "Fax", 					value: "4" },
-				 { text: "Electronic", 				value: "5" },
-				 { text: "Online Sighting Form",	value: "6" },
-				 { text: "Hague App", 				value: "7" },
-				 { text: "NCIC", 					value: "8" },
-				 { text: "NamUs", 					value: "9" }
-				   ]
-        };
-	
-	 $scope.RFSType = {
-            placeholder: "Select RFS types",
-            dataTextField: "text",
-            dataValueField: "value",
-            valuePrimitive: true,
-            autoBind: false,
-			dataSource:  
-                   [
-                 { text: "Intake", 		value: "1" },
-       			 { text: "Lead", 		value: "2" },
-				 { text: "TA", 			value: "3" },
-				 { text: "Cybertip", 	value: "4" }
-				   ]
-        };
+// FACTORY DATA FOR TESTING PURPOSE -- RETURN A RESULT 
+.factory("dataFtry", function($http){
+	return{
+		getData: function(){
+			console.log("FROM FACTORY");
+			var srvc ="http://cc-devapp1.ncmecad.net:8080/ecms-prod/rest/caseadmin/cases?startDate=2015-02-18&endDate=2015-02-19";
+			var $promise = $http.get(srvc);
+			
+			$promise.then(function(result){
+				console.log("SUCCESS" + result);
+				/*console.log(result.status);
+				console.log(result.data.status);
+				if(result.data.status == 'SUCCESS'){
+					$scope.errormessage='';
+					$rootScope.usernameScope = credentials['username']; // display the user name
+					$location.path('/home'); // redirect to the home page
+				} else {
+					//$scope.errormessage		= result.data.messages[0] + "!";
+					//$scope.errormessage		= result.data + "!";
+					$scope.errormessage			= "Incorrect Information, please try again!";
+					$scope.errormessageclass	= 'errorMessageOn';	
+					$location.path('/home');
+					
+				};*/
+			})
+		}
+	}
+})
+
+.controller("DatePickerCtrl",['$rootScope','$scope',  function($rootScope, $scope){
+	var todayDate 		= new Date();
+	var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
+	var startingDate 	= new Date(todayDate.getTime() - dateOffset);
+	var endingDate 		= todayDate;
+
+	$scope.startingDate	= startingDate;
+	$scope.endingDate	= endingDate;
+	$rootScope.numRecords	= 33*2; // 33 RECORDS/DAY
+
+	$rootScope.changeDateRange = function(){
 		
-		 $scope.caseType = {
-            placeholder: "Select Case types",
-            dataTextField: "text",
-            dataValueField: "value",
-            valuePrimitive: true,
-            autoBind: false,
-			dataSource:  
-                   [
-                 { text: "ERU", 		value: "1" },
-       			 { text: "FA", 			value: "2" },
-				 { text: "NFA", 		value: "3" },
-				 { text: "LIM", 		value: "4" },
-				 { text: "5779", 		value: "5" },
-				 { text: "ATAB", 		value: "6" },
-				 { text: "UNID", 		value: "7" },
-				 { text: "DEC", 		value: "8" },
-				 { text: "UMR", 		value: "9" },
-				 { text: "RCST", 		value: "10" }
-				   ]
-        };
+		var numDays = ($scope.endingDate - $scope.startingDate) / 86400000;
+		var numRecords = 33 * numDays; // 33 RECORDS/DAY
+		$rootScope.numRecords = numRecords;
+		//console.log("FROM DATEPICKERCTRL: " + dataSvrc.getData(numRecords));
+	}
+}])
+
+.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
+//.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataFtry', function($rootScope, $scope, dataFtry){
+	
+	var caseAdminData = dataSvrc.getData($rootScope.numRecords);
+	//var caseAdminData = dataFtry.getData();
+	
+	// WATCH FOR A DATE RANGE CHANGE
+	$rootScope.$watch('numRecords', function(newValue, oldValue) {
 		
-		 $scope.mediaStatus = {
-            placeholder: "Select Media Statuses",
-            dataTextField: "text",
-            dataValueField: "value",
-            valuePrimitive: true,
-            autoBind: false,
-			dataSource:  
-                   [
-                 { text: "Not Media Ready", value: "1" },
-       			 { text: "Certified", 		value: "2" },
-				 { text: "Restricted", 		value: "3" },
-				 { text: "No Media", 		value: "4" }
-				   ]
-        };
-	})
+			caseAdminData = dataSvrc.getData(newValue);
+			$scope.mainGridOptions.dataSource.data = caseAdminData;
+			console.log($scope.mainGridOptions.dataSource.data);
+	});
 
-.controller('AdminMainResultCtrl', function($scope) {
-
-	// prepare the data
-	var data = generatenotification(13);
-
-	var source =
-		{
-		localdata: data,
-		datafields:
-			[
-				{ name: 'id', type: 'number'},
-				{ name: 'events', type: 'string' },
-				{ name: 'objects', type: 'string' },
-				{ name: 'details', type: 'string' },
-				{ name: 'users', type: 'string' },
-				{ name: 'seen', type: 'bool' }
-			],
-		datatype: "array"
-		};
-	var columns = 
-		[
-			{ text: 'ID', datafield: 'id', width: '5%', cellsAlign: 'center', align: 'center'},
-			{ text: 'Object/Event', datafield: 'events', width: '20%', align: 'center'},
-			{ text: 'Object ID', datafield: 'objects', width: '20%', align: 'center'},
-			{ text: 'Details', datafield: 'details', width: '35%', align: 'center'},
-			{ text: 'User', datafield: 'users', width: '15%', cellsFormat: 'c2', align: 'center' },
-			{ text: 'Seen', datafield: 'seen', width: '5%', columntype: 'checkbox', cellsAlign: 'center', align: 'center',  cellsformat: 'c2' }
-		];
-      
-	$scope.gridSettings =
-		{
-			width: '100%',
-			autoheight: true,
-			source: source,                
-			columns: columns,
-			editable: true,
-            enabletooltips: true
-
-		};
-	})
-
-.controller("DatePickerCtrl", function($scope){
-          $scope.monthSelectorOptions = {
-            start: "year",
-            depth: "year"
-          };
-          $scope.getType = function(x) {
-            return typeof x;
-          };
-          $scope.isDate = function(x) {
-            return x instanceof Date;
-          };
-      })
+	$scope.mainGridOptions =  {
+		 
+		dataSource: {
+			data: caseAdminData,
+			    schema: {
+					model: {
+						fields: {
+								cases			: { type: "string" },
+								receivedDate	: { type: "date" },
+								incidentDate	: { type: "date" },
+								source			: { type: "string" },
+								caseType		: { type: "string" },
+								caseStatus		: { type: "string" },
+								numVictims		: { type: "string" },
+								endangerment	: { type: "string" },
+								alerts			: { type: "string" },
+								state			: { type: "string" },
+								division		: { type: "string" },
+								assignee		: { type: "string" },
+								selected		: { type: "boolean" }
+								}
+							}
+						},
+					},
+		//height		: 550,
+		sortable	: true,
+		scrollable	: false,
+		filterable	: {
+					mode		: "menu",
+    				extra		: false,
+					messages	: {
+      					info		: "Filter by:",
+						selectValue	: "Select category",
+						isTrue		: "selected",
+						isFalse		: "not selected"
+							},
+					operators	: {
+      						string	: {
+        						eq			: "Equal to",
+        						//neq			: "Not equal to",
+								contains	: "Contains",
+								startswith	: "Starts with",
+								endswith	: "Ends with"
+      							},
+							number	: {
+								eq			: "Equal to",
+								},
+							date	: {
+								gt			: "After",
+       					 		lt			: "Before"
+								}
+							}
+  						},
+		pageable	: {
+                     	refresh: true,
+                      	pageSizes: true,
+                     	buttonCount: 5,
+						pageSize: 15
+                        },
+						
+		/*columnMenu: {
+   			messages	: {
+      			columns			: "Choose columns",
+      			filter			: "Apply filter",
+      			sortAscending	: "Sort (asc)",
+      			sortDescending	: "Sort (desc)"
+							}
+    				},*/
+		columns		: [{
+						field	: "cases",
+						title	: "RFS/Case",
+						width	: "8%",
+						attributes: {
+      						//style: "text-align: center"
+    						}
+						},{
+						field	: "receivedDate",
+						title	: "Date Rcvd",
+            			format	:"{0:MM/dd/yyyy}" ,
+						width	: "9%"
+						},{
+						field	: "incidentDate",
+						title	: "Incid. Date",
+						format	:"{0:MM/dd/yyyy}" ,
+						width	: "9%"
+						},{
+						field	: "source",
+						title	: "Source",
+						width	: "6%"
+						},{
+						field	: "caseType",
+						title	: "Case Type",
+						width	: "9%"
+						},{
+						field	: "caseStatus",
+						title	: "Case Status",
+						width	: "9%",
+						},{
+						field	: "numVictims",
+						title	: "# Vic.",
+						filterable: false,
+						width	: "5%"
+						},{
+						field	: "endangerment",
+						title	: "Endg.",
+						filterable: false,
+						width	: "5%"
+						},{
+						field	: "alerts",
+						title	: "Alerts",
+						width	: "8%"
+						},{
+						field	: "state",
+						title	: "State",
+						filterable: false,
+						width	: "5%"
+						},{
+						field	: "division",
+						title	: "Div",
+						filterable: false,
+						width	: "8%"
+						},{
+						field	: "assignee",
+						title	: "Assignee",
+						width	: "14%"
+						},{
+						field	: "selected",
+						title	: "Sel.",
+						width	: "5%",
+						filterable: false,
+						template: "<input type='checkbox'/>",
+						attributes: {
+      						style: "text-align: center"
+    					}
+                	}]
+				};
+	
+}])

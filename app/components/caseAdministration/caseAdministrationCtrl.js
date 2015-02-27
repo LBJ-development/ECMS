@@ -11,33 +11,39 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 	return this;
 })
 
-// FACTORY DATA FOR TESTING PURPOSE -- RETURN A RESULT 
-.factory("dataFtry", function($http){
+// FACTORY DATA FOR TESTING PURPOSE -- RETURN A RESULT
+.factory("testDataFtry", function(){
 	return{
-		getData: function(){
-			console.log("FROM FACTORY");
-			var srvc ="http://cc-devapp1.ncmecad.net:8080/ecms-prod/rest/caseadmin/cases?startDate=2015-02-18&endDate=2015-02-19";
-			var $promise = $http.get(srvc);
-			
-			$promise.then(function(result){
-				console.log("SUCCESS" + result);
-				/*console.log(result.status);
-				console.log(result.data.status);
-				if(result.data.status == 'SUCCESS'){
-					$scope.errormessage='';
-					$rootScope.usernameScope = credentials['username']; // display the user name
-					$location.path('/home'); // redirect to the home page
-				} else {
-					//$scope.errormessage		= result.data.messages[0] + "!";
-					//$scope.errormessage		= result.data + "!";
-					$scope.errormessage			= "Incorrect Information, please try again!";
-					$scope.errormessageclass	= 'errorMessageOn';	
-					$location.path('/home');
-					
-				};*/
-			})
+		getData: function(num){
+			return generateCaseAdminData(num)
 		}
 	}
+})
+
+.factory('dataFtry', function($http, $q) {
+
+	var getData = function() {
+	 
+		var urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=2015-02-18&endDate=2015-02-19";
+		var $promise = $http.get(urlBase);
+		
+		var deferred = $q.defer();
+		
+		$promise.then(function(result){
+			
+			if(result.data.status == 'SUCCESS'){
+				//console.log(result.data.status);
+				deferred.resolve(result.data.content);
+				
+			} else {
+				alert("Something better is coming!");
+			}
+		})
+		return deferred.promise;
+	};
+    return {
+      getData: getData
+    };
 })
 
 .controller("DatePickerCtrl",['$rootScope','$scope',  function($rootScope, $scope){
@@ -62,16 +68,38 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 //.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
 .controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataFtry', function($rootScope, $scope, dataFtry){
 	
+	 var iniGrid = dataFtry.getData().then(function(caseAdminData) {
+
+	
 	//var caseAdminData = dataSvrc.getData($rootScope.numRecords);
-	var caseAdminData = dataFtry.getData();
+	
+	//console.log("FROM CONTROLER: ");
+	
+	/*var caseAdminData = dataFtry.getData(function(data){
+		
+		console.log("FROM CONTROLER: " + data);
+		
+	});*/
+	
+	/*var $promise = dataFtry.getData();
+	
+	$promise.then(function(){
+		console.log("FROM CONTROLER: " + caseAdminData);
+	});
+	*/
+	
+	
+	
+	
 	
 	// WATCH FOR A DATE RANGE CHANGE
 	/*$rootScope.$watch('numRecords', function(newValue, oldValue) {
 		
 			caseAdminData = dataSvrc.getData(newValue);
 			$scope.mainGridOptions.dataSource.data = caseAdminData;
-			//console.log($scope.mainGridOptions.dataSource.data);
+			console.log($scope.mainGridOptions.dataSource.data);
 	});*/
+	
 
 	$scope.mainGridOptions =  {
 		 
@@ -80,19 +108,16 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 			    schema: {
 					model: {
 						fields: {
-								cases			: { type: "string" },
-								receivedDate	: { type: "date" },
-								incidentDate	: { type: "date" },
-								source			: { type: "string" },
-								caseType		: { type: "string" },
-								caseStatus		: { type: "string" },
-								numVictims		: { type: "string" },
-								endangerment	: { type: "string" },
-								alerts			: { type: "string" },
-								state			: { type: "string" },
-								division		: { type: "string" },
-								assignee		: { type: "string" },
-								selected		: { type: "boolean" }
+								caseNumber		: { type: "string" 	},
+								receivedDate	: { type: "date"	},
+								incidentDate	: { type: "date" 	},
+								source			: { type: "string"	},
+								caseType		: { type: "string" 	},
+								caseStatus		: { type: "string"	},
+								alerts			: { type: "string" 	},
+								state			: { type: "string"	},
+								caseManager		: { type: "string"	},
+								selected		: { type: "boolean"	}
 								}
 							}
 						},
@@ -142,7 +167,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 							}
     				},*/
 		columns		: [{
-						field	: "cases",
+						field	: "caseNumber",
 						title	: "RFS/Case",
 						width	: "8%",
 						attributes: {
@@ -150,9 +175,10 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
     						}
 						},{
 						field	: "receivedDate",
-						title	: "Date Rcvd",
+						title	: "Date Rcvd.",
             			format	:"{0:MM/dd/yyyy}" ,
-						width	: "9%"
+						width	: "9%",
+						filterable: false,
 						},{
 						field	: "incidentDate",
 						title	: "Incid. Date",
@@ -164,22 +190,12 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						width	: "6%"
 						},{
 						field	: "caseType",
-						title	: "Case Type",
+						title	: "Type",
 						width	: "9%"
 						},{
 						field	: "caseStatus",
-						title	: "Case Status",
+						title	: "Status",
 						width	: "9%",
-						},{
-						field	: "numVictims",
-						title	: "# Vic.",
-						filterable: false,
-						width	: "5%"
-						},{
-						field	: "endangerment",
-						title	: "Endg.",
-						filterable: false,
-						width	: "5%"
 						},{
 						field	: "alerts",
 						title	: "Alerts",
@@ -187,15 +203,9 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						},{
 						field	: "state",
 						title	: "State",
-						filterable: false,
 						width	: "5%"
 						},{
-						field	: "division",
-						title	: "Div",
-						filterable: false,
-						width	: "8%"
-						},{
-						field	: "assignee",
+						field	: "caseManager",
 						title	: "Assignee",
 						width	: "14%"
 						},{
@@ -209,5 +219,6 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
     					}
                 	}]
 				};
-	
+
+	 });
 }])
