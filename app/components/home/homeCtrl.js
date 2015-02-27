@@ -36,6 +36,7 @@ angular.module('ECMSapp.home', [])
 						field	: "id",
 						title	: "ID",
 						width	: "50px",
+						sortable: false,
 						attributes: {
       						style: "text-align: center"
     					}
@@ -60,6 +61,7 @@ angular.module('ECMSapp.home', [])
 						title	: "Seen",
 						template: "<input type='checkbox'/>",
 						width	: "70px",
+						sortable: false,
 						attributes: {
       						style: "text-align: center"
     					}

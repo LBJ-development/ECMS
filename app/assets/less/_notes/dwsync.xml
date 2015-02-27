@@ -63,7 +63,7 @@
 <file name="colour.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
 <file name="forms.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
 <file name="JQX-redefined.less" server="Z:/ECMS/app/" local="130686537513231448" remote="130686537510000000" Dst="1" />
-<file name="kendoUI-redefined.less" server="Z:/ECMS/app/" local="130686578371323566" remote="130686578370000000" Dst="1" />
+<file name="kendoUI-redefined.less" server="Z:/ECMS/app/" local="130686587598461071" remote="130686587590000000" Dst="1" />
 <file name="mixins.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
 <file name="reset.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
 <file name="variables.less" server="Z:/ECMS/app/" local="130686537513331432" remote="130686537510000000" Dst="1" />
@@ -93,4 +93,5 @@
 <file name="kendoUI-redefined.less" server="Z:/UIDesigns/ECMS/app/" local="130692798245674015" remote="130692798240000000" Dst="1" />
 <file name="ng-Animation.less" server="Z:/UIDesigns/ECMS/app/" local="130688388332088081" remote="130688388330000000" Dst="1" />
 <file name="CC-variables.less" server="Z:/UIDesigns/ECMS/app/" local="130691789104963273" remote="130691789100000000" Dst="1" />
+<file name="ng-Animation.less" server="Z:/ECMS/app/" local="130694286927528797" remote="130694286920000000" Dst="1" />
 </dwsync>
