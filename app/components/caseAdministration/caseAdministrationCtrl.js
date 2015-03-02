@@ -12,20 +12,50 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 })
 
 // FACTORY DATA FOR TESTING PURPOSE -- RETURN A RESULT
-.factory("testDataFtry", function(){
-	return{
-		getData: function(num){
-			return generateCaseAdminData(num)
-		}
-	}
+.factory("GetDateRangeFtry", function($scope){
+	
+	var getDateRange = function() {
+
+			var todayDate 		= new Date();
+			var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
+			var startingDate 	= new Date(todayDate.getTime() - dateOffset);
+			var endingDate 		= todayDate;
+
+			$scope.startingDate	= startingDate;
+			$scope.endingDate	= endingDate;
+
+			var stDate 	= $scope.startingDate.getDate() ;
+			var stMonth = $scope.startingDate.getMonth() + 1;
+			var stYear 	= $scope.startingDate.getFullYear();
+			var enDate 	= $scope.endingDate.getDate() ;
+			var enMonth = $scope.endingDate.getMonth() + 1;
+			var enYear 	= $scope.endingDate.getFullYear();
+		
+			var startDate 	= stYear + "-" + stMonth  + "-" + stDate;
+			var endDate 	= enYear + "-" + enMonth  + "-" + enDate;
+			//$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
+			
+			return  "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
+		};
+			
+		return {
+				
+			getDateRange : getDateRange	
+	};
 })
 
-.factory('DataFtry', function($http, $q) {
+.factory('DataFtry', function($rootScope, $http, $q) {
 
-	var getData = function() {
+	var getData = function(URL) {
+		
+		//console.log(URL);
 	 
-		var urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=2015-02-18&endDate=2015-02-19";
-		var $promise = $http.get(urlBase);
+		$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=2015-02-11&endDate=2015-02-19";
+		
+			//console.log($rootScope.urlBase);
+			//console.log(URL);
+		
+		var $promise = $http.get($rootScope.urlBase);
 		
 		var deferred = $q.defer();
 		
@@ -54,22 +84,39 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 
 	$scope.startingDate	= startingDate;
 	$scope.endingDate	= endingDate;
-	$rootScope.numRecords	= 33*2; // 33 RECORDS/DAY
 
 	$rootScope.changeDateRange = function(){
 		
-		var numDays = ($scope.endingDate - $scope.startingDate) / 86400000;
-		var numRecords = 33 * numDays; // 33 RECORDS/DAY
-		$rootScope.numRecords = numRecords;
-		//console.log("FROM DATEPICKERCTRL: " + DataSvrc.getData(numRecords));
+		var stDate 	= $scope.startingDate.getDate() ;
+		var stMonth = $scope.startingDate.getMonth() + 1;
+		var stYear 	= $scope.startingDate.getFullYear();
+		var enDate 	= $scope.endingDate.getDate() ;
+		var enMonth = $scope.endingDate.getMonth() + 1;
+		var enYear 	= $scope.endingDate.getFullYear();
+		
+		var startDate 	= stYear + "-" + stMonth  + "-" + stDate;
+		var endDate 	= enYear + "-" + enMonth  + "-" + enDate;
+		
+		$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
+		
 	}
 }])
 
-//.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataSvrc', function($rootScope, $scope, DataSvrc){
-.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry', function($rootScope, $scope, DataFtry){
-
-	DataFtry.getData().then(function(result){
-
+//.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry', 'GetDateRangeFtry', function($rootScope, $scope, DataFtry, GetDateRangeFtry ){
+.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry', function($rootScope, $scope, DataFtry ){
+	
+	//console.log(GetDateRangeFtry.getDateRange())
+	
+	// WATCH FOR A DATE RANGE CHANGE
+	$rootScope.$watch('urlBase', function(newValue, oldValue) {
+		
+			DataFtry.getData(newValue).then(function(result){
+		
+				initGrid(result);
+		})
+	});
+	
+	var initGrid = function(result){
 		$scope.mainGridOptions =  {
 		 
 		dataSource: {
@@ -190,7 +237,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 				};
 
 		
-	});
+	};
 		
 
 	
