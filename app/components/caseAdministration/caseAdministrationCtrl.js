@@ -3,7 +3,7 @@
 angular.module('ECMSapp.adminMain', ['ngRoute'])
 
 // SERVICE DATA FOR TESTING PURPOSE -- RETURN AN INSTANCE OF THE FUNCTION
-.service("dataSvrc" ,function(){
+.service("DataSvrc" ,function(){
 	this.getData = function(num){
 		var data = generateCaseAdminData(num);
 		return data;	
@@ -20,7 +20,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 	}
 })
 
-.factory('dataFtry', function($http, $q) {
+.factory('DataFtry', function($http, $q) {
 
 	var getData = function() {
 	 
@@ -61,56 +61,25 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 		var numDays = ($scope.endingDate - $scope.startingDate) / 86400000;
 		var numRecords = 33 * numDays; // 33 RECORDS/DAY
 		$rootScope.numRecords = numRecords;
-		//console.log("FROM DATEPICKERCTRL: " + dataSvrc.getData(numRecords));
+		//console.log("FROM DATEPICKERCTRL: " + DataSvrc.getData(numRecords));
 	}
 }])
 
-//.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataSvrc', function($rootScope, $scope, dataSvrc){
-.controller("CaseAdminCtrl",['$rootScope', '$scope', 'dataFtry', function($rootScope, $scope, dataFtry){
-	
-	 var iniGrid = dataFtry.getData().then(function(caseAdminData) {
+//.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataSvrc', function($rootScope, $scope, DataSvrc){
+.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry', function($rootScope, $scope, DataFtry){
 
-	
-	//var caseAdminData = dataSvrc.getData($rootScope.numRecords);
-	
-	//console.log("FROM CONTROLER: ");
-	
-	/*var caseAdminData = dataFtry.getData(function(data){
-		
-		console.log("FROM CONTROLER: " + data);
-		
-	});*/
-	
-	/*var $promise = dataFtry.getData();
-	
-	$promise.then(function(){
-		console.log("FROM CONTROLER: " + caseAdminData);
-	});
-	*/
-	
-	
-	
-	
-	
-	// WATCH FOR A DATE RANGE CHANGE
-	/*$rootScope.$watch('numRecords', function(newValue, oldValue) {
-		
-			caseAdminData = dataSvrc.getData(newValue);
-			$scope.mainGridOptions.dataSource.data = caseAdminData;
-			console.log($scope.mainGridOptions.dataSource.data);
-	});*/
-	
+	DataFtry.getData().then(function(result){
 
-	$scope.mainGridOptions =  {
+		$scope.mainGridOptions =  {
 		 
 		dataSource: {
-			data: caseAdminData,
+			data: result,
 			    schema: {
 					model: {
 						fields: {
 								caseNumber		: { type: "string" 	},
-								receivedDate	: { type: "date"	},
-								incidentDate	: { type: "date" 	},
+								dateReceived	: { type: "date"	},
+								incidentDates	: { type: "date"	},
 								source			: { type: "string"	},
 								caseType		: { type: "string" 	},
 								caseStatus		: { type: "string"	},
@@ -174,13 +143,13 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
       						//style: "text-align: center"
     						}
 						},{
-						field	: "receivedDate",
+						field	: "dateReceived",
 						title	: "Date Rcvd.",
             			format	:"{0:MM/dd/yyyy}" ,
 						width	: "9%",
 						filterable: false,
 						},{
-						field	: "incidentDate",
+						field	: "incidentDates",
 						title	: "Incid. Date",
 						format	:"{0:MM/dd/yyyy}" ,
 						width	: "9%"
@@ -220,5 +189,41 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
                 	}]
 				};
 
-	 });
+		
+	});
+		
+
+	
+	//var caseAdminData = DataSvrc.getData($rootScope.numRecords);
+	
+	//console.log("FROM CONTROLER: ");
+	
+	/*var caseAdminData = DataFtry.getData(function(data){
+		
+		console.log("FROM CONTROLER: " + data);
+		
+	});*/
+	
+	/*var $promise = DataFtry.getData();
+	
+	$promise.then(function(){
+		console.log("FROM CONTROLER: " + caseAdminData);
+	});
+	*/
+	
+	
+	
+	
+	
+	// WATCH FOR A DATE RANGE CHANGE
+	/*$rootScope.$watch('numRecords', function(newValue, oldValue) {
+		
+			caseAdminData = DataSvrc.getData(newValue);
+			$scope.mainGridOptions.dataSource.data = caseAdminData;
+			console.log($scope.mainGridOptions.dataSource.data);
+	});*/
+	
+
+	
+	
 }])
