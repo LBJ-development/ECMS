@@ -1,60 +1,15 @@
 'use strict';
 
-angular.module('ECMSapp.adminMain', ['ngRoute'])
-
-// SERVICE DATA FOR TESTING PURPOSE -- RETURN AN INSTANCE OF THE FUNCTION
-.service("DataSvrc" ,function(){
-	this.getData = function(num){
-		var data = generateCaseAdminData(num);
-		return data;	
-	}
-	return this;
-})
-
-// FACTORY DATA FOR TESTING PURPOSE -- RETURN A RESULT
-.factory("GetDateRangeFtry", function($scope){
-	
-	var getDateRange = function() {
-
-			var todayDate 		= new Date();
-			var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
-			var startingDate 	= new Date(todayDate.getTime() - dateOffset);
-			var endingDate 		= todayDate;
-
-			$scope.startingDate	= startingDate;
-			$scope.endingDate	= endingDate;
-
-			var stDate 	= $scope.startingDate.getDate() ;
-			var stMonth = $scope.startingDate.getMonth() + 1;
-			var stYear 	= $scope.startingDate.getFullYear();
-			var enDate 	= $scope.endingDate.getDate() ;
-			var enMonth = $scope.endingDate.getMonth() + 1;
-			var enYear 	= $scope.endingDate.getFullYear();
-		
-			var startDate 	= stYear + "-" + stMonth  + "-" + stDate;
-			var endDate 	= enYear + "-" + enMonth  + "-" + enDate;
-			//$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
-			
-			return  "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
-		};
-			
-		return {
-				
-			getDateRange : getDateRange	
-	};
-})
+angular.module('ECMSapp.adminMain', [])
 
 .factory('DataFtry', function($rootScope, $http, $q) {
 
-	var getData = function(URL) {
-		
+	var getData = function(URL) {	
 		//console.log(URL);
-	 
-		$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=2015-02-11&endDate=2015-02-19";
-		
-			//console.log($rootScope.urlBase);
-			//console.log(URL);
-		
+		//$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=2015-02-11&endDate=2015-02-19";
+		$rootScope.urlBase = URL;
+		//console.log("FROM DATAFTRY: " + URL);
+
 		var $promise = $http.get($rootScope.urlBase);
 		
 		var deferred = $q.defer();
@@ -62,6 +17,13 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 		$promise.then(function(result){
 			
 			if(result.data.status == 'SUCCESS'){
+				
+				if(result.data.messages.CASES_LIST == 'No results found, please adjust the date range'){
+					alert(result.data.messages.CASES_LIST);
+				
+				} else if(result.data.messages.CASES_LIST == 'More than 500 results found, returning first 500, please adjust the date range') {
+					alert(result.data.messages.CASES_LIST);
+				}
 				//console.log(result.data.status);
 				deferred.resolve(result.data.content);
 				
@@ -72,20 +34,20 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 		return deferred.promise;
 	};
     return {
-      getData: getData
+		getData: getData
     };
 })
 
-.controller("DatePickerCtrl",['$rootScope','$scope',  function($rootScope, $scope){
-	var todayDate 		= new Date();
-	var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
-	var startingDate 	= new Date(todayDate.getTime() - dateOffset);
-	var endingDate 		= todayDate;
+.controller('DatePickerCtrl',['$rootScope', '$scope', function($rootScope, $scope){
+	
+		// INITIAL DATE RANGE //////////////////////////////////////////////////
+		var todayDate 		= new Date();
+		var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
+		var startingDate 	= new Date(todayDate.getTime() - dateOffset);
+		var endingDate 		= todayDate;
 
-	$scope.startingDate	= startingDate;
-	$scope.endingDate	= endingDate;
-
-	$rootScope.changeDateRange = function(){
+		$scope.startingDate	= startingDate;
+		$scope.endingDate	= endingDate;
 		
 		var stDate 	= $scope.startingDate.getDate() ;
 		var stMonth = $scope.startingDate.getMonth() + 1;
@@ -96,23 +58,36 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 		
 		var startDate 	= stYear + "-" + stMonth  + "-" + stDate;
 		var endDate 	= enYear + "-" + enMonth  + "-" + enDate;
-		
+
 		$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
+			
+		// WHEN DATE RANGE CHANGES //////////////////////////////////////////////////
+		$rootScope.changeDateRange = function(){
+			
+			stDate 	= $scope.startingDate.getDate() ;
+			stMonth = $scope.startingDate.getMonth() + 1;
+			stYear 	= $scope.startingDate.getFullYear();
+			enDate 	= $scope.endingDate.getDate() ;
+			enMonth = $scope.endingDate.getMonth() + 1;
+			enYear 	= $scope.endingDate.getFullYear();
 		
+			startDate 	= stYear + "-" + stMonth  + "-" + stDate;
+			endDate 	= enYear + "-" + enMonth  + "-" + enDate;
+
+			$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;	
+
 	}
 }])
 
-//.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry', 'GetDateRangeFtry', function($rootScope, $scope, DataFtry, GetDateRangeFtry ){
-.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry', function($rootScope, $scope, DataFtry ){
-	
-	//console.log(GetDateRangeFtry.getDateRange())
-	
+.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry',  function($rootScope, $scope, DataFtry){
+
 	// WATCH FOR A DATE RANGE CHANGE
 	$rootScope.$watch('urlBase', function(newValue, oldValue) {
-		
-			DataFtry.getData(newValue).then(function(result){
-		
-				initGrid(result);
+
+		DataFtry.getData($rootScope.urlBase).then(function(result){
+			
+			//console.log("FROM CASEADMINCTRL: " + $rootScope.urlBase);
+			initGrid(result);
 		})
 	});
 	
@@ -128,7 +103,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 								dateReceived	: { type: "date"	},
 								incidentDates	: { type: "date"	},
 								source			: { type: "string"	},
-								caseType		: { type: "string" 	},
+								caseTypeAbbr	: { type: "string" 	},
 								caseStatus		: { type: "string"	},
 								alerts			: { type: "string" 	},
 								state			: { type: "string"	},
@@ -205,13 +180,13 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
 						title	: "Source",
 						width	: "6%"
 						},{
-						field	: "caseType",
+						field	: "caseTypeAbbr",
 						title	: "Type",
 						width	: "9%"
 						},{
 						field	: "caseStatus",
 						title	: "Status",
-						width	: "9%",
+						width	: "9%"
 						},{
 						field	: "alerts",
 						title	: "Alerts",
@@ -235,11 +210,7 @@ angular.module('ECMSapp.adminMain', ['ngRoute'])
     					}
                 	}]
 				};
-
-		
-	};
-		
-
+};
 	
 	//var caseAdminData = DataSvrc.getData($rootScope.numRecords);
 	

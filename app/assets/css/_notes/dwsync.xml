@@ -4,15 +4,12 @@
 <file name="CC-styles.css" server="C:/tomcat/webapps/ecms/" local="130670153051635051" remote="130670153050000000" Dst="1" />
 <file name="CC-styles.css" server="C:/tomcat/webapps/ecms/WEB-INF/views/" local="130675411565426799" remote="130675411560000000" Dst="1" />
 <file name="CC-styles.css" server="Z:/ECMS/" local="130677309940503904" remote="130677309940000000" Dst="1" />
-<file name="JQX-redefined.css" server="Z:/ECMS/" local="130677343515401152" remote="130677343510000000" Dst="1" />
 <file name="CC-styles.css" server="Z:/UIDesigns/ECMS/" local="130688388335118384" remote="130688388330000000" Dst="1" />
-<file name="JQX-redefined.css" server="Z:/UIDesigns/ECMS/" local="130685861351317310" remote="130685861350000000" Dst="1" />
 <file name="kendoUI-redefined.css" server="Z:/UIDesigns/ECMS/" local="130688381384928848" remote="130688381380000000" Dst="1" />
-<file name="JQX-redefined.css" server="D:/xampp/htdocs/ECMS/" local="130682282859976182" remote="130682282850000000" Dst="1" />
 <file name="kendoUI-redefined.css" server="D:/xampp/htdocs/ECMS/" local="130682286720310182" remote="130682286720000000" Dst="1" />
-<file name="CC-styles.css" server="Z:/ECMS/app/" local="130686573217668252" remote="130686537500000000" Dst="1" />
-<file name="JQX-redefined.css" server="Z:/ECMS/app/" local="130686537506032600" remote="130686537500000000" Dst="1" />
-<file name="kendoUI-redefined.css" server="Z:/ECMS/app/" local="130686587601001071" remote="130686587600000000" Dst="1" />
+<file name="CC-styles.css" server="Z:/ECMS/app/" local="130698902590844903" remote="130698902590000000" Dst="1" />
+<file name="kendoUI-redefined.css" server="Z:/ECMS/app/" local="130698878441903441" remote="130698878440000000" Dst="1" />
 <file name="CC-styles.css" server="Z:/UIDesigns/ECMS/app/" local="130695197126282243" remote="130695197120000000" Dst="1" />
 <file name="kendoUI-redefined.css" server="Z:/UIDesigns/ECMS/app/" local="130695197126292243" remote="130695197120000000" Dst="1" />
+<file name="ng-Animation.css" server="Z:/ECMS/app/" local="130698838294951256" remote="130698838290000000" Dst="1" />
 </dwsync>
