@@ -101,7 +101,7 @@ angular.module('ECMSapp.adminMain', [])
 						fields: {
 								caseNumber		: { type: "string" 	},
 								dateReceived	: { type: "date"	},
-								incidentDates	: { type: "date"	},
+								incidentDate	: { type: "date"	},
 								source			: { type: "string"	},
 								caseTypeAbbr	: { type: "string" 	},
 								caseStatus		: { type: "string"	},
@@ -171,7 +171,7 @@ angular.module('ECMSapp.adminMain', [])
 						width	: "9%",
 						filterable: false,
 						},{
-						field	: "incidentDates",
+						field	: "incidentDate",
 						title	: "Incid. Date",
 						format	:"{0:MM/dd/yyyy}" ,
 						width	: "9%"

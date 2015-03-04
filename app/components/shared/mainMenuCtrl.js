@@ -270,7 +270,7 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
 			// IS SET TO TRUE BY THE LOGGIN SERVICE
 			$rootScope.loggedIn = false;
 			//CHECK IF THE USER IS LOGGED IN WHILE RELOADING THE PAGE
-//if(!$rootScope.loggedIn) $location.path('/login'); 
+if(!$rootScope.loggedIn) $location.path('/login'); 
 			
 			// CHECK IF THE MAIN MENU NEEDS TO BE DISPLAYED
 			var url = $location.url();
