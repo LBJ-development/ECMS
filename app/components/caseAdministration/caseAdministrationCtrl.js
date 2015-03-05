@@ -2,16 +2,11 @@
 
 angular.module('ECMSapp.adminMain', [])
 
-.factory('DataFtry', function($rootScope, $http, $q) {
+.factory('DataFtry', function($http, $q) {
 
 	var getData = function(URL) {	
-		//console.log(URL);
-		//$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=2015-02-11&endDate=2015-02-19";
-		$rootScope.urlBase = URL;
-		//console.log("FROM DATAFTRY: " + URL);
 
-		var $promise = $http.get($rootScope.urlBase);
-		
+		var $promise = $http.get(URL);
 		var deferred = $q.defer();
 		
 		$promise.then(function(result){
@@ -28,6 +23,7 @@ angular.module('ECMSapp.adminMain', [])
 				deferred.resolve(result.data.content);
 				
 			} else {
+				
 				alert("Something better is coming!");
 			}
 		})
@@ -58,9 +54,10 @@ angular.module('ECMSapp.adminMain', [])
 		
 		var startDate 	= stYear + "-" + stMonth  + "-" + stDate;
 		var endDate 	= enYear + "-" + enMonth  + "-" + enDate;
-
+		
+		//$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + "2015-02-15" + "&endDate=" + "2015-02-17";
 		$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
-			
+		
 		// WHEN DATE RANGE CHANGES //////////////////////////////////////////////////
 		$rootScope.changeDateRange = function(){
 			
@@ -80,19 +77,26 @@ angular.module('ECMSapp.adminMain', [])
 }])
 
 .controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry',  function($rootScope, $scope, DataFtry){
+	
+	var result = {};
 
 	// WATCH FOR A DATE RANGE CHANGE
 	$rootScope.$watch('urlBase', function(newValue, oldValue) {
 
 		DataFtry.getData($rootScope.urlBase).then(function(result){
 			
-			//console.log("FROM CASEADMINCTRL: " + $rootScope.urlBase);
-			initGrid(result);
+			$scope.mainGridOptions.dataSource.data = result;
+	
+			setTimeout(function(){
+				
+				// DELAY THE INITIALIZATION FOR THE TABLE CLICK ENVENT (CHECK IF CHECKBOX IS CLICKED)
+				$scope.mainGrid.table.on("click", ".checkbox" , selectRow);
+				
+			}, 100);
 		})
 	});
-	
-	var initGrid = function(result){
-		$scope.mainGridOptions =  {
+
+	$scope.mainGridOptions =  {
 		 
 		dataSource: {
 			data: result,
@@ -108,12 +112,14 @@ angular.module('ECMSapp.adminMain', [])
 								alerts			: { type: "string" 	},
 								state			: { type: "string"	},
 								caseManager		: { type: "string"	},
-								selected		: { type: "boolean"	}
-								}
+								selectedID		: {editable: false, nullable: true	}
+								},
 							}
 						},
 					},
 		//height		: 550,
+        dataBound	: onDataBound,
+		//toolbar		: ["create"],
 		sortable	: true,
 		scrollable	: false,
 		filterable	: {
@@ -178,15 +184,39 @@ angular.module('ECMSapp.adminMain', [])
 						},{
 						field	: "source",
 						title	: "Source",
-						width	: "6%"
+						width	: "6%",
+						filterable: {
+                        	ui			: sourceFilter,
+							operators	: {
+      							string	: {
+        						eq		: "Equal to",
+      								}
+                         		}
+							}
 						},{
 						field	: "caseTypeAbbr",
 						title	: "Type",
-						width	: "9%"
+						width	: "9%",
+						filterable: {
+                        	ui			: typeFilter,
+							operators	: {
+      							string	: {
+        						eq		: "Equal to",
+      								}
+                         		}
+							}
 						},{
 						field	: "caseStatus",
 						title	: "Status",
-						width	: "9%"
+						width	: "9%",
+						filterable: {
+                        	ui			: statusFilter,
+							operators	: {
+      								string	: {
+        							eq		: "Equal to",
+      										}
+                         				}
+									}
 						},{
 						field	: "alerts",
 						title	: "Alerts",
@@ -194,23 +224,87 @@ angular.module('ECMSapp.adminMain', [])
 						},{
 						field	: "state",
 						title	: "State",
-						width	: "5%"
+						width	: "5%",
+						filterable: {
+							operators	: {
+      								string	: {
+        							eq		: "Equal to",
+      										}
+                         				}
+									}
 						},{
 						field	: "caseManager",
 						title	: "Assignee",
 						width	: "14%"
 						},{
-						field	: "selected",
+							
+						field	: "selectedID",
 						title	: "Sel.",
 						width	: "5%",
 						filterable: false,
-						template: "<input type='checkbox'/>",
+						sortable: false,
+						template: "<input type='checkbox' class='checkbox'/>",
 						attributes: {
       						style: "text-align: center"
     					}
                 	}]
 				};
-};
+
+ 	var checkedIds = {};
+	
+	function selectRow(){
+		var checked = this.checked,
+        	row = $(this).closest("tr"),
+        	grid = $("#grid").data("kendoGrid"),
+        	dataItem = grid.dataItem(row);
+
+       	 checkedIds[dataItem.caseNumber] = checked;
+		 console.log(dataItem.caseNumber)	
+	};
+
+	 // ON DATABOUND EVENT RESTORE PREVIOUSLY SELECTED ROWS
+    function onDataBound(e) {
+
+        var view = this.dataSource.view();
+        for(var i = 0; i < view.length;i++){
+            if(checkedIds[view[i].caseNumber]){
+                this.tbody.find("tr[data-uid='" + view[i].uid + "']")
+                //.addClass("k-state-selected")
+                .find(".checkbox")
+                .attr("checked","checked");
+            }
+        }
+			//console.log(view);
+    };
+		
+	// FILTERING ////////////////////////////////////////////////////////////////////
+	var status 	= ["Active", "Recovered", "Closed"],
+		types 	= ["ERU", "FA", "NFA", "LIM", "5779", "UHR", "DECC", "RCST", "ATT", "UMR"],
+		sources = ["Call", "Email", "Internet", "WebService", "Online Sighting Form"];
+			
+
+	function typeFilter(element) {
+		//element.kendoMultiSelect({
+		element.kendoDropDownList({
+			dataSource: types,
+			//multiple: "multiple",
+			optionLabel: "--Select Value--"
+		});
+	};
+		
+	function statusFilter(element) {
+		element.kendoDropDownList({
+			dataSource: status,
+			optionLabel: "--Select Value--"
+		});
+	};
+		
+	function sourceFilter(element) {
+		element.kendoDropDownList({
+			dataSource: sources,
+			optionLabel: "--Select Value--"
+		});
+	};
 	
 	//var caseAdminData = DataSvrc.getData($rootScope.numRecords);
 	
@@ -228,11 +322,7 @@ angular.module('ECMSapp.adminMain', [])
 		console.log("FROM CONTROLER: " + caseAdminData);
 	});
 	*/
-	
-	
-	
-	
-	
+
 	// WATCH FOR A DATE RANGE CHANGE
 	/*$rootScope.$watch('numRecords', function(newValue, oldValue) {
 		
@@ -240,8 +330,5 @@ angular.module('ECMSapp.adminMain', [])
 			$scope.mainGridOptions.dataSource.data = caseAdminData;
 			console.log($scope.mainGridOptions.dataSource.data);
 	});*/
-	
 
-	
-	
 }])
