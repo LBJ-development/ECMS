@@ -3,6 +3,14 @@
 angular.module('ECMSapp.adminMain', [])
 
 .factory('DataFtry', function($http, $q) {
+	
+      $("#message").kendoWindow({
+        title: "Kendo UI Window",
+        modal: true,
+        width: 400,
+        height: 250,
+		position: "center"
+      })
 
 	var getData = function(URL) {	
 
@@ -41,38 +49,35 @@ angular.module('ECMSapp.adminMain', [])
 		var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
 		var startingDate 	= new Date(todayDate.getTime() - dateOffset);
 		var endingDate 		= todayDate;
-
 		$scope.startingDate	= startingDate;
 		$scope.endingDate	= endingDate;
-		
-		var stDate 	= $scope.startingDate.getDate() ;
-		var stMonth = $scope.startingDate.getMonth() + 1;
-		var stYear 	= $scope.startingDate.getFullYear();
-		var enDate 	= $scope.endingDate.getDate() ;
-		var enMonth = $scope.endingDate.getMonth() + 1;
-		var enYear 	= $scope.endingDate.getFullYear();
-		
-		var startDate 	= stYear + "-" + stMonth  + "-" + stDate;
-		var endDate 	= enYear + "-" + enMonth  + "-" + enDate;
-		
-		//$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + "2015-02-15" + "&endDate=" + "2015-02-17";
-		$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;
+
+		$rootScope.urlBase =	"http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + 
+								formatStartingDate() + 
+								//"2015-02-15" +
+								"&endDate=" + 
+								formatEndingDate();
+								//"2015-02-17";
 		
 		// WHEN DATE RANGE CHANGES //////////////////////////////////////////////////
 		$rootScope.changeDateRange = function(){
 			
-			stDate 	= $scope.startingDate.getDate() ;
-			stMonth = $scope.startingDate.getMonth() + 1;
-			stYear 	= $scope.startingDate.getFullYear();
-			enDate 	= $scope.endingDate.getDate() ;
-			enMonth = $scope.endingDate.getMonth() + 1;
-			enYear 	= $scope.endingDate.getFullYear();
-		
-			startDate 	= stYear + "-" + stMonth  + "-" + stDate;
-			endDate 	= enYear + "-" + enMonth  + "-" + enDate;
-
-			$rootScope.urlBase = "http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + startDate + "&endDate=" + endDate;	
-
+			$rootScope.urlBase =	"http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + 
+									formatStartingDate() + 
+									"&endDate=" + 
+									formatEndingDate();
+	};
+	function formatStartingDate(){		
+		var stDate 	= $scope.startingDate.getDate() ;
+		var stMonth = $scope.startingDate.getMonth() + 1;
+		var stYear 	= $scope.startingDate.getFullYear();
+		return stYear + "-" + stMonth  + "-" + stDate;
+	};
+	function formatEndingDate(){		
+		var enDate 	= $scope.endingDate.getDate() ;
+		var enMonth = $scope.endingDate.getMonth() + 1;
+		var enYear 	= $scope.endingDate.getFullYear();
+		return enYear + "-" + enMonth  + "-" + enDate;
 	}
 }])
 
@@ -95,7 +100,7 @@ angular.module('ECMSapp.adminMain', [])
 			}, 100);
 		})
 	});
-
+	// GRID SETTINGS 
 	$scope.mainGridOptions =  {
 		 
 		dataSource: {
@@ -134,7 +139,7 @@ angular.module('ECMSapp.adminMain', [])
 					operators	: {
       						string	: {
         						eq			: "Equal to",
-        						//neq			: "Not equal to",
+        						//neq		: "Not equal to",
 								contains	: "Contains",
 								startswith	: "Starts with",
 								endswith	: "Ends with"
@@ -166,10 +171,7 @@ angular.module('ECMSapp.adminMain', [])
 		columns		: [{
 						field	: "caseNumber",
 						title	: "RFS/Case",
-						width	: "8%",
-						attributes: {
-      						//style: "text-align: center"
-    						}
+						width	: "8%"
 						},{
 						field	: "dateReceived",
 						title	: "Date Rcvd.",
@@ -249,20 +251,20 @@ angular.module('ECMSapp.adminMain', [])
     					}
                 	}]
 				};
-
+	// MAKE THE CHECK BOX PERSISTING
  	var checkedIds = {};
 	
 	function selectRow(){
-		var checked = this.checked,
-        	row = $(this).closest("tr"),
-        	grid = $("#grid").data("kendoGrid"),
-        	dataItem = grid.dataItem(row);
+		var checked		= this.checked,
+        	row			= $(this).closest("tr"),
+        	grid		= $("#grid").data("kendoGrid"),
+        	dataItem	= grid.dataItem(row);
 
        	 checkedIds[dataItem.caseNumber] = checked;
 		 console.log(dataItem.caseNumber)	
 	};
 
-	 // ON DATABOUND EVENT RESTORE PREVIOUSLY SELECTED ROWS
+	// ON DATABOUND EVENT (WHEN PAGING) RESTORE PREVIOUSLY SELECTED ROWS
     function onDataBound(e) {
 
         var view = this.dataSource.view();
@@ -274,15 +276,13 @@ angular.module('ECMSapp.adminMain', [])
                 .attr("checked","checked");
             }
         }
-			//console.log(view);
     };
 		
-	// FILTERING ////////////////////////////////////////////////////////////////////
+	// FILTERING WITH DROPDOWN MENU 
 	var status 	= ["Active", "Recovered", "Closed"],
 		types 	= ["ERU", "FA", "NFA", "LIM", "5779", "UHR", "DECC", "RCST", "ATT", "UMR"],
 		sources = ["Call", "Email", "Internet", "WebService", "Online Sighting Form"];
 			
-
 	function typeFilter(element) {
 		//element.kendoMultiSelect({
 		element.kendoDropDownList({
@@ -305,30 +305,4 @@ angular.module('ECMSapp.adminMain', [])
 			optionLabel: "--Select Value--"
 		});
 	};
-	
-	//var caseAdminData = DataSvrc.getData($rootScope.numRecords);
-	
-	//console.log("FROM CONTROLER: ");
-	
-	/*var caseAdminData = DataFtry.getData(function(data){
-		
-		console.log("FROM CONTROLER: " + data);
-		
-	});*/
-	
-	/*var $promise = DataFtry.getData();
-	
-	$promise.then(function(){
-		console.log("FROM CONTROLER: " + caseAdminData);
-	});
-	*/
-
-	// WATCH FOR A DATE RANGE CHANGE
-	/*$rootScope.$watch('numRecords', function(newValue, oldValue) {
-		
-			caseAdminData = DataSvrc.getData(newValue);
-			$scope.mainGridOptions.dataSource.data = caseAdminData;
-			console.log($scope.mainGridOptions.dataSource.data);
-	});*/
-
 }])
