@@ -33,7 +33,7 @@
 <body>
 	<div id="wrapper" class="clearfix" >
     	<div id="MK-logo"></div>
-        <main-menu ng-show="displayMainMenu" class="fader-animation"></main-menu>
+        <main-menu ng-if="displayMainMenu" class="fader-animation"></main-menu>
         <div ng-view class="fader-animation"></div>
         <footer ng-show="displayMainMenu" class="fader-animation"></footer>
 	</div> 

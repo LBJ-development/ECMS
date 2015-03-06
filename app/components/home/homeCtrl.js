@@ -3,7 +3,7 @@
 angular.module('ECMSapp.home', [])
 
 .controller('HomeCtrl', function($scope) {
-	
+
 	var notificationData = generatenotification(13);
 
 	$scope.mainGridOptions =  {

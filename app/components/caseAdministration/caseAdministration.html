@@ -1,13 +1,13 @@
 
 <div class="content-wrapper">
-	<div class="content-holder">
+	<div class="content-holder" ng-controller="MainCaseAdminCtrl">
 		<div class="title-holder">
 			<span class="title">Case Administration</span>
 		</div>
         <!-- DATE RANGE ---------------------------------------------------------------------->
 		<div class="filter-holder">
         	<div class="row-holder title-small" style="padding: 10px 0 0px 20px">Select an other received date range:</div>
-			<div class="row-holder" ng-controller="DatePickerCtrl" style="padding: 15px 0 20px 20px">
+			<div class="row-holder"  style="padding: 15px 0 20px 20px">
 				<form name="dateRange-frm" ng-submit="changeDateRange()" role="form">
 					<span class="labelText" style="padding: 0 5px 0 0px" >From:</span> 
 					<input kendo-date-picker k-ng-model="startingDate" /> 
@@ -29,7 +29,7 @@
 			</ul>
 		</div>
         
-		<div role="datagrid" class="grid-holder"  ng-controller="CaseAdminCtrl">
+		<div role="datagrid" class="grid-holder" >
 			<div>
 				<div kendo-grid="mainGrid" id="grid" k-options="mainGridOptions" k-rebind="mainGridOptions"  k-ng-delay="mainGridOptions"></div>
 			</div>  

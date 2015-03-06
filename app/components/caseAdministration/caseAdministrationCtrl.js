@@ -4,15 +4,17 @@ angular.module('ECMSapp.adminMain', [])
 
 .factory('DataFtry', function($http, $q) {
 	
-      $("#message").kendoWindow({
+/*      $("#message").kendoWindow({
         title: "Kendo UI Window",
         modal: true,
         width: 400,
         height: 250,
 		position: "center"
-      })
+      })*/
 
 	var getData = function(URL) {	
+	
+	//console.log("FROM GET DATA: "  + URL);
 
 		var $promise = $http.get(URL);
 		var deferred = $q.defer();
@@ -42,30 +44,37 @@ angular.module('ECMSapp.adminMain', [])
     };
 })
 
-.controller('DatePickerCtrl',['$rootScope', '$scope', function($rootScope, $scope){
+.controller('MainCaseAdminCtrl', ['$scope', 'DataFtry',  function($scope, DataFtry){
+
 	
-		// INITIAL DATE RANGE //////////////////////////////////////////////////
+	// INITIAL DATE RANGE //////////////////////////////////////////////////
 		var todayDate 		= new Date();
 		var dateOffset 		= (24*60*60*1000) * 2; //DEFAULT: 2 DAYS 
 		var startingDate 	= new Date(todayDate.getTime() - dateOffset);
 		var endingDate 		= todayDate;
 		$scope.startingDate	= startingDate;
 		$scope.endingDate	= endingDate;
-
-		$rootScope.urlBase =	"http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + 
+		
+		$scope.urlBase =	//"http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" +
+								"/rest/caseadmin/cases?startDate=" +  
 								formatStartingDate() + 
 								//"2015-02-15" +
 								"&endDate=" + 
 								formatEndingDate();
 								//"2015-02-17";
+								
+		console.log("FROM INITIAL DATE RANGE: "  + $scope.urlBase);
 		
 		// WHEN DATE RANGE CHANGES //////////////////////////////////////////////////
-		$rootScope.changeDateRange = function(){
-			
-			$rootScope.urlBase =	"http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + 
+		$scope.changeDateRange = function(){
+
+			$scope.urlBase =	//"http://cc-devapp1.ncmecad.net:8080/ecms-staging/rest/caseadmin/cases?startDate=" + 
+									"/rest/caseadmin/cases?startDate=" + 
 									formatStartingDate() + 
 									"&endDate=" + 
 									formatEndingDate();
+									
+		//console.log("FROM CHANGE DATE RANGE: "  + $scope.urlBase);
 	};
 	function formatStartingDate(){		
 		var stDate 	= $scope.startingDate.getDate() ;
@@ -78,17 +87,18 @@ angular.module('ECMSapp.adminMain', [])
 		var enMonth = $scope.endingDate.getMonth() + 1;
 		var enYear 	= $scope.endingDate.getFullYear();
 		return enYear + "-" + enMonth  + "-" + enDate;
-	}
-}])
-
-.controller("CaseAdminCtrl",['$rootScope', '$scope', 'DataFtry',  function($rootScope, $scope, DataFtry){
+	};
+	
+	// GRID ////////////////////////////////////////////////////////////////////
 	
 	var result = {};
 
 	// WATCH FOR A DATE RANGE CHANGE
-	$rootScope.$watch('urlBase', function(newValue, oldValue) {
+	$scope.$watch('urlBase', function(newValue, oldValue) {
+		
+		//console.log("FROM WATCH: "  + $scope.urlBase);
 
-		DataFtry.getData($rootScope.urlBase).then(function(result){
+		DataFtry.getData($scope.urlBase).then(function(result){
 			
 			$scope.mainGridOptions.dataSource.data = result;
 	

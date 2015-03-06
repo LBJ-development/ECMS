@@ -2,29 +2,28 @@
 <div class="CC-title-big" style="width:100%"></div>
 
 <div role="login" class="login-panel">
-	<span class="panel-header"><span class="white-title">Login</span></span>
-    
+    <span class="panel-header"><span class="white-title">Login</span></span>
+
     <div role="login-frm">
-    	<form name="form" ng-submit="login()" role="form">
-    		<login-directive>
-    			<span>
-    				<label for="username"  style="width: 120px">Username:</label>
-        			<input class="k-textbox" style="width: 200px" id="username" type="text" ng-model="credentials.username" name="username" required>
-				</span>
-        		<span>
-        			<label for="password" style="width: 120px">Password:</label>
-        			<input class="k-textbox" style="width: 200px" id="password" class="form-control" type="password" ng-model="credentials.password" name="password" required>
-				</span>
-        
-        		<span  style="padding: 0 0 20px 100px">
-        		<!--<input type="submit" class="regular-btn"  value="LOGIN">-->
-    		 		<!-- <input type="submit" value="LOGIN" id="logingbutton" class="{{buttonClass}}"  ng-disabled="isDisabled">
-             		<kendo-button login-directive ng-model="button" class="k-button" ng-disabled="form.password.$pristine || form.username.$pristine" >LOGIN</kendo-button>-->
-               		<kendo-button login-directive ng-model="button" class="k-button" ng-disabled="form.$invalid" >LOGIN</kendo-button>
-				</span>
-      			<span class="{{errormessageclass}}">{{errormessage}}</span>
-      		</login-directive>
-    	</form>
-    </div> 
+        <form name="form" ng-submit="login(credentials)" role="form">
+
+            <login-directive>
+			<span>
+				<label for="username"  style="width: 120px">Username:</label>
+				<input class="k-textbox" style="width: 200px" id="username" type="text" ng-model="credentials.user" name="username" required>
+			</span>
+			<span>
+				<label for="password" style="width: 120px">Password:</label>
+				<input class="k-textbox" style="width: 200px" id="password" class="form-control" type="password" ng-model="credentials.pass" name="password" required>
+			</span>
+
+			<span  style="padding: 0 0 20px 100px">
+			   <kendo-button login-directive ng-model="button" class="k-button" ng-disabled="form.$invalid" >LOGIN</kendo-button>
+			</span>
+                <span class="{{errormessageclass}}">{{errormessage}}</span>
+
+            </login-directive>
+        </form>
+    </div>
 </div>
 

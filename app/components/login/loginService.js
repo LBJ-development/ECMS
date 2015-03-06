@@ -1,38 +1,40 @@
-/*
+
 //  BALLU ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-'use strict';
+/*'use strict';
 
-app.factory('loginService', function( $http){
-	return{
-		login:function(credentials){
+ app.factory('loginService', function( $http){
+	 return{
+ 		login:function(credentials){
 
-            Object.toparams = function ObjecttoParams(obj) {
-                var p = [];
-                for (var key in obj) {
-                    p.push(key + '=' + encodeURIComponent(obj[key]));
-                }
-                return p.join('&');
-            };
+ 			Object.toparams = function ObjecttoParams(obj) {
+ 				var p = [];
+ 				for (var key in obj) {
+ 				p.push(key + '=' + encodeURIComponent(obj[key]));
+ 			}
+ 			return p.join('&');
+ 	};
 
-            var restservice = "/ecms-prod/rest/auth/login/";
-            //"http://localhost:8080/ecms/rest/auth/login/";
-            //var restservice = "http://cc-devapp1.ncmecad.net:8080/ecms/rest/auth/login/";
-            var data = Object.toparams(credentials);
-            return $http({
-                method: 'POST',
-                url: restservice,
-                data: data,
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-            });
+ 	var restservice = "/rest/auth/login";
+ 	var data = Object.toparams(credentials);
+ 	
+	return $http({
+ 		method: 'POST',
+ 		url: restservice,
+ 		data: data,
+ 		headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+		 });
+ 	},
 
-
-		}
-	}
-})
+ 	logout : function(){
+ 		var restservice = "/rest/auth/logout";
+ 		return $http.get(restservice);
+ 		}
+ 	}
+ })
 */
 
 //  LUDWIG ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+/*
 'use strict';
 app.factory('loginService', function($http, $location, $rootScope){
 	return{
@@ -70,3 +72,4 @@ app.factory('loginService', function($http, $location, $rootScope){
 		}
 	}
 })
+*/
