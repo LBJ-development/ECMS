@@ -22,8 +22,8 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
         $routeProvider.when('/comingsoon', {
             templateUrl: 'components/shared/comingSoon.html'
         });
-
-        $routeProvider.otherwise({redirectTo: '/comingsoon'});
+ 		$routeProvider.otherwise({redirectTo: '/comingsoon'});
+        //$routeProvider.otherwise({redirectTo: '/login'});
 
     }])
 

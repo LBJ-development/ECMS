@@ -101,13 +101,17 @@ angular.module('ECMSapp.adminMain', [])
 		DataFtry.getData($scope.urlBase).then(function(result){
 			
 			$scope.mainGridOptions.dataSource.data = result;
+			
+			console.log("FROM POS 1: " + $scope.mainGrid.table);
 	
 			setTimeout(function(){
+				
+					console.log("FROM POS 2: " + $scope.mainGrid.table);
 				
 				// DELAY THE INITIALIZATION FOR THE TABLE CLICK ENVENT (CHECK IF CHECKBOX IS CLICKED)
 				$scope.mainGrid.table.on("click", ".checkbox" , selectRow);
 				
-			}, 100);
+			}, 1000);
 		})
 	});
 	// GRID SETTINGS 
