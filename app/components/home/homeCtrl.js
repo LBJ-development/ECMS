@@ -2,23 +2,75 @@
 
 angular.module('ECMSapp.home', [])
 
-.controller('HomeCtrl', function($scope) {
+.factory('NotificationFtry', function($rootScope, $http, $q) {
 
-	var notificationData = generatenotification(13);
+	var getData = function(URL) {	
+	
+	console.log("FROM GET DATA: "  + URL);
+
+		var $promise = $http.get(URL);
+		var deferred = $q.defer();
+		
+		$promise.then(function(result){
+			
+			if(result.data.status == 'SUCCESS'){
+
+				//console.log(result.data.content.length);
+				$rootScope.numberNotification = result.data.content.length;
+				deferred.resolve(result.data.content);
+				
+			} else {
+				
+				alert("Something better is coming!");
+			}
+		})
+		return deferred.promise;
+	};
+    return {
+		getData: getData
+    };
+})
+
+
+.controller('HomeCtrl', function($scope, NotificationFtry, StorageService) {
+
+	//var notificationData = generatenotification(13);
+	
+	var result = {};
+
+		//console.log("FROM WATCH: "  + $scope.urlBase);
+		
+		var URL = "/rest/notification/user";
+		
+		NotificationFtry.getData(URL).then(function(result){
+			
+			$scope.mainGridOptions.dataSource.data = result;
+			
+			//console.log("FROM POS 1: " + $scope.mainGrid.table);
+	
+			/*setTimeout(function(){
+				
+					//console.log("FROM POS 2: " + $scope.mainGrid.table);
+				
+				// DELAY THE INITIALIZATION FOR THE TABLE CLICK ENVENT (CHECK IF CHECKBOX IS CLICKED)
+				$scope.mainGrid.table.on("click", ".checkbox" , selectRow);
+				
+			}, 1000);*/
+	
+	});
 
 	$scope.mainGridOptions =  {
 		 
 		dataSource	: {
-			data: notificationData,
+			data: result,
 			    schema: {
 					model: {
 						fields: {
 								id		: { type: "number" },
-								events	: { type: "string" },
-								objects	: { type: "string" },
+								type	: { type: "string" },
 								details	: { type: "string" },
-								users	: { type: "string" },
-								seen	: { type: "boolean" }
+								assigner	: { type: "string" },
+								markedSeen	: { type: "string" }
 								}
 							}
 						},
@@ -32,25 +84,20 @@ angular.module('ECMSapp.home', [])
 						sortable: false,
 						attributes: {
       						style: "text-align: center"
-    					}
-					},{
-						field	: "events",
-						title	: "Object/Event",
+    						}
+						},{
+						field	: "type",
+						title	: "Type",
 						width	: "15%"
-					},{
-						field	: "objects",
-						title	: "Object ID",
-						width	: "20%"
 						},{
 						field	: "details",
 						title	: "Details",
-						
 						},{
-						field	: "users",
+						field	: "assigner",
 						title	: "User",
 						width	: "15%"
 						},{
-						field	: "seen",
+						field	: "markedSeen",
 						title	: "Seen",
 						template: "<input type='checkbox'/>",
 						width	: "70px",

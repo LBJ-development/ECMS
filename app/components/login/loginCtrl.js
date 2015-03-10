@@ -18,7 +18,7 @@ angular.module('ECMSapp.login', [])
                     console.log(JSON.stringify(data));
                     $rootScope.permissions = data.content.permissions;
                     //$rootScope.permissions = permissions; // Comment this once we map keys
-                    $rootScope.usernameScope = data.content.firstname;
+                    $rootScope.usernameScope = data.content.firstName;
                     StorageService.setToken(data.content.token);
                 }
                 else
