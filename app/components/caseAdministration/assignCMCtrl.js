@@ -1,17 +1,9 @@
 'use strict';
 
-angular.module('ECMSapp.adminMain', [])
+angular.module('ECMSapp.assignCM', [])
 
 .factory('DataFtry', function($http, $q) {
 	
-/*      $("#message").kendoWindow({
-        title: "Kendo UI Window",
-        modal: true,
-        width: 400,
-        height: 250,
-		position: "center"
-      })*/
-
 	var getData = function(URL) {	
 	
 	//console.log("FROM GET DATA: "  + URL);
@@ -44,7 +36,7 @@ angular.module('ECMSapp.adminMain', [])
     };
 })
 
-.controller('MainCaseAdminCtrl', ['$scope', 'DataFtry',  function($scope, DataFtry){
+.controller('AssignCMCtrl', ['$scope', 'DataFtry',  function($scope, DataFtry){
 	
 	// INITIAL DATE RANGE //////////////////////////////////////////////////
 		var todayDate 		= new Date();
@@ -103,14 +95,14 @@ angular.module('ECMSapp.adminMain', [])
 			
 			//console.log("FROM POS 1: " + $scope.mainGrid.table);
 	
-			setTimeout(function(){
+			//setTimeout(function(){
 				
 				//console.log("FROM POS 2: " + $scope.mainGrid.table);
 				
 				// DELAY THE INITIALIZATION FOR THE TABLE CLICK ENVENT (CHECK IF CHECKBOX IS CLICKED)
-				$scope.mainGrid.table.on("click", ".checkbox" , selectRow);
+				//$scope.mainGrid.table.on("click", ".checkbox" , selectRow);
 				
-			}, 1000);
+			//}, 1000);
 		})
 	});
 	// GRID SETTINGS 
@@ -126,7 +118,7 @@ angular.module('ECMSapp.adminMain', [])
 								incidentDate	: { type: "date"	},
 								source			: { type: "string"	},
 								caseTypeAbbr	: { type: "string" 	},
-								caseStatus		: { type: "string"	},
+								childCount		: { type: "number"	},
 								alerts			: { type: "string" 	},
 								state			: { type: "string"	},
 								caseManager		: { type: "string"	},
@@ -136,7 +128,7 @@ angular.module('ECMSapp.adminMain', [])
 						},
 					},
 		//height		: 550,
-        dataBound	: onDataBound,
+        //dataBound	: onDataBound,
 		//toolbar		: ["create"],
 		sortable	: true,
 		scrollable	: false,
@@ -173,29 +165,15 @@ angular.module('ECMSapp.adminMain', [])
 						pageSize: 15
                         },
 						
-		/*columnMenu: {
-   			messages	: {
-      			columns			: "Choose columns",
-      			filter			: "Apply filter",
-      			sortAscending	: "Sort (asc)",
-      			sortDescending	: "Sort (desc)"
-							}
-    				},*/
+
+      //dataBound: function() {
+                           // this.expandRow(this.tbody.find("tr.k-master-row").first());
+                        //},
+
 		columns		: [{
-						field	: "caseNumber",
-						title	: "RFS/Case",
+						field	: "alerts",
+						title	: "Alerts",
 						width	: "8%"
-						},{
-						field	: "dateReceived",
-						title	: "Date Rcvd.",
-            			format	:"{0:MM/dd/yyyy}" ,
-						width	: "9%",
-						filterable: false,
-						},{
-						field	: "incidentDate",
-						title	: "Incid. Date",
-						format	:"{0:MM/dd/yyyy}" ,
-						width	: "9%"
 						},{
 						field	: "source",
 						title	: "Source",
@@ -209,6 +187,18 @@ angular.module('ECMSapp.adminMain', [])
                          		}
 							}
 						},{
+							
+						field	: "caseNumber",
+						title	: "RFS/Case",
+						width	: "8%"
+						},{
+						field	: "dateReceived",
+						title	: "Date Rcvd.",
+            			format	:"{0:MM/dd/yyyy}" ,
+						width	: "9%",
+						filterable: false,
+						},{
+						
 						field	: "caseTypeAbbr",
 						title	: "Type",
 						width	: "9%",
@@ -221,8 +211,8 @@ angular.module('ECMSapp.adminMain', [])
                          		}
 							}
 						},{
-						field	: "caseStatus",
-						title	: "Status",
+						field	: "childCount",
+						title	: "# of Vict.",
 						width	: "9%",
 						filterable: {
                         	ui			: statusFilter,
@@ -233,37 +223,45 @@ angular.module('ECMSapp.adminMain', [])
                          				}
 									}
 						},{
-						field	: "alerts",
-						title	: "Alerts",
-						width	: "8%"
-						},{
-						field	: "state",
-						title	: "State",
-						width	: "5%",
-						filterable: {
-							operators	: {
-      								string	: {
-        							eq		: "Equal to",
-      										}
-                         				}
-									}
+						field	: "incidentDate",
+						title	: "Incid. Date",
+						format	:"{0:MM/dd/yyyy}" ,
+						width	: "9%"
 						},{
 						field	: "caseManager",
 						title	: "Assignee",
 						width	: "14%"
-						},{
-							
-						field	: "selectedID",
-						title	: "Sel.",
-						width	: "5%",
-						filterable: false,
-						sortable: false,
-						template: "<input type='checkbox' class='checkbox'/>",
-						attributes: {
-      						style: "text-align: center"
-    					}
-                	}]
+						}]
 				};
+				
+	// GRID DETAIL 
+	 
+           /* $scope.detailGridOptions = function(dataItem) {
+                return {
+                    dataSource: {
+                        type: "odata",
+                        transport: {
+                            read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
+                        },
+                        serverPaging: true,
+                        serverSorting: true,
+                        serverFiltering: true,
+                        pageSize: 5,
+                        filter: { field: "EmployeeID", operator: "eq", value: dataItem.EmployeeID }
+                    },
+                    scrollable: false,
+                    sortable: true,
+                    pageable: true,
+                    columns: [
+                    { field: "OrderID", title:"ID", width: "56px" },
+                    { field: "ShipCountry", title:"Ship Country", width: "110px" },
+                    { field: "ShipAddress", title:"Ship Address" },
+                    { field: "ShipName", title: "Ship Name", width: "190px" }
+                    ]
+                };
+            };*/
+       
+				
 	// MAKE THE CHECK BOX PERSISTING
  	var checkedIds = {};
 	

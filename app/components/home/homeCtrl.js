@@ -58,7 +58,7 @@ angular.module('ECMSapp.home', [])
 			}, 1000);*/
 	
 	});
-
+	
 	$scope.mainGridOptions =  {
 		 
 		dataSource	: {

@@ -18,6 +18,10 @@ angular.module('ECMSapp.mainMenu', ['ngRoute'])
         $routeProvider.when('/caseadministration', {
             templateUrl: 'components/caseAdministration/caseAdministration.html'
         });
+		
+		 $routeProvider.when('/caseadministration/assigncm', {
+            templateUrl: 'components/caseAdministration/assignCM.html'
+        });
 
         $routeProvider.when('/comingsoon', {
             templateUrl: 'components/shared/comingSoon.html'

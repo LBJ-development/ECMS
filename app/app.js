@@ -6,8 +6,9 @@ var app = angular.module('ECMSapp', [
 	'ngAnimate',
 	'ECMSapp.login',
 	'ECMSapp.home',
-	'ECMSapp.adminMain',
 	'ECMSapp.mainMenu',
+	'ECMSapp.adminMain',
+	'ECMSapp.assignCM',
 	'kendo.directives' 
 	])
 
