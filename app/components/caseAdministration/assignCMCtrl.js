@@ -165,7 +165,12 @@ angular.module('ECMSapp.assignCM', [])
 						pageSize: 15
                         },
 						
-
+		detailTemplate: kendo.template($("#detail-template").html()),
+    	detailInit: function(e) {
+			// without this line, detail template bindings will not work
+			kendo.bind(e.detailRow, e.data);
+		},
+						
       //dataBound: function() {
                            // this.expandRow(this.tbody.find("tr.k-master-row").first());
                         //},
@@ -173,11 +178,11 @@ angular.module('ECMSapp.assignCM', [])
 		columns		: [{
 						field	: "alerts",
 						title	: "Alerts",
-						width	: "8%"
+						width	: "10%"
 						},{
 						field	: "source",
 						title	: "Source",
-						width	: "6%",
+						width	: "15%",
 						filterable: {
                         	ui			: sourceFilter,
 							operators	: {
@@ -190,18 +195,18 @@ angular.module('ECMSapp.assignCM', [])
 							
 						field	: "caseNumber",
 						title	: "RFS/Case",
-						width	: "8%"
+						width	: "15%"
 						},{
 						field	: "dateReceived",
 						title	: "Date Rcvd.",
             			format	:"{0:MM/dd/yyyy}" ,
-						width	: "9%",
+						width	: "15%",
 						filterable: false,
 						},{
 						
 						field	: "caseTypeAbbr",
 						title	: "Type",
-						width	: "9%",
+						width	: "5%",
 						filterable: {
                         	ui			: typeFilter,
 							operators	: {
@@ -213,7 +218,7 @@ angular.module('ECMSapp.assignCM', [])
 						},{
 						field	: "childCount",
 						title	: "# of Vict.",
-						width	: "9%",
+						width	: "5%",
 						filterable: {
                         	ui			: statusFilter,
 							operators	: {
@@ -226,17 +231,19 @@ angular.module('ECMSapp.assignCM', [])
 						field	: "incidentDate",
 						title	: "Incid. Date",
 						format	:"{0:MM/dd/yyyy}" ,
-						width	: "9%"
+						width	: "15%"
 						},{
 						field	: "caseManager",
 						title	: "Assignee",
-						width	: "14%"
+						width	: "20%"
 						}]
 				};
 				
 	// GRID DETAIL 
 	 
-           /* $scope.detailGridOptions = function(dataItem) {
+           $scope.detailGridOptions = function(dataItem) {
+			   
+			   console.log("FROM DETAIL GRID OPTION");
                 return {
                     dataSource: {
                         type: "odata",
@@ -246,8 +253,8 @@ angular.module('ECMSapp.assignCM', [])
                         serverPaging: true,
                         serverSorting: true,
                         serverFiltering: true,
-                        pageSize: 5,
-                        filter: { field: "EmployeeID", operator: "eq", value: dataItem.EmployeeID }
+                        pageSize: 5
+                       // filter: { field: "EmployeeID", operator: "eq", value: dataItem.EmployeeID }
                     },
                     scrollable: false,
                     sortable: true,
@@ -259,7 +266,7 @@ angular.module('ECMSapp.assignCM', [])
                     { field: "ShipName", title: "Ship Name", width: "190px" }
                     ]
                 };
-            };*/
+            };
        
 				
 	// MAKE THE CHECK BOX PERSISTING

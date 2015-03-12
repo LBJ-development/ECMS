@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="http://demos.telerik.com/kendo-ui/grid/angular">
+    <style>html { font-size: 12px; font-family: Arial, Helvetica, sans-serif; }</style>
+    <title></title>
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.default.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.dataviz.min.css" />
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.dataviz.default.min.css" />
+
+    <script src="http://cdn.kendostatic.com/2014.3.1411/js/jquery.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.3.1411/js/angular.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.3.1411/js/kendo.all.min.js"></script>
+</head>
+<body>
+<div id="example" ng-app="KendoDemos">
+    
+    <div ng-controller="MyCtrl">
+    
+        <kendo-grid options="mainGridOptions" k-rebind="mainGridOptions.dataSource"  k-ng-delay="mainGridOptions.dataSource">
+            <div k-detail-template>
+               test
+            </div>
+        </kendo-grid>
+
+
+    </div>
+</div>
+
+<script>
+    angular.module("KendoDemos", [ "kendo.directives" ])
+        .controller("MyCtrl", function($scope){
+			
+			var dataTest = {};
+			var ds = {};
+      
+     setTimeout(function(){
+			 
+		 dataTest = {data: [
+   							 { FirstName: "Jane", LastName: "Doe" },
+  							 { FirstName: "John", LastName: "Doe" }
+  						]			
+				};
+				
+	ds = new kendo.data.DataSource({
+ 					 data: [
+     				 {FirstName: "Joe", LastName: "212-555-1234"}, 
+     					 {FirstName: "Sally", LastName: "212-999-7785"},
+      				{FirstName: "Bill", LastName: "212-244-7035"}
+  ]
+});
+
+				
+		//$scope.mainGridOptions = {dataSource : dataTest} ;
+
+		$scope.mainGridOptions.dataSource.data = ds;
+				
+				console.log("FROM TIMER");
+				console.log(dataTest);
+
+       //test();
+			
+	}, 1000);
+		
+    //function test(){
+	
+		  
+		  console.log("FROM GRID: ");
+		  console.log(dataTest);
+	
+            $scope.mainGridOptions = {
+				
+				dataSource:  ds,
+               
+                dataBound: function() {
+                    this.expandRow(this.tbody.find("tr.k-master-row").first());
+                },
+                columns: [{
+                    field: "FirstName",
+                    title: "First Name",
+                    },{
+                    field: "LastName",
+                    title: "Last Name",
+                    }]
+           
+		    	};
+	//}
+        })
+		
+		
+</script>
+
+
+</body>
+</html>
