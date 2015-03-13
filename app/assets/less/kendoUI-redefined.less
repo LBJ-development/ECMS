@@ -17,18 +17,24 @@
 	border-color:  @bordergray;;
 }
 
-.k-autocomplete.k-state-default, .k-picker-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-dropdown-wrap.k-state-default {
+.k-autocomplete.k-state-default, .k-picker-wrap.k-state-default, .k-numeric-wrap.k-state-default, .k-dropdown-wrap.k-state-default, .k-link k-pager-nav, .k-link k-pager-nav k-pager-last {
     background-color:rgb(255,255,255);
 	.vertical(@white, @lightgradientendcolor);
     background-position: 50% 50%;
     border-color:  @bordergray;
 }
 
-.k-dropdown .k-state-hover .k-input {
+.k-dropdown .k-state-hover .k-input, k-pager-wrap k-link:hover, k-state-hover:hover {
 	background-color:rgb(255,255,255);
 	.vertical(@white, @verylightblue);
 
 }
+.k-pager-numbers .k-link, k-pager-nav .k-link{
+   background-color:rgb(255,255,255);
+	.vertical(@white, @lightgradientendcolor);
+}
+
+
  
 .k-button:hover, .k-button.k-state-hover, .k-item:hover, k-state-focus.k-state-hover, .k-multiselect.k-header.k-state-hover{
 	.hover-btn;

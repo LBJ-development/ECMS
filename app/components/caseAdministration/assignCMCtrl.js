@@ -36,7 +36,7 @@ angular.module('ECMSapp.assignCM', [])
     };
 })
 
-.controller('AssignCMCtrl', ['$scope', 'DataFtry',  function($scope, DataFtry){
+.controller('AssignCMCtrl', ['$scope', 'DataFtry',  function($scope, DataFtry, $q){
 	
 	// INITIAL DATE RANGE //////////////////////////////////////////////////
 		var todayDate 		= new Date();
@@ -105,7 +105,7 @@ angular.module('ECMSapp.assignCM', [])
 			//}, 1000);
 		})
 	});
-	// GRID SETTINGS 
+	// MAIN GRID SETTINGS //////////////////////////////////////////////////////////////////////////////////////
 	$scope.mainGridOptions =  {
 		 
 		dataSource: {
@@ -239,13 +239,57 @@ angular.module('ECMSapp.assignCM', [])
 						}]
 				};
 				
-	// GRID DETAIL 
-	 
-           $scope.detailGridOptions = function(dataItem) {
+	// GRID DETAIL SETTINGS /////////////////////////////////////////////////////////////////////////////////////
+	
+	$scope.detailGridOptions = function($scope, dataItem) {
+		
+		$scope.urlBase = "/rest/caseadmin/incidentDetails?caseNumber=1245289";
 			   
-			   console.log("FROM DETAIL GRID OPTION");
-                return {
-                    dataSource: {
+			DataFtry.getData($scope.urlBase).then(function(result){
+				console.log(result)
+				
+				$scope.detailGridOptions =  {
+
+					dataSource: result,
+
+                    scrollable: false,
+                    sortable: false,
+                    pageable: false,
+					columns: [
+                    { field: "childAge", title:"Child age", width: "56px" },
+                    { field: "childFirstName", title:"Child first name", width: "110px" },
+                    { field: "childLastName", title:"Child last name" },
+                    { field: "childRecoveryStatus", title: "Recovery status", width: "190px" }
+                    ]
+				}
+				
+				});
+		
+	};
+	
+	/*var detailData = {};*/
+	 
+/*	$scope.detailGridOptions =  {
+
+					//dataSource: result,
+
+                    scrollable: false,
+                    sortable: false,
+                    pageable: false,
+					columns: [
+                    { field: "childAge", title:"Child age", width: "56px" },
+                    { field: "childFirstName", title:"Child first name", width: "110px" },
+                    { field: "childLastName", title:"Child last name" },
+                    { field: "childRecoveryStatus", title: "Recovery status", width: "190px" }
+                    ]
+		
+		
+	};*/
+			
+// PREVIOUS GRID DETAIL ///////////////////////////////////////////////////////////			
+/*	$scope.detailGridOptions = function($scope, dataItem) {
+		return {
+			dataSource: {
                         type: "odata",
                         transport: {
                             read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
@@ -254,10 +298,9 @@ angular.module('ECMSapp.assignCM', [])
                         serverSorting: true,
                         serverFiltering: true,
                         pageSize: 5
-                       // filter: { field: "EmployeeID", operator: "eq", value: dataItem.EmployeeID }
                     },
                     scrollable: false,
-                    sortable: true,
+                    sortable: false,
                     pageable: true,
                     columns: [
                     { field: "OrderID", title:"ID", width: "56px" },
@@ -265,8 +308,8 @@ angular.module('ECMSapp.assignCM', [])
                     { field: "ShipAddress", title:"Ship Address" },
                     { field: "ShipName", title: "Ship Name", width: "190px" }
                     ]
-                };
-            };
+                };	
+            };*/
        
 				
 	// MAKE THE CHECK BOX PERSISTING
@@ -279,7 +322,7 @@ angular.module('ECMSapp.assignCM', [])
         	dataItem	= grid.dataItem(row);
 
        	 checkedIds[dataItem.caseNumber] = checked;
-		 console.log(dataItem.caseNumber)	
+		 //console.log(dataItem.caseNumber)	
 	};
 
 	// ON DATABOUND EVENT (WHEN PAGING) RESTORE PREVIOUSLY SELECTED ROWS
