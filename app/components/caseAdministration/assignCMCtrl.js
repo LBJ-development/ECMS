@@ -2,6 +2,7 @@
 
 angular.module('ECMSapp.assignCM', [])
 
+/*
 .factory('DataFtry', function($http, $q) {
 	
 	var getData = function(URL) {	
@@ -35,7 +36,7 @@ angular.module('ECMSapp.assignCM', [])
 		getData: getData
     };
 })
-
+*/
 .controller('AssignCMCtrl', ['$scope', 'DataFtry',  function($scope, DataFtry, $q){
 	
 	// INITIAL DATE RANGE //////////////////////////////////////////////////
